@@ -1,0 +1,56 @@
+header {
+  .top-accent {
+    width: 100%;
+    height: 5px;
+    background-color: $background_accents;
+  }
+
+  nav {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      height: 59.1px;
+      width: 59.1px;
+      margin-left: 156px;
+    }
+
+    .btncontrol {
+      display: none;
+    }
+
+    .icons {
+      display: none;
+    }
+
+    .listas-nav {
+      display: flex;
+      align-items: center;
+      li {
+        list-style-type: none;
+
+        a {
+          font-family: $font-montserrat;
+          text-decoration: none;
+          color: $background_accents;
+        }
+
+        .circle {
+          margin-left: 59.5px;
+          margin-right: 156px;
+        }
+      }
+
+      li:nth-child(2) {
+        margin-left: 41.5px;
+      }
+
+      li:nth-child(3) {
+        margin-left: 50px;
+      }
+    }
+  }
+}

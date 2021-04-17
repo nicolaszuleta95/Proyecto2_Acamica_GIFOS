@@ -1,0 +1,83 @@
+/*colors*/
+/*fonts*/
+/*resets*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*body*/
+body {
+  background-color: #ffffff;
+}
+
+/*nav*/
+header .top-accent {
+  width: 100%;
+  height: 5px;
+  background-color: #572ee5;
+}
+
+header nav {
+  width: 100%;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .logo {
+  height: 59.1px;
+  width: 59.1px;
+  margin-left: 156px;
+}
+
+header nav .btncontrol {
+  display: none;
+}
+
+header nav .icons {
+  display: none;
+}
+
+header nav .listas-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .listas-nav li {
+  list-style-type: none;
+}
+
+header nav .listas-nav li a {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: #572ee5;
+}
+
+header nav .listas-nav li .circle {
+  margin-left: 59.5px;
+  margin-right: 156px;
+}
+
+header nav .listas-nav li:nth-child(2) {
+  margin-left: 41.5px;
+}
+
+header nav .listas-nav li:nth-child(3) {
+  margin-left: 50px;
+}
+/*# sourceMappingURL=styles.css.map */
