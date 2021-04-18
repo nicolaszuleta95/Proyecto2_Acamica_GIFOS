@@ -30,6 +30,7 @@ header {
     .listas-nav {
       display: flex;
       align-items: center;
+
       li {
         list-style-type: none;
 
@@ -37,6 +38,10 @@ header {
           font-family: $font-montserrat;
           text-decoration: none;
           color: $background_accents;
+          line-height: 16px;
+          font-size: 13px;
+          letter-spacing: 0;
+          font-weight: bold;
         }
 
         .circle {
@@ -56,11 +61,11 @@ header {
         }
       }
 
-      li:nth-child(2) {
+      li:nth-child(3) {
         margin-left: 41.5px;
       }
 
-      li:nth-child(3) {
+      li:nth-child(5) {
         margin-left: 50px;
       }
     }
@@ -85,6 +90,7 @@ header {
         display: none;
         box-sizing: border-box;
         width: 100%;
+
         li {
           display: flex;
           align-items: center;
@@ -107,27 +113,63 @@ header {
         z-index: 1;
 
         li {
-          margin-bottom: 24px;
-          margin-left: 5%;
+          display: flex;
+          justify-content: center;
+
+          text-transform: lowercase;
 
           a {
-            font-size: 16px;
+            margin-bottom: 11px;
+            font-size: 15px;
             letter-spacing: 0;
-            line-height: 28px;
+            line-height: 30px;
+          }
+
+          hr {
+            display: flex;
+            width: 41px;
+            height: 0.1px;
+            background-color: white;
+            opacity: 0.5;
           }
         }
 
-        li:nth-child(4) {
+        li:nth-child(3) {
+          margin-top: 13.9px;
+          margin-left: 0;
+        }
+
+        li:nth-child(5) {
+          margin-top: 13.9px;
+          margin-left: 0px;
+          span {
+            text-transform: uppercase;
+          }
+        }
+
+        li:nth-child(6) {
           display: none;
+        }
+
+        li:first-child {
+          margin-top: 32px;
+          span {
+            text-transform: uppercase;
+          }
+        }
+
+        a::first-letter {
+          text-transform: uppercase;
         }
       }
 
-      .btncontrol:checked + .icons .fa-bars {
+      .btncontrol:checked + .icons .burger {
         display: none;
       }
 
-      .btncontrol:checked + .icons .fa-times {
+      .btncontrol:checked + .icons .close {
         display: block;
+        margin-right: 26px;
       }
 
       .icons {

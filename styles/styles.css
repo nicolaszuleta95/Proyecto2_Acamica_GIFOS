@@ -67,6 +67,10 @@ header nav .listas-nav li a {
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
   color: #572ee5;
+  line-height: 16px;
+  font-size: 13px;
+  letter-spacing: 0;
+  font-weight: bold;
 }
 
 header nav .listas-nav li .circle {
@@ -85,11 +89,11 @@ header nav .listas-nav li .circle:active {
   background: url("/img/CTA-crear-gifo-active.svg") no-repeat;
 }
 
-header nav .listas-nav li:nth-child(2) {
+header nav .listas-nav li:nth-child(3) {
   margin-left: 41.5px;
 }
 
-header nav .listas-nav li:nth-child(3) {
+header nav .listas-nav li:nth-child(5) {
   margin-left: 50px;
 }
 
@@ -136,22 +140,58 @@ header nav .listas-nav li:nth-child(3) {
     z-index: 1;
   }
   header nav .btncontrol:checked ~ .listas-nav li {
-    margin-bottom: 24px;
-    margin-left: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-transform: lowercase;
   }
   header nav .btncontrol:checked ~ .listas-nav li a {
-    font-size: 16px;
+    margin-bottom: 11px;
+    font-size: 15px;
     letter-spacing: 0;
-    line-height: 28px;
+    line-height: 30px;
   }
-  header nav .btncontrol:checked ~ .listas-nav li:nth-child(4) {
+  header nav .btncontrol:checked ~ .listas-nav li hr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 41px;
+    height: 0.1px;
+    background-color: white;
+    opacity: 0.5;
+  }
+  header nav .btncontrol:checked ~ .listas-nav li:nth-child(3) {
+    margin-top: 13.9px;
+    margin-left: 0;
+  }
+  header nav .btncontrol:checked ~ .listas-nav li:nth-child(5) {
+    margin-top: 13.9px;
+    margin-left: 0px;
+  }
+  header nav .btncontrol:checked ~ .listas-nav li:nth-child(5) span {
+    text-transform: uppercase;
+  }
+  header nav .btncontrol:checked ~ .listas-nav li:nth-child(6) {
     display: none;
   }
-  header nav .btncontrol:checked + .icons .fa-bars {
+  header nav .btncontrol:checked ~ .listas-nav li:first-child {
+    margin-top: 32px;
+  }
+  header nav .btncontrol:checked ~ .listas-nav li:first-child span {
+    text-transform: uppercase;
+  }
+  header nav .btncontrol:checked ~ .listas-nav a::first-letter {
+    text-transform: uppercase;
+  }
+  header nav .btncontrol:checked + .icons .burger {
     display: none;
   }
-  header nav .btncontrol:checked + .icons .fa-times {
+  header nav .btncontrol:checked + .icons .close {
     display: block;
+    margin-right: 26px;
   }
   header nav .icons {
     display: -webkit-box;
