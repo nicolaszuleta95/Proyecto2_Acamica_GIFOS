@@ -16,6 +16,7 @@ header {
       height: 59.1px;
       width: 59.1px;
       margin-left: 156px;
+      background: url("/img/logo-desktop.svg") no-repeat;
     }
 
     .btncontrol {
@@ -41,6 +42,17 @@ header {
         .circle {
           margin-left: 59.5px;
           margin-right: 156px;
+          width: 54px;
+          height: 54px;
+          background: url("/img/button-crear-gifo.svg") no-repeat;
+        }
+
+        .circle:hover {
+          background: url("/img/CTA-crear-gifo-hover.svg") no-repeat;
+        }
+
+        .circle:active {
+          background: url("/img/CTA-crear-gifo-active.svg") no-repeat;
         }
       }
 
@@ -50,6 +62,87 @@ header {
 
       li:nth-child(3) {
         margin-left: 50px;
+      }
+    }
+  }
+}
+
+/*mobile*/
+@media screen and (max-width: 375px) {
+  header {
+    nav {
+      display: flex;
+      height: 95px;
+
+      .logo {
+        margin-left: 22px;
+        height: 49px;
+        width: 56px;
+        background: url("/img/logo-mobile.svg") no-repeat;
+      }
+
+      .listas-nav {
+        display: none;
+        box-sizing: border-box;
+        width: 100%;
+        li {
+          display: flex;
+          align-items: center;
+
+          a {
+            color: $background_primary;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .btncontrol:checked ~ .listas-nav {
+        position: absolute;
+        top: 95px;
+        left: 0px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: $background_accents;
+        z-index: 1;
+
+        li {
+          margin-bottom: 24px;
+          margin-left: 5%;
+
+          a {
+            font-size: 16px;
+            letter-spacing: 0;
+            line-height: 28px;
+          }
+        }
+
+        li:nth-child(4) {
+          display: none;
+        }
+      }
+
+      .btncontrol:checked + .icons .fa-bars {
+        display: none;
+      }
+
+      .btncontrol:checked + .icons .fa-times {
+        display: block;
+      }
+
+      .icons {
+        display: flex;
+        margin-right: 16px;
+
+        .burger {
+          width: 15px;
+          height: 14px;
+          margin-right: 26px;
+        }
+
+        .close {
+          display: none;
+        }
       }
     }
   }
