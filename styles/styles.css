@@ -208,4 +208,117 @@ header nav .listas-nav li:nth-child(5) {
     display: none;
   }
 }
+
+/*header search*/
+.header-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header-search .mobile-title {
+  display: none;
+}
+
+.header-search .desktop-title {
+  margin-top: 76px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 35px;
+  color: #572ee5;
+  line-height: 50px;
+  text-align: center;
+}
+
+.header-search .desktop-title span {
+  color: #50e3c2;
+}
+
+.header-search img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 399px;
+  height: 190px;
+  margin-top: 24px;
+}
+
+.header-search .search-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header-search .search-bar input {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-radius: 27px;
+  border-radius: 27px;
+  width: 551px;
+  height: 50px;
+  border: solid 1px #572ee5;
+  background: #ffffff;
+}
+
+.header-search .search-bar input::-webkit-input-placeholder {
+  font-family: "Roboto", sans-serif;
+  padding-left: 54px;
+  font-size: 16px;
+  color: #9cafc3;
+}
+
+.header-search .search-bar input:-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+  padding-left: 54px;
+  font-size: 16px;
+  color: #9cafc3;
+}
+
+.header-search .search-bar input::-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+  padding-left: 54px;
+  font-size: 16px;
+  color: #9cafc3;
+}
+
+.header-search .search-bar input::placeholder {
+  font-family: "Roboto", sans-serif;
+  padding-left: 54px;
+  font-size: 16px;
+  color: #9cafc3;
+}
+
+/*mobile*/
+@media screen and (max-width: 375px) {
+  .header-search .mobile-title {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    color: #572ee5;
+    text-align: center;
+    line-height: 33px;
+    margin-top: 7px;
+  }
+  .header-search .mobile-title span {
+    color: #50e3c2;
+  }
+  .header-search .desktop-title {
+    display: none;
+  }
+  .header-search img {
+    width: 273px;
+    height: 130px;
+    margin-top: 31px;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
