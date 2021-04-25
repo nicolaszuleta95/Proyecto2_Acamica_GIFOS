@@ -1,0 +1,111 @@
+footer {
+  width: 100%;
+  height: 116px;
+  background: $background_primary;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    font-family: $font-roboto;
+    font-size: 13px;
+    color: $Dark_background_accents;
+    letter-spacing: 0;
+  }
+
+  p:first-child {
+    margin-left: 156px;
+  }
+
+  p:last-child {
+    margin-right: 158px;
+  }
+
+  .footerCompartir {
+    display: flex;
+
+    br {
+      display: none;
+    }
+
+    .iconsFooter {
+      display: flex;
+      flex-direction: row;
+      .iconFacebook {
+        height: 20.2px;
+        width: 20px;
+        margin-right: 19px;
+        margin-left: 17px;
+        background: url("/img/icon_facebook.svg") no-repeat;
+      }
+
+      .iconFacebook:hover {
+        background: url("/img/icon_facebook_hover.svg") no-repeat;
+      }
+
+      .iconTwitter {
+        height: 20.2px;
+        width: 20px;
+        margin-right: 19px;
+        background: url("/img/icon-twitter.svg") no-repeat;
+      }
+
+      .iconTwitter:hover {
+        background: url("/img/icon-twitter-hover.svg") no-repeat;
+      }
+
+      .iconInstagram {
+        height: 20.2px;
+        width: 20px;
+        margin-right: 19px;
+        background: url("/img/icon_instagram.svg") no-repeat;
+      }
+
+      .iconInstagram:hover {
+        background: url("/img/icon_instagram-hover.svg") no-repeat;
+      }
+    }
+  }
+}
+
+.bottom-accent {
+  width: 100%;
+  height: 5px;
+  background-color: $background_accents;
+}
+
+/*mobile*/
+@media screen and (max-width: 375px) {
+  footer {
+    height: 196px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    p:last-child {
+      margin-right: 0;
+      margin-bottom: 23px;
+    }
+
+    .footerCompartir {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0;
+      margin-bottom: 0;
+
+      br {
+        display: flex;
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      p:first-child {
+        margin-top: 47px;
+        margin-left: 0;
+        margin-bottom: 24px;
+      }
+    }
+  }
+}

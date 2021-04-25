@@ -1,0 +1,50 @@
+.trending {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 73px;
+  margin-bottom: 95px;
+
+  br {
+    display: none;
+  }
+
+  h3 {
+    font-family: $font-montserrat;
+    font-size: 18px;
+    color: $background_accents;
+    text-align: center;
+    line-height: 25px;
+  }
+
+  p {
+    margin-top: 7px;
+    font-family: $font-montserrat;
+    font-size: 16px;
+    color: $background_accents;
+    text-align: center;
+    line-height: 25px;
+  }
+}
+
+/*mobile*/
+@media screen and (max-width: 375px) {
+  .trending {
+    margin-top: 31px;
+    margin-bottom: 45px;
+
+    br {
+      display: flex;
+    }
+
+    h3 {
+      font-size: 16px;
+      line-height: 25px;
+    }
+
+    p {
+      margin-top: 2px;
+      font-size: 14px;
+    }
+  }
+}
