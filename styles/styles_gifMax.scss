@@ -110,3 +110,53 @@ header {
     }
   }
 }
+
+/*mobile*/
+@media screen and (max-width: 375px) {
+  header {
+    .closeButton {
+      margin-top: 64px;
+      margin-right: 39.3px;
+      height: 13.8px;
+      width: 13.6px;
+      margin-bottom: 78px;
+    }
+  }
+
+  .gifSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 245px;
+
+    .leftButton {
+      display: none;
+    }
+
+    .gifSpace {
+      height: 245px;
+      width: 318px;
+      background-color: blue;
+    }
+
+    .rightButton {
+      display: none;
+    }
+  }
+
+  .GIFinfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 126px;
+
+    .gifText {
+      margin-top: 14px;
+      margin-left: 35px;
+    }
+
+    .GIFicons {
+      margin-right: 29px;
+    }
+  }
+}
