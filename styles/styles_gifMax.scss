@@ -1,0 +1,112 @@
+@import "./variables";
+
+/*resets*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*body*/
+body {
+  background-color: $background_primary;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+
+  .closeButton {
+    margin-top: 66.4px;
+    margin-right: 278.4px;
+    height: 15.2px;
+    width: 15.2px;
+    margin-bottom: 78.4px;
+  }
+}
+
+.gifSection {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 385px;
+
+  .leftButton {
+    margin-left: 290px;
+    margin-right: 25px;
+    width: 40px;
+    height: 40px;
+    background: url("/img/button-slider-left.svg") no-repeat;
+  }
+
+  .leftButton:hover {
+    background: url("/img/button-slider-left-hover.svg") no-repeat;
+  }
+
+  .gifSpace {
+    height: 385px;
+    width: 600px;
+    background-color: blue;
+  }
+
+  .rightButton {
+    margin-left: 25px;
+    margin-right: 325px;
+    width: 40px;
+    height: 40px;
+    background: url("/img/Button-Slider-right.svg") no-repeat;
+  }
+
+  .rightButton:hover {
+    background: url("/img/Button-Slider-right-hover.svg") no-repeat;
+  }
+}
+
+.GIFinfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 153px;
+
+  .gifText {
+    display: flex;
+    flex-direction: column;
+    margin-top: 27px;
+    margin-left: 355px;
+
+    .user {
+      font-family: $font-roboto;
+      font-size: 15px;
+      margin-bottom: 6px;
+      color: $Dark_background_accents;
+    }
+
+    .GIFtitle {
+      font-family: $font-roboto;
+      font-size: 16px;
+      color: $Dark_background_accents;
+    }
+  }
+
+  .GIFicons {
+    display: flex;
+    margin-right: 394px;
+
+    img {
+      height: 36px;
+      width: 36px;
+      background: $background_primary;
+      border-radius: 6px;
+      border-radius: 6px;
+      opacity: 0.5;
+      border: 1px solid #9cafc3;
+      margin: 10px 10px 0 10px;
+    }
+
+    img:hover {
+      opacity: 1;
+    }
+  }
+}
