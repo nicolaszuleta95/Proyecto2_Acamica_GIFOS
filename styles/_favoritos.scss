@@ -22,6 +22,7 @@
 
   .gifGrid {
     display: grid;
+    /*display: none;*/
     justify-content: center;
     grid-template-columns: repeat(4, 260px);
     gap: 29px;
@@ -112,6 +113,7 @@
   }
 
   .btnVerMas {
+    margin-bottom: 95px;
     margin-top: 78px;
     width: 127px;
     height: 50px;
@@ -120,6 +122,29 @@
 
   .btnVerMas:hover {
     background: url("/img/CTA-ver-mas-hover.svg") no-repeat;
+  }
+
+  .noContent {
+    display: none;
+    /*display: flex;*/
+    flex-direction: column;
+    align-items: center;
+
+    .imgNoContent {
+      margin-top: 109.3px;
+      margin-bottom: 23.7px;
+      width: 150px;
+      height: 151px;
+    }
+
+    p {
+      font-family: $font-montserrat;
+      font-size: 22px;
+      color: $green_icons;
+      text-align: center;
+      line-height: 33px;
+      margin-bottom: 137px;
+    }
   }
 }
 
