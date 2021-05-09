@@ -1,55 +1,36 @@
-.trending-GIFOS {
-  background-color: $background_secondary;
-  width: 100%;
-  height: 640px;
+.favoritos {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
-  br {
-    display: none;
+  .favLogo {
+    margin-top: 11px;
+    align-self: center;
+    width: 28px;
+    height: 21px;
   }
 
   h2 {
-    margin-top: 67px;
+    margin-top: 8px;
     font-family: $font-montserrat;
     font-size: 25px;
     color: $background_accents;
     text-align: center;
     line-height: 30px;
+    margin-bottom: 36px;
   }
 
-  p {
-    margin-top: 12px;
-    font-family: $font-roboto;
-    font-size: 18px;
-    color: $Dark_background_accents;
-    text-align: center;
-  }
-
-  .gifSection {
-    margin-top: 53px;
-    width: 100%;
-    height: 275px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    .leftButton {
-      margin-left: 94px;
-      margin-right: 22px;
-      width: 40px;
-      height: 40px;
-      background: url("/img/button-slider-left.svg") no-repeat;
-    }
-
-    .leftButton:hover {
-      background: url("/img/button-slider-left-hover.svg") no-repeat;
-    }
+  .gifGrid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 260px);
+    gap: 29px;
+    grid-template-rows: repeat(3, 200px);
 
     .gifSpace {
       background-color: royalblue;
-      width: 300px;
-      height: 275px;
+      width: 260px;
+      height: 200px;
 
       .iconsCard {
         display: none;
@@ -105,7 +86,6 @@
 
         /* missing the .loveButton:active functionality */
       }
-
       .GIFinfo {
         display: flex;
         flex-direction: column;
@@ -129,66 +109,41 @@
         }
       }
     }
+  }
 
-    .rightButton {
-      margin-left: 25px;
-      margin-right: 92px;
-      width: 40px;
-      height: 40px;
-      background: url("/img/Button-Slider-right.svg") no-repeat;
-    }
+  .btnVerMas {
+    margin-top: 78px;
+    width: 127px;
+    height: 50px;
+    background: url("/img/CTA-ver-mas.svg") no-repeat;
+  }
 
-    .rightButton:hover {
-      background: url("/img/Button-Slider-right-hover.svg") no-repeat;
-    }
+  .btnVerMas:hover {
+    background: url("/img/CTA-ver-mas-hover.svg") no-repeat;
   }
 }
 
 /*mobile*/
 @media screen and (max-width: 375px) {
-  .trending-GIFOS {
-    height: 430px;
-
-    br {
-      display: flex;
+  .favoritos {
+    .favLogo {
+      margin-top: 5px;
     }
 
     h2 {
-      margin-top: 46px;
-      font-size: 20px;
-      line-height: 30px;
-    }
-
-    p {
       margin-top: 7px;
-      font-size: 16px;
+      line-height: 29px;
+      margin-bottom: 46px;
     }
 
-    .gifSection {
-      margin-top: 32px;
-      height: 187px;
-      display: flex;
-      align-items: center;
-
-      .leftButton {
-        display: none;
-      }
+    .gifGrid {
+      grid-template-columns: repeat(2, 156px);
+      gap: 21px;
+      grid-template-rows: repeat(6, 120px);
 
       .gifSpace {
-        width: 200px;
-        height: 187px;
-
-        .iconsCard {
-          display: none;
-        }
-
-        .user {
-          display: none;
-        }
-
-        .tituloGIF {
-          display: none;
-        }
+        width: 156px;
+        height: 120px;
       }
 
       .gifSpace:hover {
@@ -199,21 +154,9 @@
 
           .tituloGIF {
             margin-left: 12px;
+            margin-bottom: 21px;
           }
         }
-      }
-
-      .gifSpace:first-child {
-        margin-left: 22px;
-        margin-right: 22px;
-      }
-
-      .gifSpace:nth-child(3) {
-        display: none;
-      }
-
-      .rightButton {
-        display: none;
       }
     }
   }
