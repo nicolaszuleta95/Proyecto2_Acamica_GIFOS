@@ -1,0 +1,188 @@
+.misGifs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .iconMisGifos {
+    margin-top: 10px;
+    align-self: center;
+    width: 24px;
+    height: 21.9px;
+  }
+
+  h2 {
+    margin-top: 8px;
+    font-family: $font-montserrat;
+    font-size: 25px;
+    color: $background_accents;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 36px;
+  }
+
+  .btnVerMas {
+    margin-bottom: 95px;
+    margin-top: 78px;
+    width: 127px;
+    height: 50px;
+    background: url("/img/CTA-ver-mas.svg") no-repeat;
+  }
+
+  .btnVerMas:hover {
+    background: url("/img/CTA-ver-mas-hover.svg") no-repeat;
+  }
+
+  .misGifosNoContent {
+    display: none;
+    /*display: flex;*/
+    flex-direction: column;
+    align-items: center;
+
+    .IMGmisGifosNoContent {
+      margin-top: 109.3px;
+      margin-bottom: 23.7px;
+      width: 150px;
+      height: 151px;
+    }
+
+    p {
+      font-family: $font-montserrat;
+      font-size: 22px;
+      color: $green_icons;
+      text-align: center;
+      line-height: 33px;
+      margin-bottom: 137px;
+    }
+  }
+
+  .misGifosGrid {
+    display: grid;
+    /*display: none;*/
+    justify-content: center;
+    grid-template-columns: repeat(4, 260px);
+    gap: 29px;
+    grid-template-rows: repeat(2, 200px);
+
+    .gifSpace {
+      background-color: royalblue;
+      width: 260px;
+      height: 200px;
+
+      .iconsCard {
+        display: none;
+      }
+
+      .user {
+        display: none;
+      }
+
+      .tituloGIF {
+        display: none;
+      }
+    }
+
+    .gifSpace:hover {
+      background-color: $background_accents;
+      opacity: 0.6;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .iconsCard {
+        display: flex;
+        justify-content: flex-end;
+
+        .loveButton {
+          height: 32px;
+          width: 32px;
+          opacity: 0.7;
+          border-radius: 6px;
+          border-radius: 6px;
+          margin: 10px 10px 0 10px;
+          background: url("/img/icon-fav.svg") no-repeat;
+        }
+
+        img {
+          height: 32px;
+          width: 32px;
+          opacity: 0.7;
+          background: #ffffff;
+          border-radius: 6px;
+          border-radius: 6px;
+          margin: 10px 10px 0 10px;
+        }
+
+        img:hover {
+          opacity: 1;
+        }
+
+        .loveButton:hover {
+          opacity: 1;
+        }
+
+        /* missing the .loveButton:active functionality */
+      }
+      .GIFinfo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .user {
+          display: flex;
+          font-family: $font-roboto;
+          font-size: 15px;
+          color: $background_primary;
+          margin-left: 18px;
+        }
+
+        .tituloGIF {
+          display: flex;
+          font-family: $font-roboto;
+          font-size: 16px;
+          color: $background_primary;
+          margin-left: 18.5px;
+          margin-bottom: 51px;
+        }
+      }
+    }
+  }
+}
+
+/*mobile*/
+@media screen and (max-width: 375px) {
+  .misGifs {
+    .iconMisGifos {
+      margin-top: 5px;
+    }
+
+    h2 {
+      margin-top: 7px;
+      line-height: 29px;
+      margin-bottom: 46px;
+    }
+
+    .misGifosGrid {
+      grid-template-columns: repeat(2, 156px);
+      gap: 21px;
+      grid-template-rows: repeat(4, 120px);
+
+      .gifSpace {
+        width: 156px;
+        height: 120px;
+      }
+
+      .gifSpace:hover {
+        .GIFinfo {
+          .user {
+            margin-left: 13px;
+          }
+
+          .tituloGIF {
+            margin-left: 12px;
+            margin-bottom: 21px;
+          }
+        }
+      }
+    }
+  }
+}

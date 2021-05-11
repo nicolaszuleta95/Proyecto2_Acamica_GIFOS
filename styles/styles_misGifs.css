@@ -1,0 +1,807 @@
+/*colors*/
+/*fonts*/
+/*resets*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*body*/
+body {
+  background-color: #ffffff;
+}
+
+header .top-accent {
+  width: 100%;
+  height: 5px;
+  background-color: #572ee5;
+}
+
+header nav {
+  width: 100%;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .logo {
+  height: 59.1px;
+  width: 59.1px;
+  margin-left: 156px;
+  background: url("/img/logo-desktop.svg") no-repeat;
+}
+
+header nav .btncontrol {
+  display: none;
+}
+
+header nav .icons {
+  display: none;
+}
+
+header nav .listas-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .listas-nav li {
+  list-style-type: none;
+}
+
+header nav .listas-nav li a {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: #572ee5;
+  line-height: 16px;
+  font-size: 13px;
+  letter-spacing: 0;
+  font-weight: bold;
+}
+
+header nav .listas-nav li .circle {
+  margin-left: 59.5px;
+  margin-right: 156px;
+  width: 54px;
+  height: 54px;
+  background: url("/img/button-crear-gifo.svg") no-repeat;
+}
+
+header nav .listas-nav li .circle:hover {
+  background: url("/img/CTA-crear-gifo-hover.svg") no-repeat;
+}
+
+header nav .listas-nav li .circle:active {
+  background: url("/img/CTA-crear-gifo-active.svg") no-repeat;
+}
+
+header nav .listas-nav li:nth-child(3) {
+  margin-left: 41.5px;
+}
+
+header nav .listas-nav li:nth-child(5) {
+  margin-left: 50px;
+}
+
+/*mobile*/
+@media screen and (max-width: 375px) {
+  header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 95px;
+  }
+  header nav .logo {
+    margin-left: 22px;
+    height: 49px;
+    width: 56px;
+    background: url("/img/logo-mobile.svg") no-repeat;
+  }
+  header nav .listas-nav {
+    display: none;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+  }
+  header nav .listas-nav li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header nav .listas-nav li a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  header nav .btncontrol:checked ~ .listas-nav {
+    position: absolute;
+    top: 95px;
+    left: 0px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #572ee5;
+    z-index: 1;
+  }
+  header nav .btncontrol:checked ~ .listas-nav li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-transform: lowercase;
+  }
+  header nav .btncontrol:checked ~ .listas-nav li a {
+    margin-bottom: 11px;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 30px;
+  }
+  header nav .btncontrol:checked ~ .listas-nav li hr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 41px;
+    height: 0.1px;
+    background-color: white;
+    opacity: 0.5;
+  }
+  header nav .btncontrol:checked ~ .listas-nav li:nth-child(3) {
+    margin-top: 13.9px;
+    margin-left: 0;
+  }
+  header nav .btncontrol:checked ~ .listas-nav li:nth-child(5) {
+    margin-top: 13.9px;
+    margin-left: 0px;
+  }
+  header nav .btncontrol:checked ~ .listas-nav li:nth-child(5) span {
+    text-transform: uppercase;
+  }
+  header nav .btncontrol:checked ~ .listas-nav li:nth-child(6) {
+    display: none;
+  }
+  header nav .btncontrol:checked ~ .listas-nav li:first-child {
+    margin-top: 32px;
+  }
+  header nav .btncontrol:checked ~ .listas-nav li:first-child span {
+    text-transform: uppercase;
+  }
+  header nav .btncontrol:checked ~ .listas-nav a::first-letter {
+    text-transform: uppercase;
+  }
+  header nav .btncontrol:checked + .icons .burger {
+    display: none;
+  }
+  header nav .btncontrol:checked + .icons .close {
+    display: block;
+    margin-right: 26px;
+  }
+  header nav .icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 16px;
+  }
+  header nav .icons .burger {
+    width: 15px;
+    height: 14px;
+    margin-right: 26px;
+  }
+  header nav .icons .close {
+    display: none;
+  }
+}
+
+.misGifs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.misGifs .iconMisGifos {
+  margin-top: 10px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 24px;
+  height: 21.9px;
+}
+
+.misGifs h2 {
+  margin-top: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  color: #572ee5;
+  text-align: center;
+  line-height: 30px;
+  margin-bottom: 36px;
+}
+
+.misGifs .btnVerMas {
+  margin-bottom: 95px;
+  margin-top: 78px;
+  width: 127px;
+  height: 50px;
+  background: url("/img/CTA-ver-mas.svg") no-repeat;
+}
+
+.misGifs .btnVerMas:hover {
+  background: url("/img/CTA-ver-mas-hover.svg") no-repeat;
+}
+
+.misGifs .misGifosNoContent {
+  display: none;
+  /*display: flex;*/
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.misGifs .misGifosNoContent .IMGmisGifosNoContent {
+  margin-top: 109.3px;
+  margin-bottom: 23.7px;
+  width: 150px;
+  height: 151px;
+}
+
+.misGifs .misGifosNoContent p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  color: #50e3c2;
+  text-align: center;
+  line-height: 33px;
+  margin-bottom: 137px;
+}
+
+.misGifs .misGifosGrid {
+  display: -ms-grid;
+  display: grid;
+  /*display: none;*/
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (260px)[4];
+      grid-template-columns: repeat(4, 260px);
+  gap: 29px;
+  -ms-grid-rows: (200px)[2];
+      grid-template-rows: repeat(2, 200px);
+}
+
+.misGifs .misGifosGrid .gifSpace {
+  background-color: royalblue;
+  width: 260px;
+  height: 200px;
+}
+
+.misGifs .misGifosGrid .gifSpace .iconsCard {
+  display: none;
+}
+
+.misGifs .misGifosGrid .gifSpace .user {
+  display: none;
+}
+
+.misGifs .misGifosGrid .gifSpace .tituloGIF {
+  display: none;
+}
+
+.misGifs .misGifosGrid .gifSpace:hover {
+  background-color: #572ee5;
+  opacity: 0.6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.misGifs .misGifosGrid .gifSpace:hover .iconsCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  /* missing the .loveButton:active functionality */
+}
+
+.misGifs .misGifosGrid .gifSpace:hover .iconsCard .loveButton {
+  height: 32px;
+  width: 32px;
+  opacity: 0.7;
+  border-radius: 6px;
+  border-radius: 6px;
+  margin: 10px 10px 0 10px;
+  background: url("/img/icon-fav.svg") no-repeat;
+}
+
+.misGifs .misGifosGrid .gifSpace:hover .iconsCard img {
+  height: 32px;
+  width: 32px;
+  opacity: 0.7;
+  background: #ffffff;
+  border-radius: 6px;
+  border-radius: 6px;
+  margin: 10px 10px 0 10px;
+}
+
+.misGifs .misGifosGrid .gifSpace:hover .iconsCard img:hover {
+  opacity: 1;
+}
+
+.misGifs .misGifosGrid .gifSpace:hover .iconsCard .loveButton:hover {
+  opacity: 1;
+}
+
+.misGifs .misGifosGrid .gifSpace:hover .GIFinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.misGifs .misGifosGrid .gifSpace:hover .GIFinfo .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  margin-left: 18px;
+}
+
+.misGifs .misGifosGrid .gifSpace:hover .GIFinfo .tituloGIF {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  margin-left: 18.5px;
+  margin-bottom: 51px;
+}
+
+/*mobile*/
+@media screen and (max-width: 375px) {
+  .misGifs .iconMisGifos {
+    margin-top: 5px;
+  }
+  .misGifs h2 {
+    margin-top: 7px;
+    line-height: 29px;
+    margin-bottom: 46px;
+  }
+  .misGifs .misGifosGrid {
+    -ms-grid-columns: (156px)[2];
+        grid-template-columns: repeat(2, 156px);
+    gap: 21px;
+    -ms-grid-rows: (120px)[4];
+        grid-template-rows: repeat(4, 120px);
+  }
+  .misGifs .misGifosGrid .gifSpace {
+    width: 156px;
+    height: 120px;
+  }
+  .misGifs .misGifosGrid .gifSpace:hover .GIFinfo .user {
+    margin-left: 13px;
+  }
+  .misGifs .misGifosGrid .gifSpace:hover .GIFinfo .tituloGIF {
+    margin-left: 12px;
+    margin-bottom: 21px;
+  }
+}
+
+.trending-GIFOS {
+  background-color: #f3f5f8;
+  width: 100%;
+  height: 640px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.trending-GIFOS br {
+  display: none;
+}
+
+.trending-GIFOS h2 {
+  margin-top: 67px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  color: #572ee5;
+  text-align: center;
+  line-height: 30px;
+}
+
+.trending-GIFOS p {
+  margin-top: 12px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #000000;
+  text-align: center;
+}
+
+.trending-GIFOS .gifSection {
+  margin-top: 53px;
+  width: 100%;
+  height: 275px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.trending-GIFOS .gifSection .leftButton {
+  margin-left: 94px;
+  margin-right: 22px;
+  width: 40px;
+  height: 40px;
+  background: url("/img/button-slider-left.svg") no-repeat;
+}
+
+.trending-GIFOS .gifSection .leftButton:hover {
+  background: url("/img/button-slider-left-hover.svg") no-repeat;
+}
+
+.trending-GIFOS .gifSection .gifSpace {
+  background-color: royalblue;
+  width: 300px;
+  height: 275px;
+}
+
+.trending-GIFOS .gifSection .gifSpace .iconsCard {
+  display: none;
+}
+
+.trending-GIFOS .gifSection .gifSpace .user {
+  display: none;
+}
+
+.trending-GIFOS .gifSection .gifSpace .tituloGIF {
+  display: none;
+}
+
+.trending-GIFOS .gifSection .gifSpace:hover {
+  background-color: #572ee5;
+  opacity: 0.6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.trending-GIFOS .gifSection .gifSpace:hover .iconsCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  /* missing the .loveButton:active functionality */
+}
+
+.trending-GIFOS .gifSection .gifSpace:hover .iconsCard .loveButton {
+  height: 32px;
+  width: 32px;
+  opacity: 0.7;
+  border-radius: 6px;
+  border-radius: 6px;
+  margin: 10px 10px 0 10px;
+  background: url("/img/icon-fav.svg") no-repeat;
+}
+
+.trending-GIFOS .gifSection .gifSpace:hover .iconsCard img {
+  height: 32px;
+  width: 32px;
+  opacity: 0.7;
+  background: #ffffff;
+  border-radius: 6px;
+  border-radius: 6px;
+  margin: 10px 10px 0 10px;
+}
+
+.trending-GIFOS .gifSection .gifSpace:hover .iconsCard img:hover {
+  opacity: 1;
+}
+
+.trending-GIFOS .gifSection .gifSpace:hover .iconsCard .loveButton:hover {
+  opacity: 1;
+}
+
+.trending-GIFOS .gifSection .gifSpace:hover .GIFinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.trending-GIFOS .gifSection .gifSpace:hover .GIFinfo .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  margin-left: 18px;
+}
+
+.trending-GIFOS .gifSection .gifSpace:hover .GIFinfo .tituloGIF {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  margin-left: 18.5px;
+  margin-bottom: 51px;
+}
+
+.trending-GIFOS .gifSection .rightButton {
+  margin-left: 25px;
+  margin-right: 92px;
+  width: 40px;
+  height: 40px;
+  background: url("/img/Button-Slider-right.svg") no-repeat;
+}
+
+.trending-GIFOS .gifSection .rightButton:hover {
+  background: url("/img/Button-Slider-right-hover.svg") no-repeat;
+}
+
+/*mobile*/
+@media screen and (max-width: 375px) {
+  .trending-GIFOS {
+    height: 430px;
+  }
+  .trending-GIFOS br {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .trending-GIFOS h2 {
+    margin-top: 46px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .trending-GIFOS p {
+    margin-top: 7px;
+    font-size: 16px;
+  }
+  .trending-GIFOS .gifSection {
+    margin-top: 32px;
+    height: 187px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .trending-GIFOS .gifSection .leftButton {
+    display: none;
+  }
+  .trending-GIFOS .gifSection .gifSpace {
+    width: 200px;
+    height: 187px;
+  }
+  .trending-GIFOS .gifSection .gifSpace .iconsCard {
+    display: none;
+  }
+  .trending-GIFOS .gifSection .gifSpace .user {
+    display: none;
+  }
+  .trending-GIFOS .gifSection .gifSpace .tituloGIF {
+    display: none;
+  }
+  .trending-GIFOS .gifSection .gifSpace:hover .GIFinfo .user {
+    margin-left: 13px;
+  }
+  .trending-GIFOS .gifSection .gifSpace:hover .GIFinfo .tituloGIF {
+    margin-left: 12px;
+  }
+  .trending-GIFOS .gifSection .gifSpace:first-child {
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+  .trending-GIFOS .gifSection .gifSpace:nth-child(3) {
+    display: none;
+  }
+  .trending-GIFOS .gifSection .rightButton {
+    display: none;
+  }
+}
+
+footer {
+  width: 100%;
+  height: 116px;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer p {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  color: #000000;
+  letter-spacing: 0;
+}
+
+footer p:first-child {
+  margin-left: 156px;
+}
+
+footer p:last-child {
+  margin-right: 158px;
+}
+
+footer .footerCompartir {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footerCompartir br {
+  display: none;
+}
+
+footer .footerCompartir .iconsFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+footer .footerCompartir .iconsFooter .iconFacebook {
+  height: 20.2px;
+  width: 20px;
+  margin-right: 19px;
+  margin-left: 17px;
+  background: url("/img/icon_facebook.svg") no-repeat;
+}
+
+footer .footerCompartir .iconsFooter .iconFacebook:hover {
+  background: url("/img/icon_facebook_hover.svg") no-repeat;
+}
+
+footer .footerCompartir .iconsFooter .iconTwitter {
+  height: 20.2px;
+  width: 20px;
+  margin-right: 19px;
+  background: url("/img/icon-twitter.svg") no-repeat;
+}
+
+footer .footerCompartir .iconsFooter .iconTwitter:hover {
+  background: url("/img/icon-twitter-hover.svg") no-repeat;
+}
+
+footer .footerCompartir .iconsFooter .iconInstagram {
+  height: 20.2px;
+  width: 20px;
+  margin-right: 19px;
+  background: url("/img/icon_instagram.svg") no-repeat;
+}
+
+footer .footerCompartir .iconsFooter .iconInstagram:hover {
+  background: url("/img/icon_instagram-hover.svg") no-repeat;
+}
+
+.bottom-accent {
+  width: 100%;
+  height: 5px;
+  background-color: #572ee5;
+}
+
+/*mobile*/
+@media screen and (max-width: 375px) {
+  footer {
+    height: 196px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  footer p:last-child {
+    margin-right: 0;
+    margin-bottom: 23px;
+  }
+  footer .footerCompartir {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  footer .footerCompartir br {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer .footerCompartir p {
+    font-size: 15px;
+  }
+  footer .footerCompartir p:first-child {
+    margin-top: 47px;
+    margin-left: 0;
+    margin-bottom: 24px;
+  }
+}
+/*# sourceMappingURL=styles_misGifs.css.map */
