@@ -429,7 +429,7 @@ header nav .listas-nav li:nth-child(5) {
   }
 }
 
-.trending-GIFOS {
+.trendingGIFOS {
   background-color: #f3f5f8;
   width: 100%;
   height: 640px;
@@ -442,11 +442,11 @@ header nav .listas-nav li:nth-child(5) {
           flex-direction: column;
 }
 
-.trending-GIFOS br {
+.trendingGIFOS br {
   display: none;
 }
 
-.trending-GIFOS h2 {
+.trendingGIFOS h2 {
   margin-top: 67px;
   font-family: "Montserrat", sans-serif;
   font-size: 25px;
@@ -455,7 +455,7 @@ header nav .listas-nav li:nth-child(5) {
   line-height: 30px;
 }
 
-.trending-GIFOS p {
+.trendingGIFOS p {
   margin-top: 12px;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -463,7 +463,7 @@ header nav .listas-nav li:nth-child(5) {
   text-align: center;
 }
 
-.trending-GIFOS .gifSection {
+.trendingGIFOS .gifSection {
   margin-top: 53px;
   width: 100%;
   height: 275px;
@@ -478,7 +478,7 @@ header nav .listas-nav li:nth-child(5) {
           justify-content: space-between;
 }
 
-.trending-GIFOS .gifSection .leftButton {
+.trendingGIFOS .gifSection .leftButton {
   margin-left: 94px;
   margin-right: 22px;
   width: 40px;
@@ -486,29 +486,29 @@ header nav .listas-nav li:nth-child(5) {
   background: url("/img/button-slider-left.svg") no-repeat;
 }
 
-.trending-GIFOS .gifSection .leftButton:hover {
+.trendingGIFOS .gifSection .leftButton:hover {
   background: url("/img/button-slider-left-hover.svg") no-repeat;
 }
 
-.trending-GIFOS .gifSection .gifSpace {
+.trendingGIFOS .gifSection .gifSpace {
   background-color: royalblue;
   width: 300px;
   height: 275px;
 }
 
-.trending-GIFOS .gifSection .gifSpace .iconsCard {
+.trendingGIFOS .gifSection .gifSpace .iconsCard {
   display: none;
 }
 
-.trending-GIFOS .gifSection .gifSpace .user {
+.trendingGIFOS .gifSection .gifSpace .user {
   display: none;
 }
 
-.trending-GIFOS .gifSection .gifSpace .tituloGIF {
+.trendingGIFOS .gifSection .gifSpace .tituloGIF {
   display: none;
 }
 
-.trending-GIFOS .gifSection .gifSpace:hover {
+.trendingGIFOS .gifSection .gifSpace:hover {
   background-color: #572ee5;
   opacity: 0.6;
   display: -webkit-box;
@@ -523,7 +523,7 @@ header nav .listas-nav li:nth-child(5) {
           justify-content: space-between;
 }
 
-.trending-GIFOS .gifSection .gifSpace:hover .iconsCard {
+.trendingGIFOS .gifSection .gifSpace:hover .iconsCard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -533,7 +533,7 @@ header nav .listas-nav li:nth-child(5) {
   /* missing the .loveButton:active functionality */
 }
 
-.trending-GIFOS .gifSection .gifSpace:hover .iconsCard .loveButton {
+.trendingGIFOS .gifSection .gifSpace:hover .iconsCard .loveButton {
   height: 32px;
   width: 32px;
   opacity: 0.7;
@@ -543,7 +543,7 @@ header nav .listas-nav li:nth-child(5) {
   background: url("/img/icon-fav.svg") no-repeat;
 }
 
-.trending-GIFOS .gifSection .gifSpace:hover .iconsCard img {
+.trendingGIFOS .gifSection .gifSpace:hover .iconsCard img {
   height: 32px;
   width: 32px;
   opacity: 0.7;
@@ -553,15 +553,15 @@ header nav .listas-nav li:nth-child(5) {
   margin: 10px 10px 0 10px;
 }
 
-.trending-GIFOS .gifSection .gifSpace:hover .iconsCard img:hover {
+.trendingGIFOS .gifSection .gifSpace:hover .iconsCard img:hover {
   opacity: 1;
 }
 
-.trending-GIFOS .gifSection .gifSpace:hover .iconsCard .loveButton:hover {
+.trendingGIFOS .gifSection .gifSpace:hover .iconsCard .loveButton:hover {
   opacity: 1;
 }
 
-.trending-GIFOS .gifSection .gifSpace:hover .GIFinfo {
+.trendingGIFOS .gifSection .gifSpace:hover .GIFinfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -574,7 +574,7 @@ header nav .listas-nav li:nth-child(5) {
           align-items: flex-start;
 }
 
-.trending-GIFOS .gifSection .gifSpace:hover .GIFinfo .user {
+.trendingGIFOS .gifSection .gifSpace:hover .GIFinfo .user {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -584,7 +584,7 @@ header nav .listas-nav li:nth-child(5) {
   margin-left: 18px;
 }
 
-.trending-GIFOS .gifSection .gifSpace:hover .GIFinfo .tituloGIF {
+.trendingGIFOS .gifSection .gifSpace:hover .GIFinfo .tituloGIF {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -595,7 +595,7 @@ header nav .listas-nav li:nth-child(5) {
   margin-bottom: 51px;
 }
 
-.trending-GIFOS .gifSection .rightButton {
+.trendingGIFOS .gifSection .rightButton {
   margin-left: 25px;
   margin-right: 92px;
   width: 40px;
@@ -603,30 +603,30 @@ header nav .listas-nav li:nth-child(5) {
   background: url("/img/Button-Slider-right.svg") no-repeat;
 }
 
-.trending-GIFOS .gifSection .rightButton:hover {
+.trendingGIFOS .gifSection .rightButton:hover {
   background: url("/img/Button-Slider-right-hover.svg") no-repeat;
 }
 
 /*mobile*/
 @media screen and (max-width: 375px) {
-  .trending-GIFOS {
+  .trendingGIFOS {
     height: 430px;
   }
-  .trending-GIFOS br {
+  .trendingGIFOS br {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .trending-GIFOS h2 {
+  .trendingGIFOS h2 {
     margin-top: 46px;
     font-size: 20px;
     line-height: 30px;
   }
-  .trending-GIFOS p {
+  .trendingGIFOS p {
     margin-top: 7px;
     font-size: 16px;
   }
-  .trending-GIFOS .gifSection {
+  .trendingGIFOS .gifSection {
     margin-top: 32px;
     height: 187px;
     display: -webkit-box;
@@ -636,36 +636,36 @@ header nav .listas-nav li:nth-child(5) {
         -ms-flex-align: center;
             align-items: center;
   }
-  .trending-GIFOS .gifSection .leftButton {
+  .trendingGIFOS .gifSection .leftButton {
     display: none;
   }
-  .trending-GIFOS .gifSection .gifSpace {
+  .trendingGIFOS .gifSection .gifSpace {
     width: 200px;
     height: 187px;
   }
-  .trending-GIFOS .gifSection .gifSpace .iconsCard {
+  .trendingGIFOS .gifSection .gifSpace .iconsCard {
     display: none;
   }
-  .trending-GIFOS .gifSection .gifSpace .user {
+  .trendingGIFOS .gifSection .gifSpace .user {
     display: none;
   }
-  .trending-GIFOS .gifSection .gifSpace .tituloGIF {
+  .trendingGIFOS .gifSection .gifSpace .tituloGIF {
     display: none;
   }
-  .trending-GIFOS .gifSection .gifSpace:hover .GIFinfo .user {
+  .trendingGIFOS .gifSection .gifSpace:hover .GIFinfo .user {
     margin-left: 13px;
   }
-  .trending-GIFOS .gifSection .gifSpace:hover .GIFinfo .tituloGIF {
+  .trendingGIFOS .gifSection .gifSpace:hover .GIFinfo .tituloGIF {
     margin-left: 12px;
   }
-  .trending-GIFOS .gifSection .gifSpace:first-child {
+  .trendingGIFOS .gifSection .gifSpace:first-child {
     margin-left: 22px;
     margin-right: 22px;
   }
-  .trending-GIFOS .gifSection .gifSpace:nth-child(3) {
+  .trendingGIFOS .gifSection .gifSpace:nth-child(3) {
     display: none;
   }
-  .trending-GIFOS .gifSection .rightButton {
+  .trendingGIFOS .gifSection .rightButton {
     display: none;
   }
 }
