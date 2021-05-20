@@ -5,13 +5,26 @@ const trendingEndpoint = `https://api.giphy.com/v1/gifs/trending?api_key=${apiKe
 let elements = document.getElementsByClassName("gifSpace");
 
 function renderGiphy(giphy) {
-  const img = document.createElement("IMG");
-  img.src = giphy.images.downsized.url;
-  for (let i = 0; i < elements.length; i++) {
+  /* for (let i = 0; i < elements.length; i++) {
+    console.log(giphy);
+    const img = document.createElement("IMG");
+    img.src = giphy.images.downsized.url;
+    console.log(elements);
     elements[i].appendChild(img);
+  }
+  console.log(elements); */
+
+  for (let i = 0; i < elements.length; i++) {
+    const img = document.createElement("IMG");
+    img.src = giphy[i].images.downsized.url;
+    elements[i].appendChild(img);
+    console.log(elements[i]);
+    console.log(img);
   }
 }
 
 fetch(trendingEndpoint)
   .then((res) => res.json())
-  .then(({ data }) => data.map(renderGiphy));
+  .then(({ data }) => {
+    renderGiphy(data);
+  });
