@@ -490,40 +490,41 @@ header nav .listas-nav li:nth-child(5) {
   background: url("/img/button-slider-left-hover.svg") no-repeat;
 }
 
-.trendingGIFOS .gifSection .gifSpace {
-  background-color: royalblue;
+.trendingGIFOS .gifSection .gifSpace img {
   width: 300px;
   height: 275px;
 }
 
-.trendingGIFOS .gifSection .gifSpace .iconsCard {
+.trendingGIFOS .gifSection .gifSpace .purpleSquare {
   display: none;
 }
 
-.trendingGIFOS .gifSection .gifSpace .user {
+.trendingGIFOS .gifSection .gifSpace .purpleSquare .iconsCard {
   display: none;
 }
 
-.trendingGIFOS .gifSection .gifSpace .tituloGIF {
+.trendingGIFOS .gifSection .gifSpace .purpleSquare .user {
+  display: none;
+}
+
+.trendingGIFOS .gifSection .gifSpace .purpleSquare .tituloGIF {
   display: none;
 }
 
 .trendingGIFOS .gifSection .gifSpace:hover {
-  background-color: #572ee5;
-  opacity: 0.6;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  position: relative;
 }
 
-.trendingGIFOS .gifSection .gifSpace:hover .iconsCard {
+.trendingGIFOS .gifSection .gifSpace:hover .purpleSquare {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: #572ee5;
+  opacity: 0.6;
+}
+
+.trendingGIFOS .gifSection .gifSpace:hover .purpleSquare .iconsCard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -533,7 +534,7 @@ header nav .listas-nav li:nth-child(5) {
   /* missing the .loveButton:active functionality */
 }
 
-.trendingGIFOS .gifSection .gifSpace:hover .iconsCard .loveButton {
+.trendingGIFOS .gifSection .gifSpace:hover .purpleSquare .iconsCard .loveButton {
   height: 32px;
   width: 32px;
   opacity: 0.7;
@@ -543,7 +544,7 @@ header nav .listas-nav li:nth-child(5) {
   background: url("/img/icon-fav.svg") no-repeat;
 }
 
-.trendingGIFOS .gifSection .gifSpace:hover .iconsCard img {
+.trendingGIFOS .gifSection .gifSpace:hover .purpleSquare .iconsCard img {
   height: 32px;
   width: 32px;
   opacity: 0.7;
@@ -553,15 +554,15 @@ header nav .listas-nav li:nth-child(5) {
   margin: 10px 10px 0 10px;
 }
 
-.trendingGIFOS .gifSection .gifSpace:hover .iconsCard img:hover {
+.trendingGIFOS .gifSection .gifSpace:hover .purpleSquare .iconsCard img:hover {
   opacity: 1;
 }
 
-.trendingGIFOS .gifSection .gifSpace:hover .iconsCard .loveButton:hover {
+.trendingGIFOS .gifSection .gifSpace:hover .purpleSquare .iconsCard .loveButton:hover {
   opacity: 1;
 }
 
-.trendingGIFOS .gifSection .gifSpace:hover .GIFinfo {
+.trendingGIFOS .gifSection .gifSpace:hover .purpleSquare .GIFinfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -569,25 +570,26 @@ header nav .listas-nav li:nth-child(5) {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
+  height: 100%;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-.trendingGIFOS .gifSection .gifSpace:hover .GIFinfo .user {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.trendingGIFOS .gifSection .gifSpace:hover .purpleSquare .GIFinfo .user {
+  display: block;
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   color: #ffffff;
   margin-left: 18px;
 }
 
-.trendingGIFOS .gifSection .gifSpace:hover .GIFinfo .tituloGIF {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.trendingGIFOS .gifSection .gifSpace:hover .purpleSquare .GIFinfo .tituloGIF {
+  display: block;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #ffffff;
@@ -639,24 +641,9 @@ header nav .listas-nav li:nth-child(5) {
   .trendingGIFOS .gifSection .leftButton {
     display: none;
   }
-  .trendingGIFOS .gifSection .gifSpace {
-    width: 200px;
+  .trendingGIFOS .gifSection .gifSpace img {
+    width: 243px;
     height: 187px;
-  }
-  .trendingGIFOS .gifSection .gifSpace .iconsCard {
-    display: none;
-  }
-  .trendingGIFOS .gifSection .gifSpace .user {
-    display: none;
-  }
-  .trendingGIFOS .gifSection .gifSpace .tituloGIF {
-    display: none;
-  }
-  .trendingGIFOS .gifSection .gifSpace:hover .GIFinfo .user {
-    margin-left: 13px;
-  }
-  .trendingGIFOS .gifSection .gifSpace:hover .GIFinfo .tituloGIF {
-    margin-left: 12px;
   }
   .trendingGIFOS .gifSection .gifSpace:first-child {
     margin-left: 22px;

@@ -47,85 +47,97 @@
     }
 
     .gifSpace {
-      background-color: royalblue;
-      width: 300px;
-      height: 275px;
-
-      .iconsCard {
-        display: none;
+      img {
+        width: 300px;
+        height: 275px;
       }
 
-      .user {
+      .purpleSquare {
         display: none;
-      }
 
-      .tituloGIF {
-        display: none;
+        .iconsCard {
+          display: none;
+        }
+
+        .user {
+          display: none;
+        }
+
+        .tituloGIF {
+          display: none;
+        }
       }
     }
 
     .gifSpace:hover {
-      background-color: $background_accents;
-      opacity: 0.6;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      position: relative;
+      .purpleSquare {
+        position: absolute;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background: #572ee5;
+        opacity: 0.6;
 
-      .iconsCard {
-        display: flex;
-        justify-content: flex-end;
-
-        .loveButton {
-          height: 32px;
-          width: 32px;
-          opacity: 0.7;
-          border-radius: 6px;
-          border-radius: 6px;
-          margin: 10px 10px 0 10px;
-          background: url("/img/icon-fav.svg") no-repeat;
-        }
-
-        img {
-          height: 32px;
-          width: 32px;
-          opacity: 0.7;
-          background: #ffffff;
-          border-radius: 6px;
-          border-radius: 6px;
-          margin: 10px 10px 0 10px;
-        }
-
-        img:hover {
-          opacity: 1;
-        }
-
-        .loveButton:hover {
-          opacity: 1;
-        }
-
-        /* missing the .loveButton:active functionality */
-      }
-
-      .GIFinfo {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
-        .user {
+        .iconsCard {
           display: flex;
-          font-family: $font-roboto;
-          font-size: 15px;
-          color: $background_primary;
-          margin-left: 18px;
+          justify-content: flex-end;
+
+          .loveButton {
+            height: 32px;
+            width: 32px;
+            opacity: 0.7;
+            border-radius: 6px;
+            border-radius: 6px;
+            margin: 10px 10px 0 10px;
+            background: url("/img/icon-fav.svg") no-repeat;
+          }
+
+          img {
+            height: 32px;
+            width: 32px;
+            opacity: 0.7;
+            background: #ffffff;
+            border-radius: 6px;
+            border-radius: 6px;
+            margin: 10px 10px 0 10px;
+          }
+
+          img:hover {
+            opacity: 1;
+          }
+
+          .loveButton:hover {
+            opacity: 1;
+          }
+
+          /* missing the .loveButton:active functionality */
         }
 
-        .tituloGIF {
+        .GIFinfo {
           display: flex;
-          font-family: $font-roboto;
-          font-size: 16px;
-          color: $background_primary;
-          margin-left: 18.5px;
-          margin-bottom: 51px;
+          flex-direction: column;
+          width: 100%;
+          height: 100%;
+          align-items: flex-start;
+          justify-content: flex-end;
+
+          .user {
+            display: block;
+            font-family: $font-roboto;
+            font-size: 15px;
+            color: $background_primary;
+            margin-left: 18px;
+          }
+
+          .tituloGIF {
+            display: block;
+            font-family: $font-roboto;
+            font-size: 16px;
+            color: $background_primary;
+            margin-left: 18.5px;
+            margin-bottom: 51px;
+          }
         }
       }
     }
@@ -175,31 +187,9 @@
       }
 
       .gifSpace {
-        width: 200px;
-        height: 187px;
-
-        .iconsCard {
-          display: none;
-        }
-
-        .user {
-          display: none;
-        }
-
-        .tituloGIF {
-          display: none;
-        }
-      }
-
-      .gifSpace:hover {
-        .GIFinfo {
-          .user {
-            margin-left: 13px;
-          }
-
-          .tituloGIF {
-            margin-left: 12px;
-          }
+        img {
+          width: 243px;
+          height: 187px;
         }
       }
 
