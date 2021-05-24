@@ -222,6 +222,7 @@ header nav .listas-nav li:nth-child(5) {
       -ms-flex-pack: center;
           justify-content: center;
   /*mobile*/
+  /*mobile*/
 }
 
 .header-search .mobile-title {
@@ -261,6 +262,8 @@ header nav .listas-nav li:nth-child(5) {
 }
 
 .header-search .search-bar input[type="text"] {
+  outline: none;
+  z-index: 1;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Roboto", sans-serif;
@@ -315,7 +318,109 @@ header nav .listas-nav li:nth-child(5) {
   border-radius: 27px;
   cursor: pointer;
   background: url("/img/icon-search.svg") no-repeat 50% 50%;
-  z-index: 1;
+  z-index: 2;
+}
+
+.header-search .search-bar .searchButtonLeft {
+  margin-right: 490px;
+  position: absolute;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 27px;
+  cursor: pointer;
+  background: url("/img/icon-search-gris.svg") no-repeat 50% 50%;
+  z-index: 2;
+}
+
+.header-search .search-bar .XButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 490px;
+  position: absolute;
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 27px;
+  cursor: pointer;
+  background: url("/img/close.svg") no-repeat 50% 50%;
+  z-index: 2;
+}
+
+.header-search .search-bar .hideborder {
+  border: none !important;
+}
+
+.header-search .search-bar .hideX {
+  display: none;
+  position: fixed;
+}
+
+.header-search .search-bar .dispnone {
+  display: none !important;
+}
+
+.header-search .search-bar .autocomSearch {
+  border: solid 1px #572ee5;
+  border-radius: 27px;
+  position: absolute;
+  z-index: 0;
+  width: 555px;
+  height: 200px;
+  background-color: #ffffff;
+  margin-top: -1px;
+  padding-top: 37px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header-search .search-bar .autocomSearch i {
+  margin-left: 23.6px;
+  margin-right: 14.6px;
+  opacity: 0.5;
+}
+
+.header-search .search-bar .autocomSearch hr {
+  display: none;
+  background-color: #9cafc3;
+  opacity: 0.5;
+  height: 3px;
+  width: 505px;
+  z-index: 3;
+}
+
+.header-search .search-bar .autocomSearch hr:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.header-search .search-bar .autocomSearch a {
+  list-style: none;
+  text-decoration: none;
+}
+
+.header-search .search-bar .autocomSearch a li {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #9cafc3;
 }
 
 @media screen and (max-width: 375px) {
@@ -352,6 +457,62 @@ header nav .listas-nav li:nth-child(5) {
   }
   .header-search .search-bar .searchButton {
     margin-left: 320px;
+  }
+}
+
+.header-search .trending {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 73px;
+  margin-bottom: 95px;
+}
+
+.header-search .trending br {
+  display: none;
+}
+
+.header-search .trending h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #572ee5;
+  text-align: center;
+  line-height: 25px;
+}
+
+.header-search .trending p {
+  margin-top: 7px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #572ee5;
+  text-align: center;
+  line-height: 25px;
+}
+
+@media screen and (max-width: 375px) {
+  .header-search .trending {
+    margin-top: 31px;
+    margin-bottom: 45px;
+  }
+  .header-search .trending br {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header-search .trending h3 {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .header-search .trending p {
+    margin-top: 2px;
+    font-size: 14px;
   }
 }
 

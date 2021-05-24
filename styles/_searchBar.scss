@@ -4,6 +4,8 @@
   position: relative;
 
   input[type="text"] {
+    outline: none;
+    z-index: 1;
     box-sizing: border-box;
     font-family: $font-roboto;
     font-size: 16px;
@@ -34,7 +36,94 @@
     border-radius: 27px;
     cursor: pointer;
     background: url("/img/icon-search.svg") no-repeat 50% 50%;
-    z-index: 1;
+    z-index: 2;
+  }
+
+  .searchButtonLeft {
+    margin-right: 490px;
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 27px;
+    cursor: pointer;
+    background: url("/img/icon-search-gris.svg") no-repeat 50% 50%;
+    z-index: 2;
+  }
+
+  .XButton {
+    display: flex;
+    margin-left: 490px;
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 27px;
+    cursor: pointer;
+    background: url("/img/close.svg") no-repeat 50% 50%;
+    z-index: 2;
+  }
+
+  .hideborder {
+    border: none !important;
+  }
+
+  .hideX {
+    display: none;
+    position: fixed;
+  }
+
+  .dispnone {
+    display: none !important;
+  }
+
+  .autocomSearch {
+    border: solid 1px $background_accents;
+    border-radius: 27px;
+    position: absolute;
+    z-index: 0;
+    width: 555px;
+    height: 200px;
+    background-color: $background_primary;
+    margin-top: -1px;
+    padding-top: 37px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    i {
+      margin-left: 23.6px;
+      margin-right: 14.6px;
+      opacity: 0.5;
+    }
+
+    hr {
+      display: none;
+      background-color: #9cafc3;
+      opacity: 0.5;
+      height: 3px;
+      width: 505px;
+      z-index: 3;
+    }
+
+    hr:first-child {
+      display: flex;
+      align-self: center;
+    }
+
+    a {
+      list-style: none;
+      text-decoration: none;
+
+      li {
+        font-family: $font-roboto;
+
+        font-size: 16px;
+        color: #9cafc3;
+      }
+    }
   }
 }
 
