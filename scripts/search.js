@@ -29,7 +29,6 @@ const handleToSearch = () => {
       gifosCount += SEARCH_LIMIT;
       console.log(response);
       searchOffset = searchOffset + SEARCH_LIMIT;
-      //if(gifosCount === response.pagination.total_count) //Desaparecer el btn de ver mas
     })
     .catch((error) => {
       console.warn(error);
@@ -61,16 +60,29 @@ const giveSuggs = async (searchText) => {
   paintSuggsHTML(suggs.data);
 };
 
+const completeInput = (link) => {
+  inputSearch.value = link.getAttribute("value");
+};
+
 const paintSuggsHTML = async (suggestions) => {
   if (suggestions.length > 0) {
     const html = suggestions
       .map(
         (match) =>
-          `<hr /><a href="#"><li><i class="fas fa-search"></i>${match.name}</li></a>`
+          `<hr /><a class="suggLink" href="#"
+          onclick="completeInput(this)" value="${match.name}"><li><i class="fas fa-search"></i>${match.name}</li></a>`
       )
       .join("");
     autocompleteList.innerHTML = html;
   }
+
+  if (suggestions.length === 0) {
+    autocompleteList.innerHTML = `<a class="suggLink" href="#"
+    onclick="completeInput(this)">`;
+  }
+
+  const suggLink = document.querySelector(".suggLink");
+  suggLink.addEventListener("click", () => handleToSearch());
 };
 
 const closeSearch = () => {
@@ -86,3 +98,11 @@ btnSearch.addEventListener("click", handleToSearch);
 btnSearchLeft.addEventListener("click", handleToSearch);
 inputSearch.addEventListener("input", () => giveSuggs(inputSearch.value));
 btnClose.addEventListener("click", () => closeSearch());
+
+//presionar el boton search al hundir click
+inputSearch.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    btnSearch.click();
+  }
+});
