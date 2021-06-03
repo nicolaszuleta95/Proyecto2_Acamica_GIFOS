@@ -12,15 +12,6 @@ export default {
     });
   },
 
-  getApiAutocomplete(search) {
-    return new Promise((resolve, reject) => {
-      fetch(`${paths.API_AUTOCOMPLETE}?api_key=${paths.API_KEY}&q=${search}`)
-        .then((res) => res.json())
-        .then((data) => resolve(data))
-        .catch((err) => reject(err));
-    });
-  },
-
   getSearch(search, limit, offset) {
     return new Promise((resolve, reject) => {
       fetch(

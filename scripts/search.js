@@ -1,7 +1,7 @@
-const searchEndpoint = "https://api.giphy.com/v1/gifs/search";
 const suggEndpoint = "https://api.giphy.com/v1/tags/related/";
 
 import paths from "./services/paths.js";
+import api from "./services/services.js";
 
 let SEARCH_LIMIT = 12;
 let searchOffset = 0;
@@ -14,19 +14,9 @@ const btnSearchLeft = document.querySelector(".searchButtonLeft");
 const btnClose = document.querySelector(".XButton");
 const autocompleteList = document.querySelector(".autocomSearch");
 
-const requestSearch = () => {
-  return new Promise((resolve, reject) => {
-    fetch(
-      `${searchEndpoint}?api_key=${paths.API_KEY}&q=${inputSearch.value}&limit=${SEARCH_LIMIT}&offset=${searchOffset}`
-    )
-      .then((response) => response.json())
-      .then((data) => resolve(data))
-      .catch((error) => reject(`Error de ${error}`));
-  });
-};
-
 const handleToSearch = () => {
-  requestSearch()
+  api
+    .getSearch(inputSearch.value, SEARCH_LIMIT, searchOffset)
     .then((response) => {
       gifosCount += SEARCH_LIMIT;
       console.log(response);
@@ -95,9 +85,6 @@ const closeSearch = () => {
   btnSearch.classList.remove("hideX");
   btnClose.classList.add("hideX");
 };
-
-//Pintar GIFS buscados
-//const markupGIFS = (giphy) => {};
 
 btnSearch.addEventListener("click", handleToSearch);
 btnSearchLeft.addEventListener("click", handleToSearch);

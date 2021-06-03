@@ -4,7 +4,7 @@ export default {
   API_KEY: "hMezKtdsiOx17jANW8QDU3ipt0Kks8jK",
 
   API_SEARCH: `${ENDPOINT}search`,
-  API_AUTOCOMPLETE: `${ENDPOINT}search/tags`,
+  API_SUGGS: `${ENDPOINT}search/tags`,
   API_TRENDING: `${ENDPOINT}trending`,
   API_GIF_BY_ID: `${ENDPOINT}`,
 };
