@@ -1,5 +1,4 @@
-const apiKey = "hMezKtdsiOx17jANW8QDU3ipt0Kks8jK";
-const trendingEndpoint = `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=3&rating=g`;
+import api from "./services/services.js";
 
 let elements = document.getElementsByClassName("gifSpace");
 let titleGif = document.getElementsByClassName("tituloGIF");
@@ -22,12 +21,23 @@ function fillGIF(giphy) {
   }
 }
 
-fetch(trendingEndpoint)
-  .then((res) => res.json())
-  .then(({ data }) => {
+const requestTrendingGifs = () => {
+  return new Promise((resolve, reject) => {
+    fetch(`${trendingEndpoint}`)
+      .then((response) => response.json())
+      .then(({ data }) => {
+        renderGiphy(data);
+        fillGIF(data);
+      })
+      .catch((error) => reject(`Error de ${error}`));
+  });
+};
+
+api
+  .getTrending(3, 0)
+  .then((res) => {
+    const { data } = res;
     renderGiphy(data);
     fillGIF(data);
   })
-  .catch((error) => {
-    console.warn(`Error de ${error}`);
-  });
+  .catch((error) => console.warn("Error getTrending: ", error));

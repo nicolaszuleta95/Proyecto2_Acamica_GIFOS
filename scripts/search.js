@@ -1,7 +1,9 @@
 const searchEndpoint = "https://api.giphy.com/v1/gifs/search";
 const suggEndpoint = "https://api.giphy.com/v1/tags/related/";
 
-let SEARCH_LIMIT = 10;
+import paths from "./services/paths.js";
+
+let SEARCH_LIMIT = 12;
 let searchOffset = 0;
 let SUGGS_LIMIT = 4;
 let gifosCount = 0;
@@ -15,7 +17,7 @@ const autocompleteList = document.querySelector(".autocomSearch");
 const requestSearch = () => {
   return new Promise((resolve, reject) => {
     fetch(
-      `${searchEndpoint}?api_key=${apiKey}&q=${inputSearch.value}&limit=${SEARCH_LIMIT}&offset=${searchOffset}`
+      `${searchEndpoint}?api_key=${paths.API_KEY}&q=${inputSearch.value}&limit=${SEARCH_LIMIT}&offset=${searchOffset}`
     )
       .then((response) => response.json())
       .then((data) => resolve(data))
@@ -43,7 +45,7 @@ const giveSuggs = async (searchText) => {
   btnSearchLeft.classList.remove("hideX");
 
   const res = await fetch(
-    `${suggEndpoint}${searchText}?api_key=${apiKey}&limit=${SUGGS_LIMIT}`
+    `${suggEndpoint}${searchText}?api_key=${paths.API_KEY}&limit=${SUGGS_LIMIT}`
   );
   const suggs = await res.json();
 
@@ -93,6 +95,9 @@ const closeSearch = () => {
   btnSearch.classList.remove("hideX");
   btnClose.classList.add("hideX");
 };
+
+//Pintar GIFS buscados
+//const markupGIFS = (giphy) => {};
 
 btnSearch.addEventListener("click", handleToSearch);
 btnSearchLeft.addEventListener("click", handleToSearch);
