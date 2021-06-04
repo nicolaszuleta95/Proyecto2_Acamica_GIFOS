@@ -14,6 +14,8 @@ const btnSearchLeft = document.querySelector(".searchButtonLeft");
 const btnClose = document.querySelector(".XButton");
 const autocompleteList = document.querySelector(".autocomSearch");
 
+let searchedGIFS = document.getElementsByClassName("searchedGIFS");
+
 const handleToSearch = () => {
   api
     .getSearch(inputSearch.value, SEARCH_LIMIT, searchOffset)
