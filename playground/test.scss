@@ -1,0 +1,32 @@
+.searchButton {
+  background-color: blue;
+  height: 15px;
+  width: 5px;
+}
+
+.searchedGIFS {
+  .gifResults {
+    margin-left: 156px;
+    margin-right: 156px;
+    display: grid;
+    grid-template-columns: repeat(4, 260px);
+    gap: 29px;
+    grid-template-rows: repeat(3, 200px);
+
+    .gif-img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .seeMoreBtn {
+    margin-top: 78px;
+    background-color: coral;
+    width: 150px;
+    height: 50px;
+  }
+}
+
+.hideBtn {
+  display: none !important;
+}
