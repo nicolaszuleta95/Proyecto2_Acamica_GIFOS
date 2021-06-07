@@ -4,6 +4,7 @@ const inputSearch = document.querySelector(".input-search");
 const btnSearch = document.querySelector(".searchButton");
 let gifResults = document.querySelector(".gifResults");
 let seeMoreBtn = document.querySelector(".seeMoreBtn");
+let searchedValue = document.querySelector(".searchedValue");
 
 let SEARCH_LIMIT = 12;
 let searchOffset = 0;
@@ -11,7 +12,7 @@ let gifosCount = 0;
 
 function paintSearchGifs(data) {
   const { id, title, username, images } = data.data;
-  //   return `
+  // return `
   //   <div class="gifSpace">
   //     <img src="${images.downsized.url}" alt="" class="gif-img">
   //     <div class="purpleSquare">
@@ -35,6 +36,8 @@ function paintSearchGifs(data) {
 }
 
 const handleToSearch = () => {
+  searchedValue.innerHTML = inputSearch.value;
+
   api
     .getSearch(inputSearch.value, SEARCH_LIMIT, searchOffset)
     .then((response) => {

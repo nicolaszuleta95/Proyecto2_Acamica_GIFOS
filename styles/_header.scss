@@ -20,7 +20,7 @@
     }
   }
 
-  img {
+  .headerImg {
     align-self: center;
     width: 399px;
     height: 190px;
@@ -28,6 +28,7 @@
   }
 
   @import "./searchBar";
+  @import "./searchedGifs";
   @import "./trending";
 }
 
@@ -52,7 +53,7 @@
       display: none;
     }
 
-    img {
+    .headerImg {
       width: 273px;
       height: 130px;
       margin-top: 31px;

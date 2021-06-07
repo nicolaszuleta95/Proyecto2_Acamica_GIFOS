@@ -242,7 +242,7 @@ header nav .listas-nav li:nth-child(5) {
   color: #50e3c2;
 }
 
-.header-search img {
+.header-search .headerImg {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -460,6 +460,88 @@ header nav .listas-nav li:nth-child(5) {
   }
 }
 
+.header-search .searchedGIFS {
+  width: 100%;
+  margin-top: 255px;
+  height: 1293px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-search .searchedGIFS .searchedValue {
+  color: #572ee5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 35px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.header-search .searchedGIFS .gifResults {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-line-pack: start;
+      align-content: start;
+  justify-items: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-grid-columns: (260px)[4];
+      grid-template-columns: repeat(4, 260px);
+  gap: 29px;
+  -ms-grid-rows: (200px)[3];
+      grid-template-rows: repeat(3, 200px);
+}
+
+.header-search .searchedGIFS .gifResults .gifSpace {
+  grid-column: span / span;
+  grid-row: span / span;
+  place-self: stretch stretch;
+}
+
+.header-search .searchedGIFS .gifResults .gifSpace .gif-img {
+  width: 260px;
+  height: 200px;
+}
+
+.header-search .searchedGIFS .gifResults .gifSpace .purpleSquare {
+  display: none;
+}
+
+.header-search .searchedGIFS .gifResults .gifSpace .purpleSquare .iconsCard {
+  display: none;
+}
+
+.header-search .searchedGIFS .gifResults .gifSpace .purpleSquare .user {
+  display: none;
+}
+
+.header-search .searchedGIFS .gifResults .gifSpace .purpleSquare .tituloGIF {
+  display: none;
+}
+
+.header-search .searchedGIFS .seeMoreBtn {
+  margin-bottom: 95px;
+  margin-top: 78px;
+  width: 127px;
+  height: 50px;
+  background: url("/img/CTA-ver-mas.svg") no-repeat;
+}
+
+.header-search .searchedGIFS .seeMoreBtn:hover {
+  background: url("/img/CTA-ver-mas-hover.svg") no-repeat;
+}
+
 .header-search .trending {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -533,7 +615,7 @@ header nav .listas-nav li:nth-child(5) {
   .header-search .desktop-title {
     display: none;
   }
-  .header-search img {
+  .header-search .headerImg {
     width: 273px;
     height: 130px;
     margin-top: 31px;

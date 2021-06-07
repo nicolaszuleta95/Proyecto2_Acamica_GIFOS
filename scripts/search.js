@@ -14,15 +14,64 @@ const btnSearchLeft = document.querySelector(".searchButtonLeft");
 const btnClose = document.querySelector(".XButton");
 const autocompleteList = document.querySelector(".autocomSearch");
 
-let searchedGIFS = document.getElementsByClassName("searchedGIFS");
+let gifResults = document.querySelector(".gifResults");
+let seeMoreBtn = document.querySelector(".seeMoreBtn");
+let searchedValue = document.querySelector(".searchedValue");
+
+function paintSearchGifs(data) {
+  const { id, title, username, images } = data.data;
+  return `
+    <div class="gifSpace">
+      <img src="${images.downsized.url}" alt="" class="gif-img">
+      <div class="purpleSquare">
+      <div class="iconsCard">
+          <div class="loveButton"></div>
+          <img src="/img/icon-link-normal.svg" alt="link" />
+          <img src="/img/icon-max-normal.svg" alt="max" />
+      </div>
+      <div class="GIFinfo">
+          <p class="user">${username}</p>
+          <h3 class="tituloGIF">${title}</h3>
+      </div>
+    </div>
+    `;
+}
 
 const handleToSearch = () => {
+  searchedValue.innerHTML = inputSearch.value;
+
   api
     .getSearch(inputSearch.value, SEARCH_LIMIT, searchOffset)
     .then((response) => {
-      gifosCount += SEARCH_LIMIT;
+      const { data } = response;
       console.log(response);
+      let acum = 0;
+      let gifs = "";
+      let gifsArr = [];
+      for (let i = 0; i < data.length; i++) {
+        api.getApiGifByID(data[i].id).then((response) => {
+          acum++;
+          gifsArr.push(response);
+
+          if (acum === data.length) {
+            gifsArr.sort((a, b) => {
+              return a.id > b.id ? 1 : b.id > a.id ? -1 : 0;
+            });
+
+            for (let i = 0; i < gifsArr.length; i++) {
+              gifs += paintSearchGifs(gifsArr[i]);
+            }
+            gifResults.innerHTML = gifs;
+          }
+        });
+      }
+
+      console.log(gifsArr);
+      gifosCount += SEARCH_LIMIT;
       searchOffset = searchOffset + SEARCH_LIMIT;
+      if (gifosCount >= response.pagination.total_count) {
+        seeMoreBtn.classList.add("hideBtn");
+      }
     })
     .catch((error) => {
       console.warn(error);
@@ -92,6 +141,7 @@ btnSearch.addEventListener("click", handleToSearch);
 btnSearchLeft.addEventListener("click", handleToSearch);
 inputSearch.addEventListener("input", () => giveSuggs(inputSearch.value));
 btnClose.addEventListener("click", () => closeSearch());
+seeMoreBtn.addEventListener("click", handleToSearch);
 
 //presionar el boton search al hundir click
 inputSearch.addEventListener("keyup", function (event) {
