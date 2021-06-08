@@ -17,6 +17,7 @@ const autocompleteList = document.querySelector(".autocomSearch");
 let gifResults = document.querySelector(".gifResults");
 let seeMoreBtn = document.querySelector(".seeMoreBtn");
 let searchedValue = document.querySelector(".searchedValue");
+let searchedGIFS = document.querySelector(".searchedGIFS");
 
 function paintSearchGifs(data) {
   const { id, title, username, images } = data.data;
@@ -24,20 +25,22 @@ function paintSearchGifs(data) {
     <div class="gifSpace">
       <img src="${images.downsized.url}" alt="" class="gif-img">
       <div class="purpleSquare">
-      <div class="iconsCard">
-          <div class="loveButton"></div>
-          <img src="/img/icon-link-normal.svg" alt="link" />
-          <img src="/img/icon-max-normal.svg" alt="max" />
-      </div>
-      <div class="GIFinfo">
-          <p class="user">${username}</p>
-          <h3 class="tituloGIF">${title}</h3>
+        <div class="iconsCard">
+            <div class="loveButton"></div>
+            <img src="/img/icon-link-normal.svg" alt="link" />
+            <img src="/img/icon-max-normal.svg" alt="max" />
+        </div>
+        <div class="GIFinfo">
+            <p class="user">${username}</p>
+            <h3 class="tituloGIF">${title}</h3>
+        </div>
       </div>
     </div>
     `;
 }
 
 const handleToSearch = () => {
+  hideSearched();
   searchedValue.innerHTML = inputSearch.value;
 
   api
@@ -135,7 +138,18 @@ const closeSearch = () => {
   inputSearch.classList.remove("hideborder");
   btnSearch.classList.remove("hideX");
   btnClose.classList.add("hideX");
+  searchedGIFS.style.display = "none";
+  searchedGIFS.classList.remove("tag1");
 };
+
+function hideSearched() {
+  if (searchedGIFS.style.display === "none") {
+    searchedGIFS.style.display = "flex";
+    searchedGIFS.classList.add("tag1");
+  } else if (searchedGIFS.classList.contains("tag1") === false) {
+    searchedGIFS.style.display = "none";
+  }
+}
 
 btnSearch.addEventListener("click", handleToSearch);
 btnSearchLeft.addEventListener("click", handleToSearch);

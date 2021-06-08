@@ -222,7 +222,6 @@ header nav .listas-nav li:nth-child(5) {
       -ms-flex-pack: center;
           justify-content: center;
   /*mobile*/
-  /*mobile*/
 }
 
 .header-search .mobile-title {
@@ -460,144 +459,6 @@ header nav .listas-nav li:nth-child(5) {
   }
 }
 
-.header-search .searchedGIFS {
-  width: 100%;
-  margin-top: 255px;
-  height: 1293px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header-search .searchedGIFS .searchedValue {
-  color: #572ee5;
-  font-family: "Montserrat", sans-serif;
-  font-size: 35px;
-  text-align: center;
-  line-height: 30px;
-}
-
-.header-search .searchedGIFS .gifResults {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -ms-flex-line-pack: start;
-      align-content: start;
-  justify-items: stretch;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -ms-grid-columns: (260px)[4];
-      grid-template-columns: repeat(4, 260px);
-  gap: 29px;
-  -ms-grid-rows: (200px)[3];
-      grid-template-rows: repeat(3, 200px);
-}
-
-.header-search .searchedGIFS .gifResults .gifSpace {
-  grid-column: span / span;
-  grid-row: span / span;
-  place-self: stretch stretch;
-}
-
-.header-search .searchedGIFS .gifResults .gifSpace .gif-img {
-  width: 260px;
-  height: 200px;
-}
-
-.header-search .searchedGIFS .gifResults .gifSpace .purpleSquare {
-  display: none;
-}
-
-.header-search .searchedGIFS .gifResults .gifSpace .purpleSquare .iconsCard {
-  display: none;
-}
-
-.header-search .searchedGIFS .gifResults .gifSpace .purpleSquare .user {
-  display: none;
-}
-
-.header-search .searchedGIFS .gifResults .gifSpace .purpleSquare .tituloGIF {
-  display: none;
-}
-
-.header-search .searchedGIFS .seeMoreBtn {
-  margin-bottom: 95px;
-  margin-top: 78px;
-  width: 127px;
-  height: 50px;
-  background: url("/img/CTA-ver-mas.svg") no-repeat;
-}
-
-.header-search .searchedGIFS .seeMoreBtn:hover {
-  background: url("/img/CTA-ver-mas-hover.svg") no-repeat;
-}
-
-.header-search .trending {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 73px;
-  margin-bottom: 95px;
-}
-
-.header-search .trending br {
-  display: none;
-}
-
-.header-search .trending h3 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  color: #572ee5;
-  text-align: center;
-  line-height: 25px;
-}
-
-.header-search .trending p {
-  margin-top: 7px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  color: #572ee5;
-  text-align: center;
-  line-height: 25px;
-}
-
-@media screen and (max-width: 375px) {
-  .header-search .trending {
-    margin-top: 31px;
-    margin-bottom: 45px;
-  }
-  .header-search .trending br {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .header-search .trending h3 {
-    font-size: 16px;
-    line-height: 25px;
-  }
-  .header-search .trending p {
-    margin-top: 2px;
-    font-size: 14px;
-  }
-}
-
 /*mobile*/
 @media screen and (max-width: 375px) {
   .header-search .mobile-title {
@@ -678,6 +539,162 @@ header nav .listas-nav li:nth-child(5) {
     margin-top: 2px;
     font-size: 14px;
   }
+}
+
+/*searched gifs*/
+.tag1 {
+  color: #572ee5;
+}
+
+.searchedGIFS {
+  margin-top: 255px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.searchedGIFS .searchedValue {
+  color: #572ee5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 35px;
+  text-align: center;
+  line-height: 30px;
+  margin-bottom: 60px;
+}
+
+.searchedGIFS .gifResults {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: row;
+  -ms-grid-columns: (260px)[4];
+      grid-template-columns: repeat(4, 260px);
+  grid-gap: 29px;
+  -ms-grid-rows: (200px)[3];
+      grid-template-rows: repeat(3, 200px);
+}
+
+.searchedGIFS .gifResults .gifSpace .gif-img {
+  width: 260px;
+  height: 200px;
+}
+
+.searchedGIFS .gifResults .gifSpace .purpleSquare {
+  display: none;
+}
+
+.searchedGIFS .gifResults .gifSpace .purpleSquare .iconsCard {
+  display: none;
+}
+
+.searchedGIFS .gifResults .gifSpace .purpleSquare .user {
+  display: none;
+}
+
+.searchedGIFS .gifResults .gifSpace .purpleSquare .tituloGIF {
+  display: none;
+}
+
+.searchedGIFS .gifResults .gifSpace:hover .gif-img {
+  position: absolute;
+}
+
+.searchedGIFS .gifResults .gifSpace:hover .purpleSquare {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: #572ee5;
+  opacity: 0.6;
+}
+
+.searchedGIFS .gifResults .gifSpace:hover .purpleSquare .iconsCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  /* missing the .loveButton:active functionality */
+}
+
+.searchedGIFS .gifResults .gifSpace:hover .purpleSquare .iconsCard .loveButton {
+  height: 32px;
+  width: 32px;
+  opacity: 0.7;
+  border-radius: 6px;
+  border-radius: 6px;
+  margin: 10px 10px 0 10px;
+  background: url("/img/icon-fav.svg") no-repeat;
+}
+
+.searchedGIFS .gifResults .gifSpace:hover .purpleSquare .iconsCard img {
+  height: 32px;
+  width: 32px;
+  opacity: 0.7;
+  background: #ffffff;
+  border-radius: 6px;
+  border-radius: 6px;
+  margin: 10px 10px 0 10px;
+}
+
+.searchedGIFS .gifResults .gifSpace:hover .purpleSquare .iconsCard img:hover {
+  opacity: 1;
+}
+
+.searchedGIFS .gifResults .gifSpace:hover .purpleSquare .iconsCard .loveButton:hover {
+  opacity: 1;
+}
+
+.searchedGIFS .gifResults .gifSpace:hover .purpleSquare .GIFinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.searchedGIFS .gifResults .gifSpace:hover .purpleSquare .GIFinfo .user {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  margin-left: 18px;
+}
+
+.searchedGIFS .gifResults .gifSpace:hover .purpleSquare .GIFinfo .tituloGIF {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  margin-left: 18.5px;
+  margin-bottom: 51px;
+}
+
+.searchedGIFS .seeMoreBtn {
+  margin-bottom: 95px;
+  margin-top: 78px;
+  width: 127px;
+  height: 50px;
+  background: url("/img/CTA-ver-mas.svg") no-repeat;
+}
+
+.searchedGIFS .seeMoreBtn:hover {
+  background: url("/img/CTA-ver-mas-hover.svg") no-repeat;
 }
 
 /*Trending GIFOS*/
