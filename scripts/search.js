@@ -18,6 +18,7 @@ let gifResults = document.querySelector(".gifResults");
 let seeMoreBtn = document.querySelector(".seeMoreBtn");
 let searchedValue = document.querySelector(".searchedValue");
 let searchedGIFS = document.querySelector(".searchedGIFS");
+let trending = document.querySelector(".trending");
 
 function paintSearchGifs(data) {
   const { id, title, username, images } = data.data;
@@ -40,14 +41,11 @@ function paintSearchGifs(data) {
 }
 
 const handleToSearch = () => {
-  hideSearched();
   searchedValue.innerHTML = inputSearch.value;
-
   api
     .getSearch(inputSearch.value, SEARCH_LIMIT, searchOffset)
     .then((response) => {
       const { data } = response;
-      console.log(response);
       let acum = 0;
       let gifs = "";
       let gifsArr = [];
@@ -69,12 +67,17 @@ const handleToSearch = () => {
         });
       }
 
-      console.log(gifsArr);
       gifosCount += SEARCH_LIMIT;
       searchOffset = searchOffset + SEARCH_LIMIT;
       if (gifosCount >= response.pagination.total_count) {
-        seeMoreBtn.classList.add("hideBtn");
+        seeMoreBtn.style.display = "none";
+      } else {
+        seeMoreBtn.style.display = "flex";
       }
+
+      searchedGIFS.style.display = "flex";
+      trending.style.display = "none";
+      hideSearched(gifsArr);
     })
     .catch((error) => {
       console.warn(error);
@@ -107,28 +110,37 @@ const giveSuggs = async (searchText) => {
 };
 
 const completeInput = (link) => {
-  inputSearch.value = link.getAttribute("value");
+  inputSearch.value = link;
+  handleToSearch();
 };
 
 const paintSuggsHTML = async (suggestions) => {
+  let suggsArr = [];
+  for (let i = 0; i < suggestions.length; i++) {
+    suggsArr.push(suggestions[i]);
+  }
+
   if (suggestions.length > 0) {
     const html = suggestions
       .map(
         (match) =>
-          `<hr /><a class="suggLink" href="#"
-          onclick="completeInput(this)" value="${match.name}"><li><i class="fas fa-search"></i>${match.name}</li></a>`
+          `<hr /><a class="suggLink" href="#" id="${match.name}" value="${match.name}"><li><i class="fas fa-search"></i>${match.name}</li></a>`
       )
       .join("");
     autocompleteList.innerHTML = html;
   }
 
   if (suggestions.length === 0) {
-    autocompleteList.innerHTML = `<a class="suggLink" href="#"
-    onclick="completeInput(this)">`;
+    autocompleteList.innerHTML = `<a class="suggLink" href="#">`;
   }
 
-  const suggLink = document.querySelector(".suggLink");
-  suggLink.addEventListener("click", () => handleToSearch());
+  for (let t = 0; t < suggsArr.length; t++) {
+    let auto = document.getElementById(`${suggsArr[t].name}`);
+
+    auto.addEventListener("click", () => {
+      completeInput(suggsArr[t].name);
+    });
+  }
 };
 
 const closeSearch = () => {
@@ -140,14 +152,16 @@ const closeSearch = () => {
   btnClose.classList.add("hideX");
   searchedGIFS.style.display = "none";
   searchedGIFS.classList.remove("tag1");
+  trending.style.display = "flex";
 };
 
-function hideSearched() {
-  if (searchedGIFS.style.display === "none") {
+function hideSearched(gifsArrLength) {
+  if (searchedGIFS.style.display === "none" && gifsArrLength > 0) {
     searchedGIFS.style.display = "flex";
-    searchedGIFS.classList.add("tag1");
-  } else if (searchedGIFS.classList.contains("tag1") === false) {
+    //trending.style.display = "none";
+  } else if (gifsArrLength === 0) {
     searchedGIFS.style.display = "none";
+    //trending.style.display = "flex";
   }
 }
 

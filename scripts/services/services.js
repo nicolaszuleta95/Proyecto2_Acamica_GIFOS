@@ -31,4 +31,13 @@ export default {
         .catch((err) => reject(err));
     });
   },
+
+  getSuggs(search) {
+    return new Promise((resolve, reject) => {
+      fetch(`${pathsApi.API_SUGGS}?api_key=${pathsApi.API_KEY}&q=${search}`)
+        .then((res) => res.json())
+        .then((data) => resolve(data))
+        .catch((err) => reject(err));
+    });
+  },
 };
