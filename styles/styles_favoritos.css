@@ -535,6 +535,9 @@ header nav .listas-nav li:nth-child(5) {
 }
 
 .trendingGIFOS .gifSection .gifSpace:hover .purpleSquare .iconsCard .loveButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 32px;
   width: 32px;
   opacity: 0.7;
@@ -542,6 +545,13 @@ header nav .listas-nav li:nth-child(5) {
   border-radius: 6px;
   margin: 10px 10px 0 10px;
   background: url("/img/icon-fav.svg") no-repeat;
+}
+
+.trendingGIFOS .gifSection .gifSpace:hover .purpleSquare .iconsCard .loveButton .icon-icon-fav-active {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: 8px;
 }
 
 .trendingGIFOS .gifSection .gifSpace:hover .purpleSquare .iconsCard img {

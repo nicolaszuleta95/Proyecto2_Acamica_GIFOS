@@ -2,11 +2,13 @@ const suggEndpoint = "https://api.giphy.com/v1/tags/related/";
 
 import paths from "./services/paths.js";
 import api from "./services/services.js";
+import liked from "./buttonsFunc.js";
 
 let SEARCH_LIMIT = 12;
 let searchOffset = 0;
 let SUGGS_LIMIT = 4;
 let gifosCount = 0;
+liked();
 
 const inputSearch = document.querySelector(".input-search");
 const btnSearch = document.querySelector(".searchButton");
@@ -45,6 +47,7 @@ const handleToSearch = () => {
   api
     .getSearch(inputSearch.value, SEARCH_LIMIT, searchOffset)
     .then((response) => {
+      console.log(response);
       const { data } = response;
       let acum = 0;
       let gifs = "";
@@ -63,12 +66,15 @@ const handleToSearch = () => {
               gifs += paintSearchGifs(gifsArr[i]);
             }
             gifResults.innerHTML = gifs;
+            liked();
           }
         });
       }
 
       gifosCount += SEARCH_LIMIT;
       searchOffset = searchOffset + SEARCH_LIMIT;
+      SEARCH_LIMIT += SEARCH_LIMIT;
+
       if (gifosCount >= response.pagination.total_count) {
         seeMoreBtn.style.display = "none";
       } else {
@@ -158,10 +164,8 @@ const closeSearch = () => {
 function hideSearched(gifsArrLength) {
   if (searchedGIFS.style.display === "none" && gifsArrLength > 0) {
     searchedGIFS.style.display = "flex";
-    //trending.style.display = "none";
   } else if (gifsArrLength === 0) {
     searchedGIFS.style.display = "none";
-    //trending.style.display = "flex";
   }
 }
 
