@@ -43,80 +43,88 @@ function paintSearchGifs(data) {
 }
 
 const handleToSearch = () => {
-  searchedValue.innerHTML = inputSearch.value;
-  api
-    .getSearch(inputSearch.value, SEARCH_LIMIT, searchOffset)
-    .then((response) => {
-      console.log(response);
-      const { data } = response;
-      let acum = 0;
-      let gifs = "";
-      let gifsArr = [];
-      for (let i = 0; i < data.length; i++) {
-        api.getApiGifByID(data[i].id).then((response) => {
-          acum++;
-          gifsArr.push(response);
+  if (inputSearch.value != "") {
+    searchedValue.innerHTML = inputSearch.value;
+    api
+      .getSearch(inputSearch.value, SEARCH_LIMIT, searchOffset)
+      .then((response) => {
+        console.log(response);
+        const { data } = response;
+        let acum = 0;
+        let gifs = "";
+        let gifsArr = [];
+        for (let i = 0; i < data.length; i++) {
+          api.getApiGifByID(data[i].id).then((response) => {
+            acum++;
+            gifsArr.push(response);
 
-          if (acum === data.length) {
-            gifsArr.sort((a, b) => {
-              return a.id > b.id ? 1 : b.id > a.id ? -1 : 0;
-            });
+            if (acum === data.length) {
+              gifsArr.sort((a, b) => {
+                return a.id > b.id ? 1 : b.id > a.id ? -1 : 0;
+              });
 
-            for (let i = 0; i < gifsArr.length; i++) {
-              gifs += paintSearchGifs(gifsArr[i]);
+              for (let i = 0; i < gifsArr.length; i++) {
+                gifs += paintSearchGifs(gifsArr[i]);
+              }
+              gifResults.innerHTML = gifs;
+              liked();
             }
-            gifResults.innerHTML = gifs;
-            liked();
-          }
-        });
-      }
+          });
+        }
 
-      gifosCount += SEARCH_LIMIT;
-      searchOffset = searchOffset + SEARCH_LIMIT;
-      SEARCH_LIMIT += SEARCH_LIMIT;
+        gifosCount += 12;
+        searchOffset += 12;
+        SEARCH_LIMIT += 12;
 
-      if (gifosCount >= response.pagination.total_count) {
-        seeMoreBtn.style.display = "none";
-      } else {
-        seeMoreBtn.style.display = "flex";
-      }
+        if (gifosCount >= response.pagination.total_count) {
+          seeMoreBtn.style.display = "none";
+        } else {
+          seeMoreBtn.style.display = "flex";
+        }
 
-      searchedGIFS.style.display = "flex";
-      trending.style.display = "none";
-      hideSearched(gifsArr);
-    })
-    .catch((error) => {
-      console.warn(error);
-    });
+        searchedGIFS.style.display = "flex";
+        trending.style.display = "none";
+        hideSearched(gifsArr);
+      })
+      .catch((error) => {
+        console.warn(error);
+      });
+  }
 };
 
 const giveSuggs = async (searchText) => {
-  autocompleteList.classList.remove("dispnone");
-  inputSearch.classList.add("hideborder");
-  btnSearch.classList.add("hideX");
-  btnClose.classList.remove("hideX");
-  btnSearchLeft.classList.remove("hideX");
+  if (searchText != "") {
+    autocompleteList.classList.remove("dispnone");
+    inputSearch.classList.add("hideborder");
+    btnSearch.classList.add("hideX");
+    btnClose.classList.remove("hideX");
+    btnSearchLeft.classList.remove("hideX");
 
-  const res = await fetch(
-    `${suggEndpoint}${searchText}?api_key=${paths.API_KEY}&limit=${SUGGS_LIMIT}`
-  );
-  const suggs = await res.json();
+    const res = await fetch(
+      `${suggEndpoint}${searchText}?api_key=${paths.API_KEY}&limit=${SUGGS_LIMIT}`
+    );
+    const suggs = await res.json();
 
-  if (searchText.length === 0) {
-    suggs.data = [];
-    autocompleteList.innerHTML = "";
-    autocompleteList.classList.add("dispnone");
-    inputSearch.classList.remove("hideborder");
-    btnSearch.classList.remove("hideX");
-    btnClose.classList.add("hideX");
-    btnSearchLeft.classList.add("hideX");
+    if (searchText.length === 0) {
+      suggs.data = [];
+      autocompleteList.innerHTML = "";
+      autocompleteList.classList.add("dispnone");
+      inputSearch.classList.remove("hideborder");
+      btnSearch.classList.remove("hideX");
+      btnClose.classList.add("hideX");
+      btnSearchLeft.classList.add("hideX");
+    }
+
+    paintSuggsHTML(suggs.data);
   }
-
-  paintSuggsHTML(suggs.data);
 };
 
 const completeInput = (link) => {
   inputSearch.value = link;
+  SEARCH_LIMIT = 12;
+  searchOffset = 0;
+  SUGGS_LIMIT = 4;
+  gifosCount = 0;
   handleToSearch();
 };
 
@@ -137,7 +145,7 @@ const paintSuggsHTML = async (suggestions) => {
   }
 
   if (suggestions.length === 0) {
-    autocompleteList.innerHTML = `<a class="suggLink" href="#">`;
+    autocompleteList.innerHTML = `<a class="suggLink" href="#" id="${match.name}" value="${match.name}">`;
   }
 
   for (let t = 0; t < suggsArr.length; t++) {
@@ -159,6 +167,10 @@ const closeSearch = () => {
   searchedGIFS.style.display = "none";
   searchedGIFS.classList.remove("tag1");
   trending.style.display = "flex";
+  SEARCH_LIMIT = 12;
+  searchOffset = 0;
+  SUGGS_LIMIT = 4;
+  gifosCount = 0;
 };
 
 function hideSearched(gifsArrLength) {
