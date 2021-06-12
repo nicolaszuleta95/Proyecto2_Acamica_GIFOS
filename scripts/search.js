@@ -2,13 +2,14 @@ const suggEndpoint = "https://api.giphy.com/v1/tags/related/";
 
 import paths from "./services/paths.js";
 import api from "./services/services.js";
-import liked from "./buttonsFunc.js";
+import { liked, downloadGif } from "./buttonsFunc.js";
 
 let SEARCH_LIMIT = 12;
 let searchOffset = 0;
 let SUGGS_LIMIT = 4;
 let gifosCount = 0;
 liked();
+downloadGif();
 
 const inputSearch = document.querySelector(".input-search");
 const btnSearch = document.querySelector(".searchButton");
@@ -30,7 +31,7 @@ function paintSearchGifs(data) {
       <div class="purpleSquare">
         <div class="iconsCard">
             <div class="loveButton"></div>
-            <img class="downloadBtn" src="/img/icon-link-normal.svg" alt="link" />
+            <img class="downloadBtn" src="/img/icon-download.svg" alt="link" />
             <img class="maxBtn" src="/img/icon-max-normal.svg" alt="max" />
         </div>
         <div class="GIFinfo">
@@ -68,6 +69,7 @@ const handleToSearch = () => {
               }
               gifResults.innerHTML = gifs;
               liked();
+              downloadGif();
             }
           });
         }
