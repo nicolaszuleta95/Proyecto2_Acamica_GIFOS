@@ -25,13 +25,13 @@ let trending = document.querySelector(".trending");
 function paintSearchGifs(data) {
   const { id, title, username, images } = data.data;
   return `
-    <div class="gifSpace">
-      <img src="${images.downsized.url}" alt="" class="gif-img">
+    <div class="gifSpace" id="${id}">
+      <img src="${images.original.url}" alt="" class="gif-img" id="${id}">
       <div class="purpleSquare">
         <div class="iconsCard">
             <div class="loveButton"></div>
-            <img src="/img/icon-link-normal.svg" alt="link" />
-            <img src="/img/icon-max-normal.svg" alt="max" />
+            <img class="downloadBtn" src="/img/icon-link-normal.svg" alt="link" />
+            <img class="maxBtn" src="/img/icon-max-normal.svg" alt="max" />
         </div>
         <div class="GIFinfo">
             <p class="user">${username}</p>

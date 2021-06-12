@@ -3,12 +3,17 @@ import api from "./services/services.js";
 let elements = document.getElementsByClassName("gifSpace");
 let titleGif = document.getElementsByClassName("tituloGIF");
 let userGif = document.getElementsByClassName("user");
+let trendGifsArr = [];
 
 function renderGiphy(giphy) {
   for (let i = 0; i < elements.length; i++) {
     const img = document.createElement("IMG");
-    img.src = giphy[i].images.downsized.url;
+    img.src = giphy[i].images.original.url;
+    img.id = giphy[i].id;
+    img.classList.add("gif-img");
     elements[i].appendChild(img);
+    elements[i].id = giphy[i].id;
+    trendGifsArr.push(giphy[i]);
   }
 }
 
@@ -21,18 +26,6 @@ function fillGIF(giphy) {
   }
 }
 
-const requestTrendingGifs = () => {
-  return new Promise((resolve, reject) => {
-    fetch(`${trendingEndpoint}`)
-      .then((response) => response.json())
-      .then(({ data }) => {
-        renderGiphy(data);
-        fillGIF(data);
-      })
-      .catch((error) => reject(`Error de ${error}`));
-  });
-};
-
 api
   .getTrending(3, 0)
   .then((res) => {
@@ -41,3 +34,5 @@ api
     fillGIF(data);
   })
   .catch((error) => console.warn("Error getTrending: ", error));
+
+//console.log(trendGifsArr);

@@ -34,7 +34,16 @@ export default {
 
   getSuggs(search) {
     return new Promise((resolve, reject) => {
-      fetch(`${pathsApi.API_SUGGS}?api_key=${pathsApi.API_KEY}&q=${search}`)
+      fetch(`${paths.API_SUGGS}?api_key=${paths.API_KEY}&q=${search}`)
+        .then((res) => res.json())
+        .then((data) => resolve(data))
+        .catch((err) => reject(err));
+    });
+  },
+
+  getApiGifByID(id) {
+    return new Promise((resolve, reject) => {
+      fetch(`${paths.API_GIF_BY_ID}${id}?api_key=${paths.API_KEY}`)
         .then((res) => res.json())
         .then((data) => resolve(data))
         .catch((err) => reject(err));
