@@ -1,5 +1,6 @@
 import paths from "./services/paths.js";
 import api from "./services/services.js";
+let likedArr = [];
 
 export default function liked() {
   let loveButton = document.getElementsByClassName("loveButton");
@@ -18,7 +19,8 @@ export default function liked() {
               .getApiGifByID(allGifs[i].id)
               .then((res) => {
                 const { data } = res;
-                localStorage.setItem("Liked", JSON.stringify(data));
+                likedArr.push(JSON.stringify(data));
+                localStorage.setItem("Liked", JSON.stringify(likedArr));
               })
               .catch((error) => console.warn("Error getApiGifByID: ", error));
           }
@@ -33,7 +35,11 @@ export default function liked() {
               .getApiGifByID(allGifs[i].id)
               .then((res) => {
                 const { data } = res;
-                localStorage.removeItem("Liked", JSON.stringify(data));
+                const index = likedArr.indexOf(JSON.stringify(data));
+                if (index > -1) {
+                  likedArr.splice(index, 1);
+                }
+                localStorage.setItem("Liked", JSON.stringify(likedArr));
               })
               .catch((error) => console.warn("Error getApiGifByID: ", error));
           }
