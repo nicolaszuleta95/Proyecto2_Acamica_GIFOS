@@ -1,0 +1,20 @@
+.maximizeGif {
+  display: none;
+
+  header {
+    display: flex;
+    justify-content: flex-end;
+
+    .closeButton {
+      margin-top: 66.4px;
+      margin-right: 278.4px;
+      height: 15.2px;
+      width: 15.2px;
+      margin-bottom: 78.4px;
+    }
+  }
+
+  .maxGifSpace {
+    display: flex;
+  }
+}

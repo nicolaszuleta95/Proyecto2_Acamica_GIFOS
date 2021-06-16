@@ -2,7 +2,7 @@ const suggEndpoint = "https://api.giphy.com/v1/tags/related/";
 
 import paths from "./services/paths.js";
 import api from "./services/services.js";
-import { liked, downloadGif } from "./buttonsFunc.js";
+import { liked, downloadGif, maxGif } from "./buttonsFunc.js";
 
 let SEARCH_LIMIT = 12;
 let searchOffset = 0;
@@ -10,6 +10,7 @@ let SUGGS_LIMIT = 4;
 let gifosCount = 0;
 liked();
 downloadGif();
+maxGif();
 
 const inputSearch = document.querySelector(".input-search");
 const btnSearch = document.querySelector(".searchButton");
@@ -70,6 +71,7 @@ const handleToSearch = () => {
               gifResults.innerHTML = gifs;
               liked();
               downloadGif();
+              maxGif();
             }
           });
         }
