@@ -125,8 +125,8 @@ export function maxGif() {
                     <h3 class="GIFtitle">${data.title}</h3>
                   </div>
                   <div class="GIFicons">
-                    <img class="loveButton" src="/img/icon-fav.svg" alt="favorite" />
-                    <img class="downloadButton" src="/img/icon-download.svg" alt="link" />
+                    <img class="loveButtonMax" src="/img/icon-fav.svg" alt="favorite" />
+                    <img class="downloadButtonMax" src="/img/icon-download.svg" alt="link" />
                   </div>
                 </section>
               </div>
