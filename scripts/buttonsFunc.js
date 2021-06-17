@@ -99,7 +99,6 @@ export function downloadGif() {
 export function maxGif() {
   let maxBtn = document.getElementsByClassName("maxBtn");
   let allGifs = document.getElementsByClassName("gif-img");
-  let maxGifSpace = document.querySelector(".maxGifSpace");
   let maximizeGif = document.querySelector(".maximizeGif");
 
   for (let t = 0; t < maxBtn.length; t++) {
@@ -111,14 +110,36 @@ export function maxGif() {
           api.getApiGifByID(allGifs[i].id).then((res) => {
             const { data } = res;
             let url = data.images.original.url;
-            maxGifSpace.innerHTML += `<img class="maxImg" src="${url}" alt="maximized Gif" />`;
+
+            if (maximizeGif.innerHTML == "") {
+              maximizeGif.innerHTML += `
+              <div class="transpBack"></div>
+              <header>
+                <img class="closeButton" src="/img/close.svg" alt="close button" />
+              </header>
+              <div class="maxGifSpace">
+                <img class="maxImg" src="${url}" alt="maximized Gif" />
+                <section class="GIFinfo">
+                  <div class="gifText">
+                    <p class="user">${data.username}</p>
+                    <h3 class="GIFtitle">${data.title}</h3>
+                  </div>
+                  <div class="GIFicons">
+                    <img class="loveButton" src="/img/icon-fav.svg" alt="favorite" />
+                    <img class="downloadButton" src="/img/icon-download.svg" alt="link" />
+                  </div>
+                </section>
+              </div>
+              `;
+            }
+
             maximizeGif.style.display = "flex";
+            maximizeGif.classList.add("sticky");
 
             let closeButton = document.querySelector(".closeButton");
             closeButton.addEventListener("click", () => {
+              maximizeGif.innerHTML = "";
               maximizeGif.style.display = "none";
-              var image_x = document.querySelector(".maxImg");
-              image_x.parentNode.removeChild(image_x);
             });
           });
         }

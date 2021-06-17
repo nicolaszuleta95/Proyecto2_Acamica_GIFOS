@@ -1079,8 +1079,35 @@ footer .footerCompartir .iconsFooter .iconInstagram:hover {
 }
 
 /*maximized gif*/
+/*colors*/
+/*fonts*/
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.maximizeGif::after {
+  content: "";
+  background-color: white;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
 .maximizeGif {
   display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  z-index: 2;
 }
 
 .maximizeGif header {
@@ -1090,19 +1117,95 @@ footer .footerCompartir .iconsFooter .iconInstagram:hover {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  margin-bottom: 250px;
 }
 
 .maximizeGif header .closeButton {
   margin-top: 66.4px;
-  margin-right: 278.4px;
+  margin-right: 240px;
   height: 15.2px;
   width: 15.2px;
-  margin-bottom: 78.4px;
+  margin-bottom: 200px;
 }
 
 .maximizeGif .maxGifSpace {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  height: 385px;
+}
+
+.maximizeGif .maxGifSpace .maxImg {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 695px;
+  height: 385px;
+}
+
+.maximizeGif .maxGifSpace .GIFinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 153px;
+}
+
+.maximizeGif .maxGifSpace .GIFinfo .gifText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 27px;
+  margin-left: 330px;
+}
+
+.maximizeGif .maxGifSpace .GIFinfo .gifText .user {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #000000;
+}
+
+.maximizeGif .maxGifSpace .GIFinfo .gifText .GIFtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 200px;
+}
+
+.maximizeGif .maxGifSpace .GIFinfo .GIFicons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 320px;
+}
+
+.maximizeGif .maxGifSpace .GIFinfo .GIFicons img {
+  height: 36px;
+  width: 36px;
+  background: #ffffff;
+  border-radius: 6px;
+  border-radius: 6px;
+  opacity: 0.5;
+  border: 1px solid #9cafc3;
+  margin: 10px 10px 0 10px;
+}
+
+.maximizeGif .maxGifSpace .GIFinfo .GIFicons img:hover {
+  opacity: 1;
 }
 /*# sourceMappingURL=styles.css.map */

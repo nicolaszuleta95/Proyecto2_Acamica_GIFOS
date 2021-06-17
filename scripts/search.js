@@ -8,9 +8,10 @@ let SEARCH_LIMIT = 12;
 let searchOffset = 0;
 let SUGGS_LIMIT = 4;
 let gifosCount = 0;
+
+maxGif();
 liked();
 downloadGif();
-maxGif();
 
 const inputSearch = document.querySelector(".input-search");
 const btnSearch = document.querySelector(".searchButton");
@@ -69,9 +70,10 @@ const handleToSearch = () => {
                 gifs += paintSearchGifs(gifsArr[i]);
               }
               gifResults.innerHTML = gifs;
+
+              maxGif();
               liked();
               downloadGif();
-              maxGif();
             }
           });
         }
