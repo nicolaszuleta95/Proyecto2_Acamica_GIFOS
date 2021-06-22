@@ -373,7 +373,6 @@ header nav .listas-nav li:nth-child(5) {
 
 .favoritos .noContent {
   display: none;
-  /*display: flex;*/
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
