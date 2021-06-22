@@ -428,6 +428,142 @@ header nav .listas-nav li:nth-child(5) {
   }
 }
 
+.gifGrid {
+  margin-top: 36;
+  margin-bottom: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gifGrid .gifResults {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: row;
+  -ms-grid-columns: (260px)[4];
+      grid-template-columns: repeat(4, 260px);
+  grid-gap: 29px;
+  -ms-grid-rows: (200px)[3];
+      grid-template-rows: repeat(3, 200px);
+}
+
+.gifGrid .gifResults .gifSpace .gif-img {
+  width: 260px;
+  height: 200px;
+}
+
+.gifGrid .gifResults .gifSpace .purpleSquare {
+  display: none;
+}
+
+.gifGrid .gifResults .gifSpace .purpleSquare .iconsCard {
+  display: none;
+}
+
+.gifGrid .gifResults .gifSpace .purpleSquare .user {
+  display: none;
+}
+
+.gifGrid .gifResults .gifSpace .purpleSquare .tituloGIF {
+  display: none;
+}
+
+.gifGrid .gifResults .gifSpace:hover .gif-img {
+  position: absolute;
+}
+
+.gifGrid .gifResults .gifSpace:hover .purpleSquare {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: #572ee5;
+  opacity: 0.6;
+}
+
+.gifGrid .gifResults .gifSpace:hover .purpleSquare .iconsCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  /* missing the .loveButton:active functionality */
+}
+
+.gifGrid .gifResults .gifSpace:hover .purpleSquare .iconsCard .loveButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 32px;
+  width: 32px;
+  opacity: 0.7;
+  border-radius: 6px;
+  border-radius: 6px;
+  margin: 10px 10px 0 10px;
+  background: url("/img/icon-fav.svg") no-repeat;
+}
+
+.gifGrid .gifResults .gifSpace:hover .purpleSquare .iconsCard .loveButton .icon-icon-fav-active {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: 8px;
+}
+
+.gifGrid .gifResults .gifSpace:hover .purpleSquare .iconsCard img {
+  height: 32px;
+  width: 32px;
+  opacity: 0.7;
+  background: #ffffff;
+  border-radius: 6px;
+  border-radius: 6px;
+  margin: 10px 10px 0 10px;
+}
+
+.gifGrid .gifResults .gifSpace:hover .purpleSquare .iconsCard img:hover {
+  opacity: 1;
+}
+
+.gifGrid .gifResults .gifSpace:hover .purpleSquare .iconsCard .loveButton:hover {
+  opacity: 1;
+}
+
+.gifGrid .gifResults .gifSpace:hover .purpleSquare .GIFinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.gifGrid .gifResults .gifSpace:hover .purpleSquare .GIFinfo .user {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  margin-left: 18px;
+}
+
+.gifGrid .gifResults .gifSpace:hover .purpleSquare .GIFinfo .tituloGIF {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  margin-left: 18.5px;
+  margin-bottom: 51px;
+}
+
 .trendingGIFOS {
   background-color: #f3f5f8;
   width: 100%;

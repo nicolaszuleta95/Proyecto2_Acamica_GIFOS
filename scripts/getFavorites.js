@@ -1,5 +1,6 @@
 let noContent = document.querySelector(".noContent");
 let gifGrid = document.querySelector(".gifGrid");
+let gifResults = document.querySelector(".gifResults");
 let seeMoreBtn = document.querySelector(".btnVerMas");
 
 const paintFavorites = (data) => {
@@ -23,10 +24,11 @@ const paintFavorites = (data) => {
 };
 
 const getFavorites = (likedGifs) => {
+  let gifs = "";
   for (let i = 0; i < likedGifs.length; i++) {
     const gif = JSON.parse(likedGifs[i]);
-    gifs = paintFavorites(gif);
-    gifGrid.innerHTML = gifs;
+    gifs += paintFavorites(gif);
+    gifResults.innerHTML = gifs;
   }
 };
 
@@ -52,4 +54,7 @@ const readFavorites = () => {
     }
   }
 };
-readFavorites();
+
+setTimeout(() => {
+  readFavorites();
+}, 200);
