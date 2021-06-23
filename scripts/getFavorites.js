@@ -53,10 +53,14 @@ const readFavorites = () => {
     seeMoreBtn.style.display = "none";
 
     let likedGifs = JSON.parse(localStorage.getItem("Liked"));
-    getFavorites(likedGifs);
     let numberOfLiked = likedGifs.length;
     if (numberOfLiked > 12) {
       seeMoreBtn.style.display = "flex";
+      getFavorites(likedGifs);
+
+    } else {
+      getFavorites(likedGifs);
+
     }
   }
 };
