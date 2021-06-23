@@ -2,6 +2,9 @@ let noContent = document.querySelector(".noContent");
 let gifGrid = document.querySelector(".gifGrid");
 let gifResults = document.querySelector(".gifResults");
 let seeMoreBtn = document.querySelector(".btnVerMas");
+let loveButton = document.getElementsByClassName("loveButton");
+let allGifs = document.getElementsByClassName("gif-img");
+
 
 const paintFavorites = (data) => {
   const { id, title, username, images } = data;
@@ -30,6 +33,9 @@ const getFavorites = (likedGifs) => {
     gifs += paintFavorites(gif);
     gifResults.innerHTML = gifs;
   }
+
+  unlikeFavs();
+  saveFavs();
 };
 
 const readFavorites = () => {
@@ -54,6 +60,52 @@ const readFavorites = () => {
     }
   }
 };
+
+const unlikeFavs = () => {
+  for (let t = 0; t < loveButton.length; t++) {
+    if (loveButton[t].parentNode.parentNode.parentNode.parentNode.id === 'gifSectionFavs') {
+      loveButton[t].innerHTML = '';
+    } else {
+      loveButton[t].innerHTML = '<span class="icon-icon-fav-active"></span>';
+    }
+
+    let unlike = loveButton[t];
+    unlike.addEventListener("click", () => {
+      console.log('clicked unlike')
+      loveButton[t].innerHTML = "";
+      for (let i = 0; i < allGifs.length; i++) {
+        if (
+          loveButton[t].parentNode.parentNode.parentNode.id === allGifs[i].id
+        ) {
+          let likedGifs = JSON.parse(localStorage.getItem("Liked"));
+          for (let e = 0; e < likedGifs.length; e++) {
+            const gif = JSON.parse(likedGifs[e])
+            if (gif.id === allGifs[i].id) {
+              const index = likedGifs.indexOf(JSON.stringify(gif));
+              console.log(index)
+              if (index > -1) {
+                likedGifs.splice(index, 1);
+              }
+              localStorage.setItem("Liked", JSON.stringify(likedGifs));
+              console.log(likedGifs)
+              //refresco la pagina
+              window.location.reload();
+            }
+          }
+          
+        }
+      }
+    })
+  }
+    
+}
+
+const saveFavs = () => {
+  let likedGifs = JSON.parse(localStorage.getItem("Liked"));
+  localStorage.setItem("Liked", JSON.stringify(likedGifs));
+  console.log('favs saved')
+}
+
 
 setTimeout(() => {
   readFavorites();

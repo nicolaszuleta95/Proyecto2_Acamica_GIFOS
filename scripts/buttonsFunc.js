@@ -10,12 +10,14 @@ export function liked() {
   for (let t = 0; t < loveButton.length; t++) {
     let like = loveButton[t];
     like.addEventListener("click", () => {
+      //likedArr = localStorage.getItem("Liked");
       if (loveButton[t].innerHTML === "") {
         loveButton[t].innerHTML = '<span class="icon-icon-fav-active"></span>';
         for (let i = 0; i < allGifs.length; i++) {
           if (
             loveButton[t].parentNode.parentNode.parentNode.id === allGifs[i].id
           ) {
+            likedArr = JSON.parse(localStorage.getItem("Liked"));
             api
               .getApiGifByID(allGifs[i].id)
               .then((res) => {
