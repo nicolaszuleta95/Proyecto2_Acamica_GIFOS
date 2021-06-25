@@ -5,6 +5,7 @@ let seeMoreBtn = document.querySelector(".btnVerMas");
 let loveButton = document.getElementsByClassName("loveButton");
 let allGifs = document.getElementsByClassName("gif-img");
 
+let page = 0;
 
 const paintFavorites = (data) => {
   const { id, title, username, images } = data;
@@ -25,6 +26,16 @@ const paintFavorites = (data) => {
       </div>
       `;
 };
+
+function splitArrayIntoChunksOfLen(arr, len) {
+  var chunks = [],
+    i = 0,
+    n = arr.length;
+  while (i < n) {
+    chunks.push(arr.slice(i, (i += len)));
+  }
+  return chunks;
+}
 
 const getFavorites = (likedGifs) => {
   let gifs = "";
@@ -54,28 +65,38 @@ const readFavorites = () => {
 
     let likedGifs = JSON.parse(localStorage.getItem("Liked"));
     let numberOfLiked = likedGifs.length;
-    if (numberOfLiked > 12) {
+    let dividedLikes = splitArrayIntoChunksOfLen(likedGifs, 12);
+    if (numberOfLiked > 12 && page !== dividedLikes.length) {
       seeMoreBtn.style.display = "flex";
-      getFavorites(likedGifs);
 
-    } else {
-      getFavorites(likedGifs);
-
+      console.log(dividedLikes.length);
+      console.log(page);
+      getFavorites(dividedLikes[0]);
+      seeMoreBtn.addEventListener("click", () => {
+        page += 1;
+        getFavorites(dividedLikes[page]);
+        if (page === dividedLikes.length - 1) {
+          seeMoreBtn.style.display = "none";
+        }
+      });
     }
   }
 };
 
 const unlikeFavs = () => {
   for (let t = 0; t < loveButton.length; t++) {
-    if (loveButton[t].parentNode.parentNode.parentNode.parentNode.id === 'gifSectionFavs') {
-      loveButton[t].innerHTML = '';
+    if (
+      loveButton[t].parentNode.parentNode.parentNode.parentNode.id ===
+      "gifSectionFavs"
+    ) {
+      loveButton[t].innerHTML = "";
     } else {
       loveButton[t].innerHTML = '<span class="icon-icon-fav-active"></span>';
     }
 
     let unlike = loveButton[t];
     unlike.addEventListener("click", () => {
-      console.log('clicked unlike')
+      console.log("clicked unlike");
       loveButton[t].innerHTML = "";
       for (let i = 0; i < allGifs.length; i++) {
         if (
@@ -83,33 +104,30 @@ const unlikeFavs = () => {
         ) {
           let likedGifs = JSON.parse(localStorage.getItem("Liked"));
           for (let e = 0; e < likedGifs.length; e++) {
-            const gif = JSON.parse(likedGifs[e])
+            const gif = JSON.parse(likedGifs[e]);
             if (gif.id === allGifs[i].id) {
               const index = likedGifs.indexOf(JSON.stringify(gif));
-              console.log(index)
+              console.log(index);
               if (index > -1) {
                 likedGifs.splice(index, 1);
               }
               localStorage.setItem("Liked", JSON.stringify(likedGifs));
-              console.log(likedGifs)
+              console.log(likedGifs);
               //refresco la pagina
               window.location.reload();
             }
           }
-          
         }
       }
-    })
+    });
   }
-    
-}
+};
 
 const saveFavs = () => {
   let likedGifs = JSON.parse(localStorage.getItem("Liked"));
   localStorage.setItem("Liked", JSON.stringify(likedGifs));
-  console.log('favs saved')
-}
-
+  console.log("favs saved");
+};
 
 setTimeout(() => {
   readFavorites();
