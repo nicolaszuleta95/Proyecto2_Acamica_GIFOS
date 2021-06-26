@@ -1,0 +1,28 @@
+.crearGif {
+  width: 100%;
+  height: 572px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .contentCont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .camaraImgCont {
+      .imgCamera {
+        height: 100px;
+        width: 100px;
+        background: url("/img/camara.svg") no-repeat;
+      }
+    }
+
+    .videoCont {
+      height: 390px;
+      width: 688px;
+      border: solid 1px $background_accents;
+    }
+  }
+}
