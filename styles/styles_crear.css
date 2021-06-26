@@ -377,15 +377,115 @@ footer .footerCompartir .iconsFooter .iconInstagram:hover {
           align-items: center;
 }
 
+.crearGif .contentCont .camaraImgCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .crearGif .contentCont .camaraImgCont .imgCamera {
-  height: 100px;
-  width: 100px;
+  margin-right: -70px;
+  height: 200px;
+  width: 200px;
   background: url("/img/camara.svg") no-repeat;
 }
 
+.crearGif .contentCont .camaraImgCont .imgLuzCamera {
+  margin-bottom: 10px;
+  margin-right: -10px;
+  width: 76px;
+  height: 151px;
+  background: url("/img/element-luz-camara.svg") no-repeat;
+}
+
 .crearGif .contentCont .videoCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 50px;
   height: 390px;
   width: 688px;
   border: solid 1px #572ee5;
+}
+
+.crearGif .contentCont .videoCont .leftBorders {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.crearGif .contentCont .videoCont .leftBorders .borderTopLeft {
+  margin-top: 24px;
+  margin-left: 20px;
+  height: 27px;
+  width: 25px;
+  background: url("/img/border1.svg") no-repeat;
+}
+
+.crearGif .contentCont .videoCont .leftBorders .borderBottomLeft {
+  margin-bottom: 24px;
+  margin-left: 20px;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  height: 27px;
+  width: 25px;
+  background: url("/img/border1.svg") no-repeat;
+}
+
+.crearGif .contentCont .videoCont .rightBorders {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.crearGif .contentCont .videoCont .rightBorders .borderTopRight {
+  margin-top: 24px;
+  margin-right: 20px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  height: 27px;
+  width: 25px;
+  background: url("/img/border1.svg") no-repeat;
+}
+
+.crearGif .contentCont .videoCont .rightBorders .borderBottomRight {
+  margin-bottom: 24px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  height: 27px;
+  width: 25px;
+  background: url("/img/border1.svg") no-repeat;
+}
+
+.crearGif .contentCont .imgTape {
+  margin-top: 450px;
+  margin-left: 67px;
+  height: 100px;
+  width: 200px;
+  background: url("/img/pelicula.svg") no-repeat;
 }
 /*# sourceMappingURL=styles_crear.css.map */

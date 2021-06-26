@@ -12,17 +12,86 @@
     align-items: center;
 
     .camaraImgCont {
+      display: flex;
+      align-items: center;
+
       .imgCamera {
-        height: 100px;
-        width: 100px;
+        margin-right: -70px;
+        height: 200px;
+        width: 200px;
         background: url("/img/camara.svg") no-repeat;
+      }
+      .imgLuzCamera {
+        margin-bottom: 10px;
+        margin-right: -10px;
+        width: 76px;
+        height: 151px;
+        background: url("/img/element-luz-camara.svg") no-repeat;
       }
     }
 
     .videoCont {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-left: 50px;
       height: 390px;
       width: 688px;
       border: solid 1px $background_accents;
+
+      .leftBorders {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .borderTopLeft {
+          margin-top: 24px;
+          margin-left: 20px;
+          height: 27px;
+          width: 25px;
+          background: url("/img/border1.svg") no-repeat;
+        }
+
+        .borderBottomLeft {
+          margin-bottom: 24px;
+          margin-left: 20px;
+          transform: rotate(270deg);
+          height: 27px;
+          width: 25px;
+          background: url("/img/border1.svg") no-repeat;
+        }
+      }
+
+      .rightBorders {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .borderTopRight {
+          margin-top: 24px;
+          margin-right: 20px;
+          transform: rotate(90deg);
+          height: 27px;
+          width: 25px;
+          background: url("/img/border1.svg") no-repeat;
+        }
+
+        .borderBottomRight {
+          margin-bottom: 24px;
+          transform: rotate(180deg);
+          height: 27px;
+          width: 25px;
+          background: url("/img/border1.svg") no-repeat;
+        }
+      }
+    }
+
+    .imgTape {
+      margin-top: 450px;
+      margin-left: 67px;
+      height: 100px;
+      width: 200px;
+      background: url("/img/pelicula.svg") no-repeat;
     }
   }
 }
