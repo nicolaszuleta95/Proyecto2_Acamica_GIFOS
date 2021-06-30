@@ -139,6 +139,10 @@
   }
 
   .footerCreateGif {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
     .steps {
       display: flex;
       justify-content: space-between;
@@ -158,6 +162,44 @@
       margin-right: 26px;
     }
   }
+
+  .infoRec {
+    display: flex;
+    width: 650px;
+    justify-content: flex-end;
+
+    .gifTimer {
+      display: none;
+      align-self: center;
+      margin-top: -70px;
+      font-family: $font-montserrat;
+      font-weight: bold;
+      font-size: 15px;
+      color: #572ee5;
+      letter-spacing: 0;
+      text-align: center;
+      line-height: 22px;
+    }
+
+    .repeatBtn {
+      display: none;
+      align-self: center;
+      margin-top: -70px;
+      font-family: $font-montserrat;
+      font-size: 13px;
+      font-weight: bold;
+      color: $background_accents;
+      letter-spacing: 0;
+      text-align: center;
+
+      a {
+        text-decoration-line: underline;
+        text-decoration-thickness: 2px;
+        text-decoration-color: $green_icons;
+      }
+    }
+  }
+
   .lineSeparator {
     display: flex;
     border: 3.45px solid $background_accents;
@@ -271,6 +313,44 @@
   }
 
   .endBtn:active {
+    background-color: #9cafc3;
+    border: 1px solid #9cafc3;
+    a {
+      background-color: #9cafc3;
+      color: $background_primary;
+    }
+  }
+
+  .uploadBtn {
+    display: none;
+    margin-top: 20px;
+    margin-bottom: 26px;
+    padding: 16px 0 16px 0;
+    width: 127px;
+    height: 50px;
+    border: 1px solid #572ee5;
+    border-radius: 25px;
+    text-align: center;
+
+    a {
+      background: #fff;
+      font-family: $font-montserrat;
+      font-size: 13px;
+      font-weight: bold;
+      color: $background_accents;
+      letter-spacing: 0;
+    }
+  }
+
+  .uploadBtn:hover {
+    background-color: $background_accents;
+    a {
+      background-color: $background_accents;
+      color: $background_primary;
+    }
+  }
+
+  .uploadBtn:active {
     background-color: #9cafc3;
     border: 1px solid #9cafc3;
     a {

@@ -1,6 +1,7 @@
 const startBtn = document.querySelector(".startBtn");
 const recBtn = document.querySelector(".recBtn");
 const endBtn = document.querySelector(".endBtn");
+const uploadBtn = document.querySelector(".uploadBtn");
 const Msgs = document.querySelector(".Msgs");
 const mainMsg = document.querySelector(".mainMsg");
 const secMsg = document.querySelector(".secMsg");
@@ -42,11 +43,9 @@ function getStreamAndRecord() {
         recorder.startRecording();
         recBtn.style.display = "none";
         endBtn.style.display = "block";
+
         endBtn.addEventListener("click", () => {
-          recorder.stopRecording();
-          gifPreview.src = URL.createObjectURL(recorder.getBlob());
-          videoFrame.style.display = "none";
-          gifPreview.style.display = "block";
+          recorder.stopRecording(stopRec);
         });
       });
     });
@@ -70,6 +69,17 @@ function paintBtn(btn, color) {
     btn.style.backgroundColor = "#ffffff";
     btn.style.color = "#572ee5";
   }
+}
+
+function stopRec() {
+  gifPreview.src = URL.createObjectURL(recorder.getBlob());
+  let form = new FormData();
+  form.append("file", recorder.getBlob(), "myGif.gif");
+  console.log(form.get("file"));
+  videoFrame.style.display = "none";
+  gifPreview.style.display = "block";
+  endBtn.style.display = "none";
+  uploadBtn.style.display = "block";
 }
 
 startBtn.addEventListener("click", changeMsg);
