@@ -7,6 +7,7 @@ const secMsg = document.querySelector(".secMsg");
 const oneBtn = document.querySelector(".oneBtn");
 const twoBtn = document.querySelector(".twoBtn");
 const videoFrame = document.querySelector(".videoFrame");
+const gifPreview = document.querySelector(".gifPreview");
 
 function getStreamAndRecord() {
   navigator.mediaDevices
@@ -24,6 +25,30 @@ function getStreamAndRecord() {
       recBtn.style.display = "block";
       videoFrame.srcObject = stream;
       videoFrame.play();
+      recBtn.addEventListener("click", () => {
+        recorder = RecordRTC(stream, {
+          type: "gif",
+          frameRate: 1,
+          quality: 10,
+          width: 360,
+          hidden: 240,
+          onGifRecordingStarted: function () {
+            console.log("started");
+          },
+          onGifPreview: function (gifURL) {
+            gifPreview.src = gifURL;
+          },
+        });
+        recorder.startRecording();
+        recBtn.style.display = "none";
+        endBtn.style.display = "block";
+        endBtn.addEventListener("click", () => {
+          recorder.stopRecording();
+          gifPreview.src = URL.createObjectURL(recorder.getBlob());
+          videoFrame.style.display = "none";
+          gifPreview.style.display = "block";
+        });
+      });
     });
 }
 

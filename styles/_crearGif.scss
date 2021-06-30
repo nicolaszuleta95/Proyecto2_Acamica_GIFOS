@@ -39,6 +39,13 @@
       width: 688px;
       border: solid 1px $background_accents;
 
+      .gifPreview {
+        display: none;
+        align-self: center;
+        height: 320px;
+        width: 480px;
+      }
+
       .videoFrame {
         display: none;
         align-self: center;

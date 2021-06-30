@@ -418,6 +418,15 @@ footer .footerCompartir .iconsFooter .iconInstagram:hover {
   border: solid 1px #572ee5;
 }
 
+.crearGif .contentCont .videoCont .gifPreview {
+  display: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 320px;
+  width: 480px;
+}
+
 .crearGif .contentCont .videoCont .videoFrame {
   display: none;
   -ms-flex-item-align: center;
