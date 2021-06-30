@@ -39,6 +39,35 @@
       width: 688px;
       border: solid 1px $background_accents;
 
+      .Msgs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .mainMsg {
+          text-align: center;
+          border-bottom: 3px;
+          font-family: $font-montserrat;
+          font-weight: bold;
+          font-size: 25px;
+          color: $background_accents;
+          line-height: 35px;
+
+          span {
+            color: $green_icons;
+          }
+        }
+
+        .secMsg {
+          text-align: center;
+          font-family: $font-roboto;
+          font-size: 16px;
+          color: #000000;
+          line-height: 29px;
+        }
+      }
+
       .leftBorders {
         display: flex;
         flex-direction: column;
@@ -92,6 +121,71 @@
       height: 100px;
       width: 200px;
       background: url("/img/pelicula.svg") no-repeat;
+    }
+  }
+
+  .footerCreateGif {
+    .steps {
+      display: flex;
+      justify-content: space-between;
+      margin-top: -50px;
+    }
+
+    .steps > * {
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      padding: 5px;
+      background: #fff;
+      border: 1px solid $background_accents;
+      color: $background_accents;
+      text-align: center;
+      font: 18px $font-roboto;
+      margin-right: 26px;
+    }
+  }
+  .lineSeparator {
+    display: flex;
+    border: 3.45px solid $background_accents;
+    width: 795.9px;
+    background-color: $background_accents;
+    border-radius: 25px;
+  }
+
+  .startBtn {
+    margin-top: 20px;
+    margin-bottom: 26px;
+    padding: 16px 0 16px 0;
+    width: 127px;
+    height: 50px;
+    border: 1px solid #572ee5;
+    border-radius: 25px;
+    text-align: center;
+
+    a {
+      background: #fff;
+      font-family: $font-montserrat;
+      font-size: 13px;
+      font-weight: bold;
+      color: $background_accents;
+      letter-spacing: 0;
+    }
+  }
+
+  .startBtn:hover {
+    background-color: $background_accents;
+    a {
+      background-color: $background_accents;
+      color: $background_primary;
+    }
+  }
+
+  .startBtn:active {
+    background-color: #9cafc3;
+    border: 1px solid #9cafc3;
+    a {
+      background-color: #9cafc3;
+      color: $background_primary;
     }
   }
 }

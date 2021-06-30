@@ -418,6 +418,44 @@ footer .footerCompartir .iconsFooter .iconInstagram:hover {
   border: solid 1px #572ee5;
 }
 
+.crearGif .contentCont .videoCont .Msgs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.crearGif .contentCont .videoCont .Msgs .mainMsg {
+  text-align: center;
+  border-bottom: 3px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  color: #572ee5;
+  line-height: 35px;
+}
+
+.crearGif .contentCont .videoCont .Msgs .mainMsg span {
+  color: #50e3c2;
+}
+
+.crearGif .contentCont .videoCont .Msgs .secMsg {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #000000;
+  line-height: 29px;
+}
+
 .crearGif .contentCont .videoCont .leftBorders {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -487,5 +525,77 @@ footer .footerCompartir .iconsFooter .iconInstagram:hover {
   height: 100px;
   width: 200px;
   background: url("/img/pelicula.svg") no-repeat;
+}
+
+.crearGif .footerCreateGif .steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: -50px;
+}
+
+.crearGif .footerCreateGif .steps > * {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  padding: 5px;
+  background: #fff;
+  border: 1px solid #572ee5;
+  color: #572ee5;
+  text-align: center;
+  font: 18px "Roboto", sans-serif;
+  margin-right: 26px;
+}
+
+.crearGif .lineSeparator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 3.45px solid #572ee5;
+  width: 795.9px;
+  background-color: #572ee5;
+  border-radius: 25px;
+}
+
+.crearGif .startBtn {
+  margin-top: 20px;
+  margin-bottom: 26px;
+  padding: 16px 0 16px 0;
+  width: 127px;
+  height: 50px;
+  border: 1px solid #572ee5;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.crearGif .startBtn a {
+  background: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #572ee5;
+  letter-spacing: 0;
+}
+
+.crearGif .startBtn:hover {
+  background-color: #572ee5;
+}
+
+.crearGif .startBtn:hover a {
+  background-color: #572ee5;
+  color: #ffffff;
+}
+
+.crearGif .startBtn:active {
+  background-color: #9cafc3;
+  border: 1px solid #9cafc3;
+}
+
+.crearGif .startBtn:active a {
+  background-color: #9cafc3;
+  color: #ffffff;
 }
 /*# sourceMappingURL=styles_crear.css.map */
