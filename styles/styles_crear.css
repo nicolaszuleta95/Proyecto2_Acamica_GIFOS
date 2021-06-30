@@ -418,6 +418,15 @@ footer .footerCompartir .iconsFooter .iconInstagram:hover {
   border: solid 1px #572ee5;
 }
 
+.crearGif .contentCont .videoCont .videoFrame {
+  display: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 320px;
+  width: 480px;
+}
+
 .crearGif .contentCont .videoCont .Msgs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -595,6 +604,86 @@ footer .footerCompartir .iconsFooter .iconInstagram:hover {
 }
 
 .crearGif .startBtn:active a {
+  background-color: #9cafc3;
+  color: #ffffff;
+}
+
+.crearGif .recBtn {
+  display: none;
+  margin-top: 20px;
+  margin-bottom: 26px;
+  padding: 16px 0 16px 0;
+  width: 127px;
+  height: 50px;
+  border: 1px solid #572ee5;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.crearGif .recBtn a {
+  background: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #572ee5;
+  letter-spacing: 0;
+}
+
+.crearGif .recBtn:hover {
+  background-color: #572ee5;
+}
+
+.crearGif .recBtn:hover a {
+  background-color: #572ee5;
+  color: #ffffff;
+}
+
+.crearGif .recBtn:active {
+  background-color: #9cafc3;
+  border: 1px solid #9cafc3;
+}
+
+.crearGif .recBtn:active a {
+  background-color: #9cafc3;
+  color: #ffffff;
+}
+
+.crearGif .endBtn {
+  display: none;
+  margin-top: 20px;
+  margin-bottom: 26px;
+  padding: 16px 0 16px 0;
+  width: 127px;
+  height: 50px;
+  border: 1px solid #572ee5;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.crearGif .endBtn a {
+  background: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #572ee5;
+  letter-spacing: 0;
+}
+
+.crearGif .endBtn:hover {
+  background-color: #572ee5;
+}
+
+.crearGif .endBtn:hover a {
+  background-color: #572ee5;
+  color: #ffffff;
+}
+
+.crearGif .endBtn:active {
+  background-color: #9cafc3;
+  border: 1px solid #9cafc3;
+}
+
+.crearGif .endBtn:active a {
   background-color: #9cafc3;
   color: #ffffff;
 }

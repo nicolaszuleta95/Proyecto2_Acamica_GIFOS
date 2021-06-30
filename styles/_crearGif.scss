@@ -39,6 +39,13 @@
       width: 688px;
       border: solid 1px $background_accents;
 
+      .videoFrame {
+        display: none;
+        align-self: center;
+        height: 320px;
+        width: 480px;
+      }
+
       .Msgs {
         display: flex;
         flex-direction: column;
@@ -181,6 +188,82 @@
   }
 
   .startBtn:active {
+    background-color: #9cafc3;
+    border: 1px solid #9cafc3;
+    a {
+      background-color: #9cafc3;
+      color: $background_primary;
+    }
+  }
+
+  .recBtn {
+    display: none;
+    margin-top: 20px;
+    margin-bottom: 26px;
+    padding: 16px 0 16px 0;
+    width: 127px;
+    height: 50px;
+    border: 1px solid #572ee5;
+    border-radius: 25px;
+    text-align: center;
+
+    a {
+      background: #fff;
+      font-family: $font-montserrat;
+      font-size: 13px;
+      font-weight: bold;
+      color: $background_accents;
+      letter-spacing: 0;
+    }
+  }
+
+  .recBtn:hover {
+    background-color: $background_accents;
+    a {
+      background-color: $background_accents;
+      color: $background_primary;
+    }
+  }
+
+  .recBtn:active {
+    background-color: #9cafc3;
+    border: 1px solid #9cafc3;
+    a {
+      background-color: #9cafc3;
+      color: $background_primary;
+    }
+  }
+
+  .endBtn {
+    display: none;
+    margin-top: 20px;
+    margin-bottom: 26px;
+    padding: 16px 0 16px 0;
+    width: 127px;
+    height: 50px;
+    border: 1px solid #572ee5;
+    border-radius: 25px;
+    text-align: center;
+
+    a {
+      background: #fff;
+      font-family: $font-montserrat;
+      font-size: 13px;
+      font-weight: bold;
+      color: $background_accents;
+      letter-spacing: 0;
+    }
+  }
+
+  .endBtn:hover {
+    background-color: $background_accents;
+    a {
+      background-color: $background_accents;
+      color: $background_primary;
+    }
+  }
+
+  .endBtn:active {
     background-color: #9cafc3;
     border: 1px solid #9cafc3;
     a {
