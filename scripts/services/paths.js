@@ -7,4 +7,5 @@ export default {
   API_SUGGS: `${ENDPOINT}search/tags`,
   API_TRENDING: `${ENDPOINT}trending`,
   API_GIF_BY_ID: `${ENDPOINT}`,
+  API_UPLOAD_GIF: `https://upload.giphy.com/v1/gifs`,
 };

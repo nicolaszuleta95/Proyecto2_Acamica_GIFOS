@@ -1,3 +1,5 @@
+import api from "./services/services.js";
+
 const startBtn = document.querySelector(".startBtn");
 const recBtn = document.querySelector(".recBtn");
 const endBtn = document.querySelector(".endBtn");
@@ -10,9 +12,10 @@ const oneBtn = document.querySelector(".oneBtn");
 const twoBtn = document.querySelector(".twoBtn");
 const videoFrame = document.querySelector(".videoFrame");
 const gifPreview = document.querySelector(".gifPreview");
+const gifPreviewPurple = document.querySelector(".gifPreviewPurple");
 const timeP = document.querySelector(".timeP");
 const gifTimer = document.querySelector(".gifTimer");
-
+var recorder;
 var dateStarted;
 
 function calculateTimeDuration(secs) {
@@ -61,13 +64,9 @@ function captureCamera(callback) {
 
 function stopRecordingCallback() {
   gifPreview.style.display = "block";
-  gifPreview.src = URL.createObjectURL(recorder.getBlob());
+  let blob = recorder.getBlob();
+  gifPreview.src = URL.createObjectURL(blob);
 
-  let form = new FormData();
-  form.append("file", recorder.getBlob(), "myGif.gif");
-  console.log(form.get("file"));
-
-  recorder.camera.stop();
   recorder.destroy();
   recorder = null;
 
@@ -78,6 +77,19 @@ function stopRecordingCallback() {
 
   gifTimer.style.display = "none";
   repeatBtn.style.display = "block";
+
+  uploadBtn.addEventListener("click", () => {
+    console.log(blob);
+    api
+      .uploadGif(blob)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log("error de uploadGif", err);
+        alert("subida de Gif fallida");
+      });
+  });
 }
 
 function paintBtn(btn, color) {
@@ -129,7 +141,7 @@ recBtn.addEventListener("click", () => {
       width: 360,
       hidden: 240,
       onGifRecordingStarted: function () {
-        console.log("started");
+        //console.log("started");
       },
       onGifPreview: function (gifURL) {
         gifPreview.src = gifURL;

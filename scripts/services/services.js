@@ -58,4 +58,19 @@ export default {
         .catch((err) => reject(err));
     });
   },
+
+  uploadGif(blob) {
+    const url = `${paths.API_UPLOAD_GIF}?api_key=${paths.API_KEY}`;
+    console.log(blob);
+
+    let form = new FormData();
+    form.append("file", blob, "myGif.gif");
+
+    return new Promise((resolve, reject) => {
+      fetch(url, { method: "POST", body: form })
+        .then((res) => res.json())
+        .then((data) => resolve(data))
+        .catch((err) => reject(err));
+    });
+  },
 };
