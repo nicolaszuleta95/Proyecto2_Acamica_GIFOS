@@ -17,6 +17,7 @@ const timeP = document.querySelector(".timeP");
 const gifTimer = document.querySelector(".gifTimer");
 var recorder;
 var dateStarted;
+let myGifsArr = [];
 
 function calculateTimeDuration(secs) {
   var hr = Math.floor(secs / 3600);
@@ -79,11 +80,24 @@ function stopRecordingCallback() {
   repeatBtn.style.display = "block";
 
   uploadBtn.addEventListener("click", () => {
+    repeatBtn.style.display = "none";
     console.log(blob);
     api
       .uploadGif(blob)
       .then((res) => {
         console.log(res);
+        const { data } = res;
+        //console.log(data.id);
+        myGifsArr = JSON.parse(localStorage.getItem("myGifs"));
+        api
+          .getApiGifByID(data.id)
+          .then((res) => {
+            const { data } = res;
+            console.log(data);
+            myGifsArr.push(JSON.stringify(data));
+            localStorage.setItem("myGifs", JSON.stringify(myGifsArr));
+          })
+          .catch((error) => console.warn("Error getApiGifByID: ", error));
       })
       .catch((err) => {
         console.log("error de uploadGif", err);

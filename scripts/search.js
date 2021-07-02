@@ -25,6 +25,18 @@ let searchedValue = document.querySelector(".searchedValue");
 let searchedGIFS = document.querySelector(".searchedGIFS");
 let trending = document.querySelector(".trending");
 
+function initializeLocal() {
+  let likedArr = [];
+  if (localStorage.getItem("Liked") === null) {
+    localStorage.setItem("Liked", JSON.stringify(likedArr));
+  }
+  let myGifsArr = [];
+  if (localStorage.getItem("myGifs") === null) {
+    localStorage.setItem("myGifs", JSON.stringify(myGifsArr));
+  }
+}
+initializeLocal();
+
 function paintSearchGifs(data) {
   const { id, title, username, images } = data.data;
   return `

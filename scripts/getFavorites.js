@@ -5,6 +5,8 @@ let seeMoreBtn = document.querySelector(".btnVerMas");
 let loveButton = document.getElementsByClassName("loveButton");
 let allGifs = document.getElementsByClassName("gif-img");
 
+let likedGifs = JSON.parse(localStorage.getItem("Liked"));
+
 let page = 0;
 
 const paintFavorites = (data) => {
@@ -63,7 +65,7 @@ const readFavorites = () => {
     gifGrid.style.display = "flex";
     seeMoreBtn.style.display = "none";
 
-    let likedGifs = JSON.parse(localStorage.getItem("Liked"));
+    //let likedGifs = JSON.parse(localStorage.getItem("Liked"));
     let numberOfLiked = likedGifs.length;
     let dividedLikes = splitArrayIntoChunksOfLen(likedGifs, 12);
     if (numberOfLiked > 12 && page !== dividedLikes.length) {
@@ -79,6 +81,8 @@ const readFavorites = () => {
           seeMoreBtn.style.display = "none";
         }
       });
+    } else {
+      getFavorites(dividedLikes[0]);
     }
   }
 };
