@@ -425,6 +425,66 @@ footer .footerCompartir .iconsFooter .iconInstagram:hover {
       align-self: center;
   height: 320px;
   width: 480px;
+  position: relative;
+}
+
+.crearGif .contentCont .videoCont .gifPreviewPurple {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 320px;
+  width: 480px;
+  opacity: 0.6;
+  background: #572ee5;
+  z-index: 1;
+  position: absolute;
+  margin-left: 103px;
+}
+
+.crearGif .contentCont .videoCont .gifPreviewPurple .iconsCard {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-top: 12px;
+  margin-right: 12px;
+}
+
+.crearGif .contentCont .videoCont .gifPreviewPurple .iconsCard img {
+  opacity: 0.7;
+}
+
+.crearGif .contentCont .videoCont .gifPreviewPurple .iconsCard img:hover {
+  opacity: 1;
+}
+
+.crearGif .contentCont .videoCont .gifPreviewPurple .indicators {
+  margin-top: 80px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.crearGif .contentCont .videoCont .gifPreviewPurple .indicators .loading {
+  height: 22px;
+  width: 22px;
+}
+
+.crearGif .contentCont .videoCont .gifPreviewPurple .indicators .check {
+  display: none;
+  height: 13px;
+  width: 18px;
+}
+
+.crearGif .contentCont .videoCont .gifPreviewPurple .insideText {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
 }
 
 .crearGif .contentCont .videoCont .videoFrame {

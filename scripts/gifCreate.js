@@ -10,9 +10,14 @@ const mainMsg = document.querySelector(".mainMsg");
 const secMsg = document.querySelector(".secMsg");
 const oneBtn = document.querySelector(".oneBtn");
 const twoBtn = document.querySelector(".twoBtn");
+const threeBtn = document.querySelector(".threeBtn");
 const videoFrame = document.querySelector(".videoFrame");
 const gifPreview = document.querySelector(".gifPreview");
 const gifPreviewPurple = document.querySelector(".gifPreviewPurple");
+const insideText = document.querySelector(".insideText");
+const loading = document.querySelector(".loading");
+const check = document.querySelector(".check");
+
 const timeP = document.querySelector(".timeP");
 const gifTimer = document.querySelector(".gifTimer");
 var recorder;
@@ -81,13 +86,13 @@ function stopRecordingCallback() {
 
   uploadBtn.addEventListener("click", () => {
     repeatBtn.style.display = "none";
+    gifPreviewPurple.style.display = "flex";
     console.log(blob);
     api
       .uploadGif(blob)
       .then((res) => {
         console.log(res);
         const { data } = res;
-        //console.log(data.id);
         myGifsArr = JSON.parse(localStorage.getItem("myGifs"));
         api
           .getApiGifByID(data.id)
@@ -96,6 +101,12 @@ function stopRecordingCallback() {
             console.log(data);
             myGifsArr.push(JSON.stringify(data));
             localStorage.setItem("myGifs", JSON.stringify(myGifsArr));
+
+            insideText.innerHTML = "GIFO subido con éxito";
+            loading.style.display = "none";
+            check.style.display = "block";
+            paintBtn(twoBtn, "white");
+            paintBtn(threeBtn, "purple");
           })
           .catch((error) => console.warn("Error getApiGifByID: ", error));
       })
