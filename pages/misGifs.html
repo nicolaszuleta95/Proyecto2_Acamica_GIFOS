@@ -25,7 +25,7 @@
     <header>
       <div class="top-accent"></div>
       <nav>
-        <div class="logo"></div>
+        <a href="../index.html"><div class="logo"></div></a>
         <input id="btncontrol" class="btncontrol" type="checkbox" />
         <label class="icons" for="btncontrol">
           <img class="burger" src="/img/burger.svg" alt="burger menu button" />
@@ -36,13 +36,17 @@
             <a href="#">MODO <span>N</span>OCTURNO</a>
           </li>
           <li><hr /></li>
-          <li><a href="#">FAVORITOS</a></li>
+          <li>
+            <a class="favoritesLink" href="./favoritos.html">FAVORITOS</a>
+          </li>
           <li><hr /></li>
           <li>
             <a href="#">MIS <span>GIFOS</span></a>
           </li>
           <li>
-            <div class="circle"></div>
+            <li>
+              <a href="../pages/crearGif.html"><div class="circle"></div></a>
+            </li>
           </li>
         </ul>
       </nav>
@@ -54,96 +58,7 @@
         alt="mis gifos icon"
       />
       <h2>Mis GIFOS</h2>
-      <div class="misGifosGrid">
-        <div class="gifSpace">
-          <div class="iconsCard">
-            <div class="loveButton"></div>
-            <img src="/img/icon-link-normal.svg" alt="link" />
-            <img src="/img/icon-max-normal.svg" alt="max" />
-          </div>
-          <div class="GIFinfo">
-            <p class="user">User</p>
-            <h3 class="tituloGIF">Titulo GIFO</h3>
-          </div>
-        </div>
-        <div class="gifSpace">
-          <div class="iconsCard">
-            <div class="loveButton"></div>
-            <img src="/img/icon-link-normal.svg" alt="link" />
-            <img src="/img/icon-max-normal.svg" alt="max" />
-          </div>
-          <div class="GIFinfo">
-            <p class="user">User</p>
-            <h3 class="tituloGIF">Titulo GIFO</h3>
-          </div>
-        </div>
-        <div class="gifSpace">
-          <div class="iconsCard">
-            <div class="loveButton"></div>
-            <img src="/img/icon-link-normal.svg" alt="link" />
-            <img src="/img/icon-max-normal.svg" alt="max" />
-          </div>
-          <div class="GIFinfo">
-            <p class="user">User</p>
-            <h3 class="tituloGIF">Titulo GIFO</h3>
-          </div>
-        </div>
-        <div class="gifSpace">
-          <div class="iconsCard">
-            <div class="loveButton"></div>
-            <img src="/img/icon-link-normal.svg" alt="link" />
-            <img src="/img/icon-max-normal.svg" alt="max" />
-          </div>
-          <div class="GIFinfo">
-            <p class="user">User</p>
-            <h3 class="tituloGIF">Titulo GIFO</h3>
-          </div>
-        </div>
-        <div class="gifSpace">
-          <div class="iconsCard">
-            <div class="loveButton"></div>
-            <img src="/img/icon-link-normal.svg" alt="link" />
-            <img src="/img/icon-max-normal.svg" alt="max" />
-          </div>
-          <div class="GIFinfo">
-            <p class="user">User</p>
-            <h3 class="tituloGIF">Titulo GIFO</h3>
-          </div>
-        </div>
-        <div class="gifSpace">
-          <div class="iconsCard">
-            <div class="loveButton"></div>
-            <img src="/img/icon-link-normal.svg" alt="link" />
-            <img src="/img/icon-max-normal.svg" alt="max" />
-          </div>
-          <div class="GIFinfo">
-            <p class="user">User</p>
-            <h3 class="tituloGIF">Titulo GIFO</h3>
-          </div>
-        </div>
-        <div class="gifSpace">
-          <div class="iconsCard">
-            <div class="loveButton"></div>
-            <img src="/img/icon-link-normal.svg" alt="link" />
-            <img src="/img/icon-max-normal.svg" alt="max" />
-          </div>
-          <div class="GIFinfo">
-            <p class="user">User</p>
-            <h3 class="tituloGIF">Titulo GIFO</h3>
-          </div>
-        </div>
-        <div class="gifSpace">
-          <div class="iconsCard">
-            <div class="loveButton"></div>
-            <img src="/img/icon-link-normal.svg" alt="link" />
-            <img src="/img/icon-max-normal.svg" alt="max" />
-          </div>
-          <div class="GIFinfo">
-            <p class="user">User</p>
-            <h3 class="tituloGIF">Titulo GIFO</h3>
-          </div>
-        </div>
-      </div>
+      <div class="misGifosGrid"> </div>
       <div class="misGifosNoContent">
         <img
           class="IMGmisGifosNoContent"
@@ -154,50 +69,67 @@
       </div>
       <div class="btnVerMas"></div>
     </section>
-    <section class="trending-GIFOS">
+    <section class="trendingGIFOS">
       <h2>Trending GIFOS</h2>
       <p>
         Mira los últimos<br />
         GIFO de nuestra comunidad.
       </p>
-      <section class="gifSection">
+      <section id="gifSectionFavs" class="gifSection">
         <div class="leftButton"></div>
         <div class="gifSpace">
-          <div class="iconsCard">
-            <div class="loveButton"></div>
-            <img src="/img/icon-link-normal.svg" alt="link" />
-            <img src="/img/icon-max-normal.svg" alt="max" />
-          </div>
-          <div class="GIFinfo">
-            <p class="user">User</p>
-            <h3 class="tituloGIF">Titulo GIFO</h3>
-          </div>
-        </div>
-        <div class="gifSpace">
-          <div class="iconsCard">
-            <img class="loveButton" src="/img/icon-fav.svg" alt="favorite" />
-            <img src="/img/icon-link-normal.svg" alt="link" />
-            <img src="/img/icon-max-normal.svg" alt="max" />
-          </div>
-          <div class="GIFinfo">
-            <p class="user">User</p>
-            <h3 class="tituloGIF">Titulo GIFO</h3>
+          <div class="purpleSquare">
+            <div class="iconsCard">
+              <div class="loveButton"></div>
+              <img
+                class="downloadBtn"
+                src="/img/icon-download.svg"
+                alt="link"
+              />
+              <img class="maxBtn" src="/img/icon-max-normal.svg" alt="max" />
+            </div>
+            <div class="GIFinfo">
+              <p class="user">User</p>
+              <h3 class="tituloGIF">Titulo GIFO</h3>
+            </div>
           </div>
         </div>
         <div class="gifSpace">
-          <div class="iconsCard">
-            <img class="loveButton" src="/img/icon-fav.svg" alt="favorite" />
-            <img src="/img/icon-link-normal.svg" alt="link" />
-            <img src="/img/icon-max-normal.svg" alt="max" />
+          <div class="purpleSquare">
+            <div class="iconsCard">
+              <div class="loveButton"></div>
+              <img
+                class="downloadBtn"
+                src="/img/icon-download.svg"
+                alt="link"
+              />
+              <img class="maxBtn" src="/img/icon-max-normal.svg" alt="max" />
+            </div>
+            <div class="GIFinfo">
+              <p class="user">User</p>
+              <h3 class="tituloGIF">Titulo GIFO</h3>
+            </div>
           </div>
-          <div class="GIFinfo">
-            <p class="user">User</p>
-            <h3 class="tituloGIF">Titulo GIFO</h3>
+        </div>
+        <div class="gifSpace">
+          <div class="purpleSquare">
+            <div class="iconsCard">
+              <div class="loveButton"></div>
+              <img
+                class="downloadBtn"
+                src="/img/icon-download.svg"
+                alt="link"
+              />
+              <img class="maxBtn" src="/img/icon-max-normal.svg" alt="max" />
+            </div>
+            <div class="GIFinfo">
+              <p class="user">User</p>
+              <h3 class="tituloGIF">Titulo GIFO</h3>
+            </div>
           </div>
         </div>
         <div class="rightButton"></div>
       </section>
-    </section>
     <footer>
       <section class="footerCompartir">
         <p>Compartir en:</p>
@@ -211,5 +143,9 @@
       <p>© GIFOS 2020 All Rights Reserved.</p>
     </footer>
     <div class="bottom-accent"></div>
+
+    <script type="module" src="../scripts/services/paths.js"></script>
+    <script type="module" src="../scripts/services/services.js"></script>
+    <script type="module" src="../scripts/GetTrendingGifs.js"></script>
   </body>
 </html>

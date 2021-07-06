@@ -1,11 +1,13 @@
 .misGifs {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
 
   .iconMisGifos {
-    margin-top: 10px;
     align-self: center;
+    margin-top: 10px;
     width: 24px;
     height: 21.9px;
   }
@@ -15,12 +17,12 @@
     font-family: $font-montserrat;
     font-size: 25px;
     color: $background_accents;
-    text-align: center;
     line-height: 30px;
     margin-bottom: 36px;
   }
 
   .btnVerMas {
+    display: none;
     margin-bottom: 95px;
     margin-top: 78px;
     width: 127px;
@@ -33,11 +35,6 @@
   }
 
   .misGifosNoContent {
-    display: none;
-    /*display: flex;*/
-    flex-direction: column;
-    align-items: center;
-
     .IMGmisGifosNoContent {
       margin-top: 109.3px;
       margin-bottom: 23.7px;
@@ -56,8 +53,8 @@
   }
 
   .misGifosGrid {
-    display: grid;
-    /*display: none;*/
+    display: none;
+    //display: grid;
     justify-content: center;
     grid-template-columns: repeat(4, 260px);
     gap: 29px;
@@ -142,45 +139,6 @@
           color: $background_primary;
           margin-left: 18.5px;
           margin-bottom: 51px;
-        }
-      }
-    }
-  }
-}
-
-/*mobile*/
-@media screen and (max-width: 375px) {
-  .misGifs {
-    .iconMisGifos {
-      margin-top: 5px;
-    }
-
-    h2 {
-      margin-top: 7px;
-      line-height: 29px;
-      margin-bottom: 46px;
-    }
-
-    .misGifosGrid {
-      grid-template-columns: repeat(2, 156px);
-      gap: 21px;
-      grid-template-rows: repeat(4, 120px);
-
-      .gifSpace {
-        width: 156px;
-        height: 120px;
-      }
-
-      .gifSpace:hover {
-        .GIFinfo {
-          .user {
-            margin-left: 13px;
-          }
-
-          .tituloGIF {
-            margin-left: 12px;
-            margin-bottom: 21px;
-          }
         }
       }
     }

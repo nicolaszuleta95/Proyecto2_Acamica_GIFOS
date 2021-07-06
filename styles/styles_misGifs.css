@@ -216,16 +216,18 @@ header nav .listas-nav li:nth-child(5) {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  text-align: center;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .misGifs .iconMisGifos {
-  margin-top: 10px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  margin-top: 10px;
   width: 24px;
   height: 21.9px;
 }
@@ -235,12 +237,12 @@ header nav .listas-nav li:nth-child(5) {
   font-family: "Montserrat", sans-serif;
   font-size: 25px;
   color: #572ee5;
-  text-align: center;
   line-height: 30px;
   margin-bottom: 36px;
 }
 
 .misGifs .btnVerMas {
+  display: none;
   margin-bottom: 95px;
   margin-top: 78px;
   width: 127px;
@@ -250,18 +252,6 @@ header nav .listas-nav li:nth-child(5) {
 
 .misGifs .btnVerMas:hover {
   background: url("/img/CTA-ver-mas-hover.svg") no-repeat;
-}
-
-.misGifs .misGifosNoContent {
-  display: none;
-  /*display: flex;*/
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .misGifs .misGifosNoContent .IMGmisGifosNoContent {
@@ -281,9 +271,7 @@ header nav .listas-nav li:nth-child(5) {
 }
 
 .misGifs .misGifosGrid {
-  display: -ms-grid;
-  display: grid;
-  /*display: none;*/
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -397,36 +385,6 @@ header nav .listas-nav li:nth-child(5) {
   color: #ffffff;
   margin-left: 18.5px;
   margin-bottom: 51px;
-}
-
-/*mobile*/
-@media screen and (max-width: 375px) {
-  .misGifs .iconMisGifos {
-    margin-top: 5px;
-  }
-  .misGifs h2 {
-    margin-top: 7px;
-    line-height: 29px;
-    margin-bottom: 46px;
-  }
-  .misGifs .misGifosGrid {
-    -ms-grid-columns: (156px)[2];
-        grid-template-columns: repeat(2, 156px);
-    gap: 21px;
-    -ms-grid-rows: (120px)[4];
-        grid-template-rows: repeat(4, 120px);
-  }
-  .misGifs .misGifosGrid .gifSpace {
-    width: 156px;
-    height: 120px;
-  }
-  .misGifs .misGifosGrid .gifSpace:hover .GIFinfo .user {
-    margin-left: 13px;
-  }
-  .misGifs .misGifosGrid .gifSpace:hover .GIFinfo .tituloGIF {
-    margin-left: 12px;
-    margin-bottom: 21px;
-  }
 }
 
 .trendingGIFOS {
