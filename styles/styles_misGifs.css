@@ -243,6 +243,9 @@ header nav .listas-nav li:nth-child(5) {
 
 .misGifs .btnVerMas {
   display: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   margin-bottom: 95px;
   margin-top: 78px;
   width: 127px;
