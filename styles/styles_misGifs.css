@@ -273,52 +273,60 @@ header nav .listas-nav li:nth-child(5) {
   margin-bottom: 137px;
 }
 
-.misGifs .misGifosGrid {
-  display: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.misGifosGrid {
+  margin-top: 36;
+  margin-bottom: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.misGifosGrid .gifResults {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: row;
   -ms-grid-columns: (260px)[4];
       grid-template-columns: repeat(4, 260px);
-  gap: 29px;
+  grid-gap: 29px;
   -ms-grid-rows: (200px)[2];
       grid-template-rows: repeat(2, 200px);
 }
 
-.misGifs .misGifosGrid .gifSpace {
-  background-color: royalblue;
+.misGifosGrid .gifResults .gifSpace .gif-img {
   width: 260px;
   height: 200px;
 }
 
-.misGifs .misGifosGrid .gifSpace .iconsCard {
+.misGifosGrid .gifResults .gifSpace .purpleSquare {
   display: none;
 }
 
-.misGifs .misGifosGrid .gifSpace .user {
+.misGifosGrid .gifResults .gifSpace .purpleSquare .iconsCard {
   display: none;
 }
 
-.misGifs .misGifosGrid .gifSpace .tituloGIF {
+.misGifosGrid .gifResults .gifSpace .purpleSquare .user {
   display: none;
 }
 
-.misGifs .misGifosGrid .gifSpace:hover {
-  background-color: #572ee5;
+.misGifosGrid .gifResults .gifSpace .purpleSquare .tituloGIF {
+  display: none;
+}
+
+.misGifosGrid .gifResults .gifSpace:hover .gif-img {
+  position: absolute;
+}
+
+.misGifosGrid .gifResults .gifSpace:hover .purpleSquare {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: #572ee5;
   opacity: 0.6;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
-.misGifs .misGifosGrid .gifSpace:hover .iconsCard {
+.misGifosGrid .gifResults .gifSpace:hover .purpleSquare .iconsCard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -328,7 +336,10 @@ header nav .listas-nav li:nth-child(5) {
   /* missing the .loveButton:active functionality */
 }
 
-.misGifs .misGifosGrid .gifSpace:hover .iconsCard .loveButton {
+.misGifosGrid .gifResults .gifSpace:hover .purpleSquare .iconsCard .loveButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 32px;
   width: 32px;
   opacity: 0.7;
@@ -338,7 +349,14 @@ header nav .listas-nav li:nth-child(5) {
   background: url("/img/icon-fav.svg") no-repeat;
 }
 
-.misGifs .misGifosGrid .gifSpace:hover .iconsCard img {
+.misGifosGrid .gifResults .gifSpace:hover .purpleSquare .iconsCard .loveButton .icon-icon-fav-active {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: 8px;
+}
+
+.misGifosGrid .gifResults .gifSpace:hover .purpleSquare .iconsCard img {
   height: 32px;
   width: 32px;
   opacity: 0.7;
@@ -348,15 +366,15 @@ header nav .listas-nav li:nth-child(5) {
   margin: 10px 10px 0 10px;
 }
 
-.misGifs .misGifosGrid .gifSpace:hover .iconsCard img:hover {
+.misGifosGrid .gifResults .gifSpace:hover .purpleSquare .iconsCard img:hover {
   opacity: 1;
 }
 
-.misGifs .misGifosGrid .gifSpace:hover .iconsCard .loveButton:hover {
+.misGifosGrid .gifResults .gifSpace:hover .purpleSquare .iconsCard .loveButton:hover {
   opacity: 1;
 }
 
-.misGifs .misGifosGrid .gifSpace:hover .GIFinfo {
+.misGifosGrid .gifResults .gifSpace:hover .purpleSquare .GIFinfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -364,25 +382,26 @@ header nav .listas-nav li:nth-child(5) {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
+  height: 100%;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-.misGifs .misGifosGrid .gifSpace:hover .GIFinfo .user {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.misGifosGrid .gifResults .gifSpace:hover .purpleSquare .GIFinfo .user {
+  display: block;
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   color: #ffffff;
   margin-left: 18px;
 }
 
-.misGifs .misGifosGrid .gifSpace:hover .GIFinfo .tituloGIF {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.misGifosGrid .gifResults .gifSpace:hover .purpleSquare .GIFinfo .tituloGIF {
+  display: block;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #ffffff;
