@@ -274,6 +274,9 @@ header nav .listas-nav li:nth-child(5) {
 }
 
 .misGifosGrid {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   margin-top: 36;
   margin-bottom: 100px;
   -webkit-box-align: center;
