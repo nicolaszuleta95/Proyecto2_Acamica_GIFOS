@@ -18,6 +18,7 @@ const btnSearch = document.querySelector(".searchButton");
 const btnSearchLeft = document.querySelector(".searchButtonLeft");
 const btnClose = document.querySelector(".XButton");
 const autocompleteList = document.querySelector(".autocomSearch");
+//const searchWord = document.querySelector(".searchWord");
 
 let gifResults = document.querySelector(".gifResults");
 let seeMoreBtn = document.querySelector(".seeMoreBtn");

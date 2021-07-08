@@ -23,6 +23,15 @@ export default {
     });
   },
 
+  getTrendingSearch() {
+    return new Promise((resolve, reject) => {
+      fetch(`${paths.API_SEARCH_TRENDING}?api_key=${paths.API_KEY}`)
+        .then((res) => res.json())
+        .then((data) => resolve(data))
+        .catch((err) => reject(err));
+    });
+  },
+
   getApiGifByID(id) {
     return new Promise((resolve, reject) => {
       fetch(`${paths.API_GIF_BY_ID}${id}?api_key=${paths.API_KEY}`)
