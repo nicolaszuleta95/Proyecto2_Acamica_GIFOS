@@ -339,7 +339,7 @@ header nav .listas-nav li:nth-child(5) {
   /* missing the .loveButton:active functionality */
 }
 
-.misGifosGrid .gifResults .gifSpace:hover .purpleSquare .iconsCard .loveButton {
+.misGifosGrid .gifResults .gifSpace:hover .purpleSquare .iconsCard .trashButton {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -349,10 +349,10 @@ header nav .listas-nav li:nth-child(5) {
   border-radius: 6px;
   border-radius: 6px;
   margin: 10px 10px 0 10px;
-  background: url("/img/icon-fav.svg") no-repeat;
+  background: url("/img/icon-trash-normal.svg") no-repeat;
 }
 
-.misGifosGrid .gifResults .gifSpace:hover .purpleSquare .iconsCard .loveButton .icon-icon-fav-active {
+.misGifosGrid .gifResults .gifSpace:hover .purpleSquare .iconsCard .trashButton .icon-icon-fav-active {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -373,7 +373,7 @@ header nav .listas-nav li:nth-child(5) {
   opacity: 1;
 }
 
-.misGifosGrid .gifResults .gifSpace:hover .purpleSquare .iconsCard .loveButton:hover {
+.misGifosGrid .gifResults .gifSpace:hover .purpleSquare .iconsCard .trashButton:hover {
   opacity: 1;
 }
 

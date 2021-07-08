@@ -2,7 +2,7 @@ const misGifosGrid = document.querySelector(".misGifosGrid");
 const misGifosNoContent = document.querySelector(".misGifosNoContent");
 const gifResults = document.querySelector(".gifResults");
 const btnVerMas = document.querySelector(".btnVerMas");
-let loveButton = document.getElementsByClassName("loveButton");
+let trashButton = document.getElementsByClassName("trashButton");
 let allGifs = document.getElementsByClassName("gif-img");
 
 let likedGifs = JSON.parse(localStorage.getItem("Liked"));
@@ -16,7 +16,7 @@ const paintMyGifs = (data) => {
           <img src="${images.original.url}" alt="" class="gif-img" id="${id}">
           <div class="purpleSquare">
             <div class="iconsCard">
-                <div class="loveButton"></div>
+                <div class="trashButton"></div>
                 <img class="downloadBtn" src="/img/icon-download.svg" alt="link" />
                 <img class="maxBtn" src="/img/icon-max-normal.svg" alt="max" />
             </div>
@@ -37,8 +37,8 @@ const getmyGifs = (myGifs) => {
     gifResults.innerHTML = gifs;
   }
 
-  unlikeFavs();
-  saveFavs();
+  trash();
+  saveTrash();
 };
 
 function splitArrayIntoChunksOfLen(arr, len) {
@@ -83,36 +83,36 @@ const readMyGifs = () => {
   }
 };
 
-const unlikeFavs = () => {
-  for (let t = 0; t < loveButton.length; t++) {
+const trash = () => {
+  for (let t = 0; t < trashButton.length; t++) {
     if (
-      loveButton[t].parentNode.parentNode.parentNode.parentNode.id ===
+      trashButton[t].parentNode.parentNode.parentNode.parentNode.id ===
       "gifSectionFavs"
     ) {
-      loveButton[t].innerHTML = "";
+      trashButton[t].innerHTML = "";
     } else {
-      loveButton[t].innerHTML = '<span class="icon-icon-fav-active"></span>';
+      trashButton[t].innerHTML = '<span class="icon-icon-trash-normal"></span>';
     }
 
-    let unlike = loveButton[t];
+    let unlike = trashButton[t];
     unlike.addEventListener("click", () => {
       console.log("clicked unlike");
-      loveButton[t].innerHTML = "";
+      trashButton[t].innerHTML = "";
       for (let i = 0; i < allGifs.length; i++) {
         if (
-          loveButton[t].parentNode.parentNode.parentNode.id === allGifs[i].id
+          trashButton[t].parentNode.parentNode.parentNode.id === allGifs[i].id
         ) {
-          let likedGifs = JSON.parse(localStorage.getItem("Liked"));
-          for (let e = 0; e < likedGifs.length; e++) {
-            const gif = JSON.parse(likedGifs[e]);
+          let myGifs = JSON.parse(localStorage.getItem("myGifs"));
+          for (let e = 0; e < myGifs.length; e++) {
+            const gif = JSON.parse(myGifs[e]);
             if (gif.id === allGifs[i].id) {
-              const index = likedGifs.indexOf(JSON.stringify(gif));
+              const index = myGifs.indexOf(JSON.stringify(gif));
               console.log(index);
               if (index > -1) {
-                likedGifs.splice(index, 1);
+                myGifs.splice(index, 1);
               }
-              localStorage.setItem("Liked", JSON.stringify(likedGifs));
-              console.log(likedGifs);
+              localStorage.setItem("myGifs", JSON.stringify(myGifs));
+              console.log(myGifs);
               //refresco la pagina
               window.location.reload();
             }
@@ -123,10 +123,9 @@ const unlikeFavs = () => {
   }
 };
 
-const saveFavs = () => {
-  let likedGifs = JSON.parse(localStorage.getItem("Liked"));
-  localStorage.setItem("Liked", JSON.stringify(likedGifs));
-  console.log("favs saved");
+const saveTrash = () => {
+  let myGifs = JSON.parse(localStorage.getItem("myGifs"));
+  localStorage.setItem("myGifs", JSON.stringify(myGifs));
 };
 
 setTimeout(() => {
