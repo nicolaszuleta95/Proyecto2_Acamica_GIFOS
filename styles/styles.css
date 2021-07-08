@@ -511,8 +511,17 @@ header nav .listas-nav li:nth-child(5) {
   line-height: 25px;
 }
 
-.trending p {
+.trending ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+.trending ul li {
+  display: inline;
   margin-top: 7px;
+}
+
+.trending ul li a {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   color: #572ee5;
@@ -535,8 +544,10 @@ header nav .listas-nav li:nth-child(5) {
     font-size: 16px;
     line-height: 25px;
   }
-  .trending p {
+  .trending ul li {
     margin-top: 2px;
+  }
+  .trending ul li a {
     font-size: 14px;
   }
 }

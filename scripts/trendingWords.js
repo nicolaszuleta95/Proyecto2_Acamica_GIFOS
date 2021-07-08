@@ -1,4 +1,3 @@
-//import paths from "./services/paths.js";
 import api from "./services/services.js";
 
 const trendingWords = document.querySelector(".trendingWords");
@@ -7,15 +6,17 @@ function trendWords() {
   api.getTrendingSearch().then((res) => {
     const { data } = res;
     const slicedArray = data.slice(0, 5);
-    let newArr = [];
     for (let i = 0; i < slicedArray.length; i++) {
       const element = slicedArray[i];
-      var pEl = document.createElement("a");
-      trendingWords.appendChild(pEl);
+      var listItem = document.createElement("li");
+      var aEl = document.createElement("a");
+      trendingWords.appendChild(listItem);
+      listItem.appendChild(aEl);
 
-      pEl.innerHTML = element + ", ";
-      pEl.id = element;
-      pEl.classList = "searchWord";
+      listItem.classList = "searchWord";
+      aEl.innerHTML = element + ", ";
+      aEl.id = element;
+      aEl.classList = "sWord";
     }
   });
 }
