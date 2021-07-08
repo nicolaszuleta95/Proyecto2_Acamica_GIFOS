@@ -529,6 +529,11 @@ header nav .listas-nav li:nth-child(5) {
   line-height: 25px;
 }
 
+.trending ul li a:hover {
+  font-size: 18px;
+  color: blue;
+}
+
 /*mobile*/
 @media screen and (max-width: 375px) {
   .trending {

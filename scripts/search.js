@@ -18,7 +18,6 @@ const btnSearch = document.querySelector(".searchButton");
 const btnSearchLeft = document.querySelector(".searchButtonLeft");
 const btnClose = document.querySelector(".XButton");
 const autocompleteList = document.querySelector(".autocomSearch");
-//const searchWord = document.querySelector(".searchWord");
 
 let gifResults = document.querySelector(".gifResults");
 let seeMoreBtn = document.querySelector(".seeMoreBtn");
@@ -213,3 +212,44 @@ inputSearch.addEventListener("keyup", function (event) {
     btnSearch.click();
   }
 });
+
+const trendingWords = document.querySelector(".trendingWords");
+
+function trendWords() {
+  api
+    .getTrendingSearch()
+    .then((res) => {
+      const { data } = res;
+      return data;
+    })
+    .then((data) => {
+      const slicedArray = data.slice(0, 5);
+
+      for (let i = 0; i < slicedArray.length; i++) {
+        const element = slicedArray[i];
+        var listItem = document.createElement("li");
+        var aEl = document.createElement("a");
+        trendingWords.appendChild(listItem);
+        listItem.appendChild(aEl);
+
+        listItem.classList = "searchWord";
+        if (i == 4) {
+          aEl.innerHTML = element + ".";
+        } else {
+          aEl.innerHTML = element + ", ";
+        }
+
+        aEl.id = element;
+        aEl.classList = "sWord";
+      }
+      const sWord = document.querySelectorAll(".sWord");
+
+      for (let i = 0; i < slicedArray.length; i++) {
+        sWord[i].addEventListener("click", () => {
+          completeInput(sWord[i].id);
+        });
+      }
+    });
+}
+
+trendWords();
