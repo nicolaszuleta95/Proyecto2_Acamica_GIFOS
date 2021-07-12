@@ -14,7 +14,7 @@
     margin-top: 8px;
     font-family: $font-montserrat;
     font-size: 25px;
-    color: $background_accents;
+    color: var(--text);
     text-align: center;
     line-height: 30px;
     margin-bottom: 36px;
@@ -25,11 +25,11 @@
     margin-top: 78px;
     width: 127px;
     height: 50px;
-    background: url("/img/CTA-ver-mas.svg") no-repeat;
+    background: var(--verMas) no-repeat;
   }
 
   .btnVerMas:hover {
-    background: url("/img/CTA-ver-mas-hover.svg") no-repeat;
+    background: var(--verMasHover) no-repeat;
   }
 
   .noContent {

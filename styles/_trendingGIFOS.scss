@@ -1,5 +1,5 @@
 .trendingGIFOS {
-  background-color: $background_secondary;
+  background-color: var(--backgroundSec);
   width: 100%;
   height: 640px;
   display: flex;
@@ -13,7 +13,7 @@
     margin-top: 67px;
     font-family: $font-montserrat;
     font-size: 25px;
-    color: $background_accents;
+    color: var(--text);
     text-align: center;
     line-height: 30px;
   }
@@ -22,7 +22,7 @@
     margin-top: 12px;
     font-family: $font-roboto;
     font-size: 18px;
-    color: $Dark_background_accents;
+    color: var(--trendingP);
     text-align: center;
   }
 
@@ -39,7 +39,7 @@
       margin-right: 22px;
       width: 40px;
       height: 40px;
-      background: url("/img/button-slider-left.svg") no-repeat;
+      background: var(--sliderLeft) no-repeat;
     }
 
     .leftButton:hover {
@@ -116,8 +116,6 @@
           .loveButton:hover {
             opacity: 1;
           }
-
-          /* missing the .loveButton:active functionality */
         }
 
         .GIFinfo {
@@ -153,7 +151,7 @@
       margin-right: 92px;
       width: 40px;
       height: 40px;
-      background: url("/img/Button-Slider-right.svg") no-repeat;
+      background: var(--sliderRight) no-repeat;
     }
 
     .rightButton:hover {

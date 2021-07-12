@@ -19,7 +19,7 @@
         margin-right: -70px;
         height: 200px;
         width: 200px;
-        background: url("/img/camara.svg") no-repeat;
+        background: var(--camara) no-repeat;
       }
       .imgLuzCamera {
         margin-bottom: 10px;
@@ -37,7 +37,7 @@
       margin-left: 50px;
       height: 390px;
       width: 688px;
-      border: solid 1px $background_accents;
+      border: solid 1px var(--text);
 
       .gifPreview {
         display: none;
@@ -114,7 +114,7 @@
           font-family: $font-montserrat;
           font-weight: bold;
           font-size: 25px;
-          color: $background_accents;
+          color: var(--text);
           line-height: 35px;
 
           span {
@@ -126,7 +126,7 @@
           text-align: center;
           font-family: $font-roboto;
           font-size: 16px;
-          color: #000000;
+          color: var(--trendingP);
           line-height: 29px;
         }
       }
@@ -183,7 +183,7 @@
       margin-left: 67px;
       height: 100px;
       width: 200px;
-      background: url("/img/pelicula.svg") no-repeat;
+      background: var(--pelicula) no-repeat;
     }
   }
 
@@ -203,9 +203,9 @@
       width: 32px;
       height: 32px;
       padding: 5px;
-      background: #fff;
-      border: 1px solid $background_accents;
-      color: $background_accents;
+      background: var(--background);
+      border: 1px solid var(--text);
+      color: var(--text);
       text-align: center;
       font: 18px $font-roboto;
       margin-right: 26px;
@@ -224,7 +224,7 @@
       font-family: $font-montserrat;
       font-weight: bold;
       font-size: 15px;
-      color: #572ee5;
+      color: var(--text);
       letter-spacing: 0;
       text-align: center;
       line-height: 22px;
@@ -237,7 +237,7 @@
       font-family: $font-montserrat;
       font-size: 13px;
       font-weight: bold;
-      color: $background_accents;
+      color: var(--text);
       letter-spacing: 0;
       text-align: center;
 
@@ -251,9 +251,9 @@
 
   .lineSeparator {
     display: flex;
-    border: 3.45px solid $background_accents;
+    border: 3.45px solid var(--text);
     width: 795.9px;
-    background-color: $background_accents;
+    background-color: var(--text);
     border-radius: 25px;
   }
 
@@ -263,25 +263,25 @@
     padding: 16px 0 16px 0;
     width: 127px;
     height: 50px;
-    border: 1px solid #572ee5;
+    border: 1px solid var(--text);
     border-radius: 25px;
     text-align: center;
 
     a {
-      background: #fff;
+      background: var(--background);
       font-family: $font-montserrat;
       font-size: 13px;
       font-weight: bold;
-      color: $background_accents;
+      color: var(--text);
       letter-spacing: 0;
     }
   }
 
   .startBtn:hover {
-    background-color: $background_accents;
+    background-color: var(--text);
     a {
-      background-color: $background_accents;
-      color: $background_primary;
+      background-color: var(--text);
+      color: var(--background);
     }
   }
 
@@ -301,25 +301,25 @@
     padding: 16px 0 16px 0;
     width: 127px;
     height: 50px;
-    border: 1px solid #572ee5;
+    border: 1px solid var(--text);
     border-radius: 25px;
     text-align: center;
 
     a {
-      background: #fff;
+      background: var(--background);
       font-family: $font-montserrat;
       font-size: 13px;
       font-weight: bold;
-      color: $background_accents;
+      color: var(--text);
       letter-spacing: 0;
     }
   }
 
   .recBtn:hover {
-    background-color: $background_accents;
+    background-color: var(--text);
     a {
-      background-color: $background_accents;
-      color: $background_primary;
+      background-color: var(--text);
+      color: var(--background);
     }
   }
 
@@ -339,25 +339,25 @@
     padding: 16px 0 16px 0;
     width: 127px;
     height: 50px;
-    border: 1px solid #572ee5;
+    border: 1px solid var(--text);
     border-radius: 25px;
     text-align: center;
 
     a {
-      background: #fff;
+      background: var(--background);
       font-family: $font-montserrat;
       font-size: 13px;
       font-weight: bold;
-      color: $background_accents;
+      color: var(--text);
       letter-spacing: 0;
     }
   }
 
   .endBtn:hover {
-    background-color: $background_accents;
+    background-color: var(--text);
     a {
-      background-color: $background_accents;
-      color: $background_primary;
+      background-color: var(--text);
+      color: var(--background);
     }
   }
 
@@ -377,25 +377,25 @@
     padding: 16px 0 16px 0;
     width: 127px;
     height: 50px;
-    border: 1px solid #572ee5;
+    border: 1px solid var(--text);
     border-radius: 25px;
     text-align: center;
 
     a {
-      background: #fff;
+      background: var(--background);
       font-family: $font-montserrat;
       font-size: 13px;
       font-weight: bold;
-      color: $background_accents;
+      color: var(--text);
       letter-spacing: 0;
     }
   }
 
   .uploadBtn:hover {
-    background-color: $background_accents;
+    background-color: var(--text);
     a {
-      background-color: $background_accents;
-      color: $background_primary;
+      background-color: var(--text);
+      color: var(--background);
     }
   }
 

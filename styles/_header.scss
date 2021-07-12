@@ -11,12 +11,12 @@
     margin-top: 76px;
     font-family: $font-montserrat;
     font-size: 35px;
-    color: $background_accents;
+    color: var(--text);
     line-height: 50px;
     text-align: center;
 
     span {
-      color: $green_icons;
+      color: var(--green_icons);
     }
   }
 
@@ -37,13 +37,13 @@
       display: block;
       font-family: $font-montserrat;
       font-size: 25px;
-      color: $background_accents;
+      color: var(--text);
       text-align: center;
       line-height: 33px;
       margin-top: 7px;
 
       span {
-        color: $green_icons;
+        color: var(--green_icons);
       }
     }
 

@@ -1,4 +1,5 @@
 /*colors*/
+/*dark them colors*/
 /*fonts*/
 /*resets*/
 * {
@@ -9,15 +10,90 @@
   box-sizing: border-box;
 }
 
+:root {
+  --background_primary: #ffffff;
+  --background_secondary: #f3f5f8;
+  --background_accents: #572ee5;
+  --green_icons: #50e3c2;
+  --text: #572ee5;
+  --trendingText: #000000;
+  --background: var(--background_primary);
+  --backgroundSec: var(--background_secondary);
+  --accents: var(--background_accents);
+  --trendingP: var(--trendingText);
+  --logo_light: url("/img/logo-desktop.svg") no-repeat;
+  --crearGifo_light: url("/img/button-crear-gifo.svg") no-repeat;
+  --crearGifoHover_light: url("/img/CTA-crear-gifo-hover.svg") no-repeat;
+  --crearGifoActive_light: url("/img/CTA-crear-gifo-active.svg") no-repeat;
+  --logoMobile_light: url("/img/logo-mobile.svg") no-repeat;
+  --search_light: url("/img/icon-search.svg");
+  --close_light: url("/img/close.svg");
+  --verMas_light: url("/img/CTA-ver-mas.svg");
+  --verMasHover_light: url("/img/CTA-ver-mas-hover.svg");
+  --sliderLeft_light: url("/img/button-slider-left.svg");
+  --sliderLeftHover_light: url("/img/button-slider-left-hover.svg");
+  --sliderRight_light: url("/img/Button-Slider-right.svg");
+  --logo: var(--logo_light);
+  --logoMobile: var(--logoMobile_light);
+  --crear_gifo: var(--crearGifo_light);
+  --crear_gifoHover: var(--crearGifoHover_light);
+  --crear_gifoActive: var(--crearGifoActive_light);
+  --search: var(--search_light);
+  --close: var(--close_light);
+  --verMas: var(--verMas_light);
+  --verMasHover: var(--verMasHover_light);
+  --sliderLeft: var(--sliderLeft_light);
+  --sliderLeftHover: var(--sliderLeftHover_light);
+  --sliderRight: var(--sliderRight_light);
+}
+
+.darkmode {
+  --Dark_background_primary: #37383c;
+  --Dark_background_secondary: #222326;
+  --Dark_background_accents: #000000;
+  --green_icons: #50e3c2;
+  --text: #ffffff;
+  --trendingText: #ffffff;
+  --background: var(--Dark_background_primary);
+  --backgroundSec: var(--Dark_background_secondary);
+  --accents: var(--Dark_background_accents);
+  --trendingP: var(--trendingText);
+  --logo_dark: url("/img/Logo-modo-noc.svg") no-repeat;
+  --logoMobile_dark: url("/img/Logo-modo-noc.svg") no-repeat;
+  --crearGifo_dark: url("/img/CTA-crear-gifo-modo-noc.svg") no-repeat;
+  --crearGifoHover_dark: url("/img/CTA-crear-gifo-hover-modo-noc.svg") no-repeat;
+  --crearGifoActive_dark: url("/img/CTA-crear-gifo-active-modo-noc.svg")
+    no-repeat;
+  --search_dark: url("/img/icon-search-modo-noct.svg");
+  --close_dark: url("/img/close-modo-noct.svg");
+  --verMas_dark: url("/img/CTA-ver+-modo-noc.svg");
+  --verMasHover_dark: url("/img/CTA-ver+hover-modo-noc.svg");
+  --sliderLeft_dark: url("/img/button-slider-left-md-noct.svg");
+  --sliderLeftHover_dark: url("/img/button-slider-left-hover.svg");
+  --sliderRight_dark: url("/img/button-slider-right-md-noct.svg");
+  --logo: var(--logo_dark);
+  --logoMobile: var(--logoMobile_dark);
+  --crear_gifo: var(--crearGifo_dark);
+  --crear_gifoHover: var(--crearGifoHover_dark);
+  --crear_gifoActive: var(--crearGifoActive_dark);
+  --search: var(--search_dark);
+  --close: var(--close_dark);
+  --verMas: var(--verMas_dark);
+  --verMasHover: var(--verMasHover_dark);
+  --sliderLeft: var(--sliderLeft_dark);
+  --sliderLeftHover: var(--sliderLeftHover_dark);
+  --sliderRight: var(--sliderRight_dark);
+}
+
 /*body*/
 body {
-  background-color: #ffffff;
+  background-color: var(--background);
 }
 
 header .top-accent {
   width: 100%;
   height: 5px;
-  background-color: #572ee5;
+  background-color: var(--accents);
 }
 
 header nav {
@@ -38,7 +114,7 @@ header nav .logo {
   height: 59.1px;
   width: 59.1px;
   margin-left: 156px;
-  background: url("/img/logo-desktop.svg") no-repeat;
+  background: var(--logo);
 }
 
 header nav .btncontrol {
@@ -65,7 +141,7 @@ header nav .listas-nav li {
 header nav .listas-nav li a {
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
-  color: #572ee5;
+  color: var(--text);
   line-height: 16px;
   font-size: 13px;
   letter-spacing: 0;
@@ -77,15 +153,15 @@ header nav .listas-nav li .circle {
   margin-right: 156px;
   width: 54px;
   height: 54px;
-  background: url("/img/button-crear-gifo.svg") no-repeat;
+  background: var(--crear_gifo);
 }
 
 header nav .listas-nav li .circle:hover {
-  background: url("/img/CTA-crear-gifo-hover.svg") no-repeat;
+  background: var(--crear_gifoHover);
 }
 
 header nav .listas-nav li .circle:active {
-  background: url("/img/CTA-crear-gifo-active.svg") no-repeat;
+  background: var(--crear_gifoActive);
 }
 
 header nav .listas-nav li:nth-child(3) {
@@ -108,7 +184,7 @@ header nav .listas-nav li:nth-child(5) {
     margin-left: 22px;
     height: 49px;
     width: 56px;
-    background: url("/img/logo-mobile.svg") no-repeat;
+    background: var(--logoMobile);
   }
   header nav .listas-nav {
     display: none;
@@ -125,7 +201,7 @@ header nav .listas-nav li:nth-child(5) {
             align-items: center;
   }
   header nav .listas-nav li a {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
   }
   header nav .btncontrol:checked ~ .listas-nav {
@@ -135,7 +211,7 @@ header nav .listas-nav li:nth-child(5) {
     display: block;
     width: 100%;
     height: 100%;
-    background: #572ee5;
+    background: var(--accents);
     z-index: 1;
   }
   header nav .btncontrol:checked ~ .listas-nav li {
@@ -234,7 +310,7 @@ header nav .listas-nav li:nth-child(5) {
   margin-top: 8px;
   font-family: "Montserrat", sans-serif;
   font-size: 25px;
-  color: #572ee5;
+  color: var(--text);
   text-align: center;
   line-height: 30px;
   margin-bottom: 36px;
@@ -245,11 +321,11 @@ header nav .listas-nav li:nth-child(5) {
   margin-top: 78px;
   width: 127px;
   height: 50px;
-  background: url("/img/CTA-ver-mas.svg") no-repeat;
+  background: var(--verMas) no-repeat;
 }
 
 .favoritos .btnVerMas:hover {
-  background: url("/img/CTA-ver-mas-hover.svg") no-repeat;
+  background: var(--verMasHover) no-repeat;
 }
 
 .favoritos .noContent {
@@ -428,7 +504,7 @@ header nav .listas-nav li:nth-child(5) {
 }
 
 .trendingGIFOS {
-  background-color: #f3f5f8;
+  background-color: var(--backgroundSec);
   width: 100%;
   height: 640px;
   display: -webkit-box;
@@ -448,7 +524,7 @@ header nav .listas-nav li:nth-child(5) {
   margin-top: 67px;
   font-family: "Montserrat", sans-serif;
   font-size: 25px;
-  color: #572ee5;
+  color: var(--text);
   text-align: center;
   line-height: 30px;
 }
@@ -457,7 +533,7 @@ header nav .listas-nav li:nth-child(5) {
   margin-top: 12px;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
-  color: #000000;
+  color: var(--trendingP);
   text-align: center;
 }
 
@@ -481,7 +557,7 @@ header nav .listas-nav li:nth-child(5) {
   margin-right: 22px;
   width: 40px;
   height: 40px;
-  background: url("/img/button-slider-left.svg") no-repeat;
+  background: var(--sliderLeft) no-repeat;
 }
 
 .trendingGIFOS .gifSection .leftButton:hover {
@@ -529,7 +605,6 @@ header nav .listas-nav li:nth-child(5) {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  /* missing the .loveButton:active functionality */
 }
 
 .trendingGIFOS .gifSection .gifSpace:hover .purpleSquare .iconsCard .loveButton {
@@ -610,7 +685,7 @@ header nav .listas-nav li:nth-child(5) {
   margin-right: 92px;
   width: 40px;
   height: 40px;
-  background: url("/img/Button-Slider-right.svg") no-repeat;
+  background: var(--sliderRight) no-repeat;
 }
 
 .trendingGIFOS .gifSection .rightButton:hover {
@@ -668,7 +743,7 @@ header nav .listas-nav li:nth-child(5) {
 footer {
   width: 100%;
   height: 116px;
-  background: #ffffff;
+  background: var(--background);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -683,7 +758,7 @@ footer {
 footer p {
   font-family: "Roboto", sans-serif;
   font-size: 13px;
-  color: #000000;
+  color: var(--trendingP);
   letter-spacing: 0;
 }
 
@@ -752,7 +827,7 @@ footer .footerCompartir .iconsFooter .iconInstagram:hover {
 .bottom-accent {
   width: 100%;
   height: 5px;
-  background-color: #572ee5;
+  background-color: var(--accents);
 }
 
 /*mobile*/

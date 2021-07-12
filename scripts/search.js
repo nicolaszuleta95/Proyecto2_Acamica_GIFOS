@@ -18,6 +18,7 @@ const btnSearch = document.querySelector(".searchButton");
 const btnSearchLeft = document.querySelector(".searchButtonLeft");
 const btnClose = document.querySelector(".XButton");
 const autocompleteList = document.querySelector(".autocomSearch");
+const searchButtonLeft = document.querySelector(".searchButtonLeft");
 
 let gifResults = document.querySelector(".gifResults");
 let seeMoreBtn = document.querySelector(".seeMoreBtn");
@@ -111,6 +112,7 @@ const handleToSearch = () => {
 };
 
 const giveSuggs = async (searchText) => {
+  searchButtonLeft.style.display = "block";
   if (searchText != "") {
     autocompleteList.classList.remove("dispnone");
     inputSearch.classList.add("hideborder");
@@ -176,6 +178,7 @@ const paintSuggsHTML = async (suggestions) => {
 };
 
 const closeSearch = () => {
+  searchButtonLeft.style.display = "none";
   inputSearch.value = "";
   autocompleteList.innerHTML = "";
   autocompleteList.classList.add("dispnone");

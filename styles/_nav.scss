@@ -2,7 +2,7 @@ header {
   .top-accent {
     width: 100%;
     height: 5px;
-    background-color: $background_accents;
+    background-color: var(--accents);
   }
 
   nav {
@@ -16,7 +16,7 @@ header {
       height: 59.1px;
       width: 59.1px;
       margin-left: 156px;
-      background: url("/img/logo-desktop.svg") no-repeat;
+      background: var(--logo);
     }
 
     .btncontrol {
@@ -37,7 +37,7 @@ header {
         a {
           font-family: $font-montserrat;
           text-decoration: none;
-          color: $background_accents;
+          color: var(--text);
           line-height: 16px;
           font-size: 13px;
           letter-spacing: 0;
@@ -49,15 +49,15 @@ header {
           margin-right: 156px;
           width: 54px;
           height: 54px;
-          background: url("/img/button-crear-gifo.svg") no-repeat;
+          background: var(--crear_gifo);
         }
 
         .circle:hover {
-          background: url("/img/CTA-crear-gifo-hover.svg") no-repeat;
+          background: var(--crear_gifoHover);
         }
 
         .circle:active {
-          background: url("/img/CTA-crear-gifo-active.svg") no-repeat;
+          background: var(--crear_gifoActive);
         }
       }
 
@@ -83,7 +83,7 @@ header {
         margin-left: 22px;
         height: 49px;
         width: 56px;
-        background: url("/img/logo-mobile.svg") no-repeat;
+        background: var(--logoMobile);
       }
 
       .listas-nav {
@@ -96,7 +96,7 @@ header {
           align-items: center;
 
           a {
-            color: $background_primary;
+            color: #fff;
             text-decoration: none;
           }
         }
@@ -109,7 +109,7 @@ header {
         display: block;
         width: 100%;
         height: 100%;
-        background: $background_accents;
+        background: var(--accents);
         z-index: 1;
 
         li {
