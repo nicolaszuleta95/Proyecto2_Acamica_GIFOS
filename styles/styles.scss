@@ -26,8 +26,8 @@
   --accents: var(--background_accents);
   --trendingP: var(--trendingText);
 
-  --logo_light: #{url("../img/logo-desktop.svg")} no-repeat;
-  --crearGifo_light: #{url("../img/button-crear-gifo.svg")} no-repeat;
+  --logo_light: #{url("/img/logo-desktop.svg")} no-repeat;
+  --crearGifo_light: #{url("/img/button-crear-gifo.svg")} no-repeat;
   --crearGifoHover_light: #{url("../img/CTA-crear-gifo-hover.svg")} no-repeat;
   --crearGifoActive_light: #{url("../img/CTA-crear-gifo-active.svg")} no-repeat;
   --logoMobile_light: #{url("../img/logo-mobile.svg")} no-repeat;
