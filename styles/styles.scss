@@ -1,7 +1,7 @@
 ---
 ---
 
-@import "./variables";
+@import url("./variables");
 
 /*resets*/
 * {
@@ -100,22 +100,22 @@ body {
 }
 
 /*nav*/
-@import "./nav";
+@import url("./nav");
 
 /*header search*/
-@import "./header";
+@import url("./header");
 
 /*trending*/
-@import "./trending";
+@import url("./trending");
 
 /*searched gifs*/
-@import "./searchedGifs";
+@import url("./searchedGifs");
 
 /*Trending GIFOS*/
-@import "./trendingGIFOS";
+@import url("./trendingGIFOS");
 
 /*footer*/
-@import "./footer";
+@import url("./footer");
 
 /*maximized gif*/
-@import "./maxGif";
+@import url("./maxGif");
