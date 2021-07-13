@@ -26,18 +26,18 @@
   --accents: var(--background_accents);
   --trendingP: var(--trendingText);
 
-  --logo_light: #{url("/img/logo-desktop.svg")} no-repeat;
-  --crearGifo_light: url("../img/button-crear-gifo.svg") no-repeat;
-  --crearGifoHover_light: url("../img/CTA-crear-gifo-hover.svg") no-repeat;
-  --crearGifoActive_light: url("../img/CTA-crear-gifo-active.svg") no-repeat;
-  --logoMobile_light: url("../img/logo-mobile.svg") no-repeat;
-  --search_light: url("../img/icon-search.svg");
-  --close_light: url("../img/close.svg");
-  --verMas_light: url("../img/CTA-ver-mas.svg");
-  --verMasHover_light: url("../img/CTA-ver-mas-hover.svg");
-  --sliderLeft_light: url("../img/button-slider-left.svg");
-  --sliderLeftHover_light: url("../img/button-slider-left-hover.svg");
-  --sliderRight_light: url("../img/Button-Slider-right.svg");
+  --logo_light: #{url("../img/logo-desktop.svg")} no-repeat;
+  --crearGifo_light: #{url("../img/button-crear-gifo.svg")} no-repeat;
+  --crearGifoHover_light: #{url("../img/CTA-crear-gifo-hover.svg")} no-repeat;
+  --crearGifoActive_light: #{url("../img/CTA-crear-gifo-active.svg")} no-repeat;
+  --logoMobile_light: #{url("../img/logo-mobile.svg")} no-repeat;
+  --search_light: #{url("../img/icon-search.svg")};
+  --close_light: #{url("../img/close.svg")};
+  --verMas_light: #{url("../img/CTA-ver-mas.svg")};
+  --verMasHover_light: #{url("../img/CTA-ver-mas-hover.svg")};
+  --sliderLeft_light: #{url("../img/button-slider-left.svg")};
+  --sliderLeftHover_light: #{url("../img/button-slider-left-hover.svg")};
+  --sliderRight_light: #{url("../img/Button-Slider-right.svg")};
 
   --logo: var(--logo_light);
   --logoMobile: var(--logoMobile_light);
@@ -67,20 +67,18 @@
   --accents: var(--Dark_background_accents);
   --trendingP: var(--trendingText);
 
-  --logo_dark: url("../img/Logo-modo-noc.svg") no-repeat;
-  --logoMobile_dark: url("../img/Logo-modo-noc.svg") no-repeat;
-  --crearGifo_dark: url("../img/CTA-crear-gifo-modo-noc.svg") no-repeat;
-  --crearGifoHover_dark: url("../img/CTA-crear-gifo-hover-modo-noc.svg")
-    no-repeat;
-  --crearGifoActive_dark: url("../img/CTA-crear-gifo-active-modo-noc.svg")
-    no-repeat;
-  --search_dark: url("../img/icon-search-modo-noct.svg");
-  --close_dark: url("../img/close-modo-noct.svg");
-  --verMas_dark: url("../img/CTA-ver+-modo-noc.svg");
-  --verMasHover_dark: url("../img/CTA-ver+hover-modo-noc.svg");
-  --sliderLeft_dark: url("../img/button-slider-left-md-noct.svg");
-  --sliderLeftHover_dark: url("../img/button-slider-left-hover.svg");
-  --sliderRight_dark: url("../img/button-slider-right-md-noct.svg");
+  --logo_dark: #{url("../img/Logo-modo-noc.svg")} no-repeat;
+  --logoMobile_dark: #{url("../img/Logo-modo-noc.svg")} no-repeat;
+  --crearGifo_dark: #{url("../img/CTA-crear-gifo-modo-noc.svg")} no-repeat;
+  --crearGifoHover_dark: #{url("../img/CTA-crear-gifo-hover-modo-noc.svg")} no-repeat;
+  --crearGifoActive_dark: #{url("../img/CTA-crear-gifo-active-modo-noc.svg")} no-repeat;
+  --search_dark: #{url("../img/icon-search-modo-noct.svg")};
+  --close_dark: #{url("../img/close-modo-noct.svg")};
+  --verMas_dark: #{url("../img/CTA-ver+-modo-noc.svg")};
+  --verMasHover_dark: #{url("../img/CTA-ver+hover-modo-noc.svg")};
+  --sliderLeft_dark: #{url("../img/button-slider-left-md-noct.svg")};
+  --sliderLeftHover_dark: #{url("../img/button-slider-left-hover.svg")};
+  --sliderRight_dark: #{url("../img/button-slider-right-md-noct.svg")};
 
   --logo: var(--logo_dark);
   --logoMobile: var(--logoMobile_dark);
