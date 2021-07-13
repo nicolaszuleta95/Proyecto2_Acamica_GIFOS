@@ -43,7 +43,7 @@
     }
 
     .leftButton:hover {
-      background: url("/img/button-slider-left-hover.svg") no-repeat;
+      background: url("../img/button-slider-left-hover.svg") no-repeat;
     }
 
     .gifSpace {
@@ -91,7 +91,7 @@
             border-radius: 6px;
             border-radius: 6px;
             margin: 10px 10px 0 10px;
-            background: url("/img/icon-fav.svg") no-repeat;
+            background: url("../img/icon-fav.svg") no-repeat;
 
             .icon-icon-fav-active {
               align-self: center;
@@ -155,7 +155,7 @@
     }
 
     .rightButton:hover {
-      background: url("/img/Button-Slider-right-hover.svg") no-repeat;
+      background: url("../img/Button-Slider-right-hover.svg") no-repeat;
     }
   }
 }
