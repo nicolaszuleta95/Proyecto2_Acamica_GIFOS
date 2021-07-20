@@ -3,6 +3,7 @@ import api from "./services/services.js";
 let trendings = document.querySelector(".trendings");
 let trendGifsArr = [];
 
+//paints the trending gifs
 const paintTrendings = (data) => {
   const { id, title, username, images } = data;
   return `
