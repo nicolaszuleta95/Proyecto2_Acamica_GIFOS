@@ -1,12 +1,12 @@
-@import url("./variables");
+@import url("./_variables.scss");
 /*resets*/
-@import url("./nav");
-@import url("./header");
-@import url("./trending");
-@import url("./searchedGifs");
+@import url("./_nav.scss");
+@import url("./_header.scss");
+@import url("./_trending.scss");
+@import url("./_searchedGifs.scss");
 @import url("./_trendingGIFOS.scss");
-@import url("./footer");
-@import url("./maxGif");
+@import url("./_footer.scss");
+@import url("./_maxGif.scss");
 * {
   margin: 0;
   padding: 0;

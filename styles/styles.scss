@@ -1,4 +1,4 @@
-@import url("./variables");
+@import url("./_variables.scss");
 
 /*resets*/
 * {
@@ -97,22 +97,22 @@ body {
 }
 
 /*nav*/
-@import url("./nav");
+@import url("./_nav.scss");
 
 /*header search*/
-@import url("./header");
+@import url("./_header.scss");
 
 /*trending*/
-@import url("./trending");
+@import url("./_trending.scss");
 
 /*searched gifs*/
-@import url("./searchedGifs");
+@import url("./_searchedGifs.scss");
 
 /*Trending GIFOS*/
 @import url("./_trendingGIFOS.scss");
 
 /*footer*/
-@import url("./footer");
+@import url("./_footer.scss");
 
 /*maximized gif*/
-@import url("./maxGif");
+@import url("./_maxGif.scss");
