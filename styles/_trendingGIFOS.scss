@@ -33,7 +33,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: red;
 
     .leftButton {
       margin-left: 94px;
@@ -48,7 +47,11 @@
     }
 
     .trendings {
+      display: flex;
+      justify-content: space-between;
+
       .gifSpace {
+        margin-right: 60px;
         .gif-img {
           width: 260px;
           height: 200px;

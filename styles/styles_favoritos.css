@@ -551,7 +551,6 @@ header nav .listas-nav li:nth-child(5) {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: red;
 }
 
 .trendingGIFOS .gifSection .leftButton {
@@ -564,6 +563,19 @@ header nav .listas-nav li:nth-child(5) {
 
 .trendingGIFOS .gifSection .leftButton:hover {
   background: url("../img/button-slider-left-hover.svg") no-repeat;
+}
+
+.trendingGIFOS .gifSection .trendings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.trendingGIFOS .gifSection .trendings .gifSpace {
+  margin-right: 60px;
 }
 
 .trendingGIFOS .gifSection .trendings .gifSpace .gif-img {
