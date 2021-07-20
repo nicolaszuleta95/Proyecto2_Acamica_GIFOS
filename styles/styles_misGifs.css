@@ -553,20 +553,6 @@ header nav .listas-nav li:nth-child(5) {
 .trendingGIFOS .gifSection .trendings {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (357px)[3];
-      grid-template-columns: repeat(3, 357px);
-  -ms-grid-rows: (275px)[1];
-      grid-template-rows: repeat(1, 275px);
-}
-
-<<<<<<< HEAD
-.trendingGIFOS .gifSection .trendings .gifSpace .gif-img {
-  width: 357px;
-  height: 275px;
-=======
-.trendingGIFOS .gifSection .trendings {
-  display: -ms-grid;
-  display: grid;
   -ms-grid-columns: (300px)[3];
       grid-template-columns: repeat(3, 300px);
   -ms-grid-rows: (250px)[1];
@@ -577,7 +563,6 @@ header nav .listas-nav li:nth-child(5) {
 .trendingGIFOS .gifSection .trendings .gifSpace .gif-img {
   width: 300px;
   height: 250px;
->>>>>>> entrega1
 }
 
 .trendingGIFOS .gifSection .trendings .gifSpace .purpleSquare {
@@ -619,11 +604,7 @@ header nav .listas-nav li:nth-child(5) {
   /* missing the .loveButton:active functionality */
 }
 
-<<<<<<< HEAD
-.trendingGIFOS .gifSection .trendings .gifSpace:hover .purpleSquare .iconsCard .trashButton {
-=======
 .trendingGIFOS .gifSection .trendings .gifSpace:hover .purpleSquare .iconsCard .loveButton {
->>>>>>> entrega1
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -633,14 +614,10 @@ header nav .listas-nav li:nth-child(5) {
   border-radius: 6px;
   border-radius: 6px;
   margin: 10px 10px 0 10px;
-  background: url("../img/icon-trash-normal.svg") no-repeat;
+  background: url("/img/icon-fav.svg") no-repeat;
 }
 
-<<<<<<< HEAD
-.trendingGIFOS .gifSection .trendings .gifSpace:hover .purpleSquare .iconsCard .trashButton .icon-icon-fav-active {
-=======
 .trendingGIFOS .gifSection .trendings .gifSpace:hover .purpleSquare .iconsCard .loveButton .icon-icon-fav-active {
->>>>>>> entrega1
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -661,11 +638,7 @@ header nav .listas-nav li:nth-child(5) {
   opacity: 1;
 }
 
-<<<<<<< HEAD
-.trendingGIFOS .gifSection .trendings .gifSpace:hover .purpleSquare .iconsCard .trashButton:hover {
-=======
 .trendingGIFOS .gifSection .trendings .gifSpace:hover .purpleSquare .iconsCard .loveButton:hover {
->>>>>>> entrega1
   opacity: 1;
 }
 

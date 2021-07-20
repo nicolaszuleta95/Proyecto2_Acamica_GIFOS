@@ -48,15 +48,6 @@
 
     .trendings {
       display: grid;
-<<<<<<< HEAD
-      grid-template-columns: repeat(3, 357px);
-      grid-template-rows: repeat(1, 275px);
-
-      .gifSpace {
-        .gif-img {
-          width: 357px;
-          height: 275px;
-=======
       grid-template-columns: repeat(3, 300px);
       grid-template-rows: repeat(1, 250px);
       gap: 27px;
@@ -65,7 +56,6 @@
         .gif-img {
           width: 300px;
           height: 250px;
->>>>>>> entrega1
         }
 
         .purpleSquare {
@@ -101,11 +91,7 @@
             display: flex;
             justify-content: flex-end;
 
-<<<<<<< HEAD
-            .trashButton {
-=======
             .loveButton {
->>>>>>> entrega1
               display: flex;
               height: 32px;
               width: 32px;
@@ -113,11 +99,7 @@
               border-radius: 6px;
               border-radius: 6px;
               margin: 10px 10px 0 10px;
-<<<<<<< HEAD
-              background: url("../img/icon-trash-normal.svg") no-repeat;
-=======
               background: url("/img/icon-fav.svg") no-repeat;
->>>>>>> entrega1
 
               .icon-icon-fav-active {
                 align-self: center;
@@ -139,11 +121,7 @@
               opacity: 1;
             }
 
-<<<<<<< HEAD
-            .trashButton:hover {
-=======
             .loveButton:hover {
->>>>>>> entrega1
               opacity: 1;
             }
 
