@@ -47,14 +47,14 @@
     }
 
     .trendings {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(3, 357px);
+      grid-template-rows: repeat(1, 275px);
 
       .gifSpace {
-        margin-right: 60px;
         .gif-img {
-          width: 260px;
-          height: 200px;
+          width: 357px;
+          height: 275px;
         }
 
         .purpleSquare {

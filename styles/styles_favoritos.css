@@ -566,21 +566,17 @@ header nav .listas-nav li:nth-child(5) {
 }
 
 .trendingGIFOS .gifSection .trendings {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.trendingGIFOS .gifSection .trendings .gifSpace {
-  margin-right: 60px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (357px)[3];
+      grid-template-columns: repeat(3, 357px);
+  -ms-grid-rows: (275px)[1];
+      grid-template-rows: repeat(1, 275px);
 }
 
 .trendingGIFOS .gifSection .trendings .gifSpace .gif-img {
-  width: 260px;
-  height: 200px;
+  width: 357px;
+  height: 275px;
 }
 
 .trendingGIFOS .gifSection .trendings .gifSpace .purpleSquare {

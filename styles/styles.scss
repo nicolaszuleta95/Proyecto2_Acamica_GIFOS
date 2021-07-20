@@ -1,6 +1,6 @@
 //variables
 
-@import url("./_variables.scss");
+@import url("/styles/_variables.scss");
 
 /*resets*/
 * {
@@ -99,22 +99,22 @@ body {
 }
 
 /*nav*/
-@import url("./_nav.scss");
+@import url("/styles/_nav.scss");
 
 /*header search*/
-@import url("./_header.scss");
+@import url("/styles/_header.scss");
 
 /*trending*/
-@import url("./_trending.scss");
+@import url("/styles/_trending.scss");
 
 /*searched gifs*/
-@import url("./_searchedGifs.scss");
+@import url("/styles/_searchedGifs.scss");
 
 /*Trending GIFOS*/
-@import url("./_trendingGIFOS.scss");
+@import url("/styles/_trendingGIFOS.scss");
 
 /*footer*/
-@import url("./_footer.scss");
+@import url("/styles/_footer.scss");
 
 /*maximized gif*/
-@import url("./_maxGif.scss");
+@import url("/styles/_maxGif.scss");
