@@ -21,18 +21,18 @@
   --backgroundSec: var(--background_secondary);
   --accents: var(--background_accents);
   --trendingP: var(--trendingText);
-  --logo_light: url("/img/logo-desktop.svg") no-repeat;
-  --crearGifo_light: url("/img/button-crear-gifo.svg") no-repeat;
-  --crearGifoHover_light: url("/img/CTA-crear-gifo-hover.svg") no-repeat;
-  --crearGifoActive_light: url("/img/CTA-crear-gifo-active.svg") no-repeat;
-  --logoMobile_light: url("/img/logo-mobile.svg") no-repeat;
-  --search_light: url("/img/icon-search.svg");
-  --close_light: url("/img/close.svg");
-  --verMas_light: url("/img/CTA-ver-mas.svg");
-  --verMasHover_light: url("/img/CTA-ver-mas-hover.svg");
-  --sliderLeft_light: url("/img/button-slider-left.svg");
-  --sliderLeftHover_light: url("/img/button-slider-left-hover.svg");
-  --sliderRight_light: url("/img/Button-Slider-right.svg");
+  --logo_light: url("../img/logo-desktop.svg") no-repeat;
+  --crearGifo_light: url("../img/button-crear-gifo.svg") no-repeat;
+  --crearGifoHover_light: url("../img/CTA-crear-gifo-hover.svg") no-repeat;
+  --crearGifoActive_light: url("../img/CTA-crear-gifo-active.svg") no-repeat;
+  --logoMobile_light: url("../img/logo-mobile.svg") no-repeat;
+  --search_light: url("../img/icon-search.svg");
+  --close_light: url("../img/close.svg");
+  --verMas_light: url("../img/CTA-ver-mas.svg");
+  --verMasHover_light: url("../img/CTA-ver-mas-hover.svg");
+  --sliderLeft_light: url("../img/button-slider-left.svg");
+  --sliderLeftHover_light: url("../img/button-slider-left-hover.svg");
+  --sliderRight_light: url("../img/Button-Slider-right.svg");
   --logo: var(--logo_light);
   --logoMobile: var(--logoMobile_light);
   --crear_gifo: var(--crearGifo_light);
@@ -58,19 +58,20 @@
   --backgroundSec: var(--Dark_background_secondary);
   --accents: var(--Dark_background_accents);
   --trendingP: var(--trendingText);
-  --logo_dark: url("/img/Logo-modo-noc.svg") no-repeat;
-  --logoMobile_dark: url("/img/Logo-modo-noc.svg") no-repeat;
-  --crearGifo_dark: url("/img/CTA-crear-gifo-modo-noc.svg") no-repeat;
-  --crearGifoHover_dark: url("/img/CTA-crear-gifo-hover-modo-noc.svg") no-repeat;
-  --crearGifoActive_dark: url("/img/CTA-crear-gifo-active-modo-noc.svg")
+  --logo_dark: url("../img/Logo-modo-noc.svg") no-repeat;
+  --logoMobile_dark: url("../img/Logo-modo-noc.svg") no-repeat;
+  --crearGifo_dark: url("../img/CTA-crear-gifo-modo-noc.svg") no-repeat;
+  --crearGifoHover_dark: url("../img/CTA-crear-gifo-hover-modo-noc.svg")
     no-repeat;
-  --search_dark: url("/img/icon-search-modo-noct.svg");
-  --close_dark: url("/img/close-modo-noct.svg");
-  --verMas_dark: url("/img/CTA-ver+-modo-noc.svg");
-  --verMasHover_dark: url("/img/CTA-ver+hover-modo-noc.svg");
-  --sliderLeft_dark: url("/img/button-slider-left-md-noct.svg");
-  --sliderLeftHover_dark: url("/img/button-slider-left-hover.svg");
-  --sliderRight_dark: url("/img/button-slider-right-md-noct.svg");
+  --crearGifoActive_dark: url("../img/CTA-crear-gifo-active-modo-noc.svg")
+    no-repeat;
+  --search_dark: url("../img/icon-search-modo-noct.svg");
+  --close_dark: url("../img/close-modo-noct.svg");
+  --verMas_dark: url("../img/CTA-ver+-modo-noc.svg");
+  --verMasHover_dark: url("../img/CTA-ver+hover-modo-noc.svg");
+  --sliderLeft_dark: url("../img/button-slider-left-md-noct.svg");
+  --sliderLeftHover_dark: url("../img/button-slider-left-hover.svg");
+  --sliderRight_dark: url("../img/button-slider-right-md-noct.svg");
   --logo: var(--logo_dark);
   --logoMobile: var(--logoMobile_dark);
   --crear_gifo: var(--crearGifo_dark);
@@ -440,7 +441,7 @@ header nav .listas-nav li:nth-child(5) {
   border-radius: 6px;
   border-radius: 6px;
   margin: 10px 10px 0 10px;
-  background: url("/img/icon-fav.svg") no-repeat;
+  background: url("../img/icon-fav.svg") no-repeat;
 }
 
 .gifGrid .gifResults .gifSpace:hover .purpleSquare .iconsCard .loveButton .icon-icon-fav-active {
@@ -550,6 +551,7 @@ header nav .listas-nav li:nth-child(5) {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: red;
 }
 
 .trendingGIFOS .gifSection .leftButton {
@@ -561,36 +563,36 @@ header nav .listas-nav li:nth-child(5) {
 }
 
 .trendingGIFOS .gifSection .leftButton:hover {
-  background: url("/img/button-slider-left-hover.svg") no-repeat;
+  background: url("../img/button-slider-left-hover.svg") no-repeat;
 }
 
-.trendingGIFOS .gifSection .gifSpace img {
-  width: 300px;
-  height: 275px;
+.trendingGIFOS .gifSection .trendings .gifSpace .gif-img {
+  width: 260px;
+  height: 200px;
 }
 
-.trendingGIFOS .gifSection .gifSpace .purpleSquare {
+.trendingGIFOS .gifSection .trendings .gifSpace .purpleSquare {
   display: none;
 }
 
-.trendingGIFOS .gifSection .gifSpace .purpleSquare .iconsCard {
+.trendingGIFOS .gifSection .trendings .gifSpace .purpleSquare .iconsCard {
   display: none;
 }
 
-.trendingGIFOS .gifSection .gifSpace .purpleSquare .user {
+.trendingGIFOS .gifSection .trendings .gifSpace .purpleSquare .user {
   display: none;
 }
 
-.trendingGIFOS .gifSection .gifSpace .purpleSquare .tituloGIF {
+.trendingGIFOS .gifSection .trendings .gifSpace .purpleSquare .tituloGIF {
   display: none;
 }
 
-.trendingGIFOS .gifSection .gifSpace:hover {
-  position: relative;
-}
-
-.trendingGIFOS .gifSection .gifSpace:hover .purpleSquare {
+.trendingGIFOS .gifSection .trendings .gifSpace:hover .gif-img {
   position: absolute;
+}
+
+.trendingGIFOS .gifSection .trendings .gifSpace:hover .purpleSquare {
+  position: relative;
   display: inline-block;
   width: 100%;
   height: 100%;
@@ -598,16 +600,17 @@ header nav .listas-nav li:nth-child(5) {
   opacity: 0.6;
 }
 
-.trendingGIFOS .gifSection .gifSpace:hover .purpleSquare .iconsCard {
+.trendingGIFOS .gifSection .trendings .gifSpace:hover .purpleSquare .iconsCard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  /* missing the .loveButton:active functionality */
 }
 
-.trendingGIFOS .gifSection .gifSpace:hover .purpleSquare .iconsCard .loveButton {
+.trendingGIFOS .gifSection .trendings .gifSpace:hover .purpleSquare .iconsCard .trashButton {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -617,17 +620,17 @@ header nav .listas-nav li:nth-child(5) {
   border-radius: 6px;
   border-radius: 6px;
   margin: 10px 10px 0 10px;
-  background: url("/img/icon-fav.svg") no-repeat;
+  background: url("../img/icon-trash-normal.svg") no-repeat;
 }
 
-.trendingGIFOS .gifSection .gifSpace:hover .purpleSquare .iconsCard .loveButton .icon-icon-fav-active {
+.trendingGIFOS .gifSection .trendings .gifSpace:hover .purpleSquare .iconsCard .trashButton .icon-icon-fav-active {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   margin-left: 8px;
 }
 
-.trendingGIFOS .gifSection .gifSpace:hover .purpleSquare .iconsCard img {
+.trendingGIFOS .gifSection .trendings .gifSpace:hover .purpleSquare .iconsCard img {
   height: 32px;
   width: 32px;
   opacity: 0.7;
@@ -637,15 +640,15 @@ header nav .listas-nav li:nth-child(5) {
   margin: 10px 10px 0 10px;
 }
 
-.trendingGIFOS .gifSection .gifSpace:hover .purpleSquare .iconsCard img:hover {
+.trendingGIFOS .gifSection .trendings .gifSpace:hover .purpleSquare .iconsCard img:hover {
   opacity: 1;
 }
 
-.trendingGIFOS .gifSection .gifSpace:hover .purpleSquare .iconsCard .loveButton:hover {
+.trendingGIFOS .gifSection .trendings .gifSpace:hover .purpleSquare .iconsCard .trashButton:hover {
   opacity: 1;
 }
 
-.trendingGIFOS .gifSection .gifSpace:hover .purpleSquare .GIFinfo {
+.trendingGIFOS .gifSection .trendings .gifSpace:hover .purpleSquare .GIFinfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -663,7 +666,7 @@ header nav .listas-nav li:nth-child(5) {
           justify-content: flex-end;
 }
 
-.trendingGIFOS .gifSection .gifSpace:hover .purpleSquare .GIFinfo .user {
+.trendingGIFOS .gifSection .trendings .gifSpace:hover .purpleSquare .GIFinfo .user {
   display: block;
   font-family: "Roboto", sans-serif;
   font-size: 15px;
@@ -671,7 +674,7 @@ header nav .listas-nav li:nth-child(5) {
   margin-left: 18px;
 }
 
-.trendingGIFOS .gifSection .gifSpace:hover .purpleSquare .GIFinfo .tituloGIF {
+.trendingGIFOS .gifSection .trendings .gifSpace:hover .purpleSquare .GIFinfo .tituloGIF {
   display: block;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -689,7 +692,7 @@ header nav .listas-nav li:nth-child(5) {
 }
 
 .trendingGIFOS .gifSection .rightButton:hover {
-  background: url("/img/Button-Slider-right-hover.svg") no-repeat;
+  background: url("../img/Button-Slider-right-hover.svg") no-repeat;
 }
 
 /*mobile*/
@@ -795,29 +798,29 @@ footer .footerCompartir .iconsFooter .iconFacebook {
   width: 20px;
   margin-right: 19px;
   margin-left: 17px;
-  background: url("/img/icon_facebook.svg") no-repeat;
+  background: url("../img/icon_facebook.svg") no-repeat;
 }
 
 footer .footerCompartir .iconsFooter .iconFacebook:hover {
-  background: url("/img/icon_facebook_hover.svg") no-repeat;
+  background: url("../img/icon_facebook_hover.svg") no-repeat;
 }
 
 footer .footerCompartir .iconsFooter .iconTwitter {
   height: 20.2px;
   width: 20px;
   margin-right: 19px;
-  background: url("/img/icon-twitter.svg") no-repeat;
+  background: url("../img/icon-twitter.svg") no-repeat;
 }
 
 footer .footerCompartir .iconsFooter .iconTwitter:hover {
-  background: url("/img/icon-twitter-hover.svg") no-repeat;
+  background: url("../img/icon-twitter-hover.svg") no-repeat;
 }
 
 footer .footerCompartir .iconsFooter .iconInstagram {
   height: 20.2px;
   width: 20px;
   margin-right: 19px;
-  background: url("/img/icon_instagram.svg") no-repeat;
+  background: url("../img/icon_instagram.svg") no-repeat;
 }
 
 footer .footerCompartir .iconsFooter .iconInstagram:hover {
