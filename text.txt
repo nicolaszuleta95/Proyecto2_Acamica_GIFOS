@@ -1,0 +1,10 @@
+Hola, Adjunto la URL del proyecto Online:
+https://nicolaszuleta95.github.io/Proyecto2_Acamica_GIFOS/
+
+Tengo un problema que no he podido solucionar con la carga de las imagenes en la URL de github pages,
+he intentado todos los metodos posibles con Jekyll (https://jekyllrb.com/docs/assets/) y SASS pero no he tenido exito.
+
+He hecho la pregunta en Stack Overflow (https://stackoverflow.com/questions/68356367/problem-with-css-variable-and-jekyll-to-post-site-on-github-pages)
+pero no he tenido una respuesta aun. Cualquier ayuda es bien recibida. Gracias!
+
+El proyecto funciona bien si lo abres en el browser con Liver Server.
