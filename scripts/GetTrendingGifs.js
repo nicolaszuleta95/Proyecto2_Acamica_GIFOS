@@ -2,6 +2,7 @@ import api from "./services/services.js";
 
 let trendings = document.querySelector(".trendings");
 let trendGifsArr = [];
+let likedArr = localStorage.getItem("Liked");
 
 //paints the trending gifs
 const paintTrendings = (data) => {
@@ -47,7 +48,50 @@ const getTrendings = (arr) => {
 readTrendings();
 
 function likeTrending() {
+  let loveTr = document.querySelectorAll(".loveTr");
   let trGif = document.querySelectorAll(".trGif");
-  console.log(trGif);
+
+  for (let t = 0; t < loveTr.length; t++) {
+    let likeTr = loveTr[t];
+    likeTr.addEventListener("click", () => {
+      console.log("please work");
+      if (loveTr[t].innerHTML === "") {
+        loveTr[t].innerHTML = '<span class="icon-icon-fav-active"></span>';
+        for (let i = 0; i < trGif.length; i++) {
+          if (loveTr[t].parentNode.parentNode.parentNode.id === trGif[i].id) {
+            likedArr = JSON.parse(localStorage.getItem("Liked"));
+            api
+              .getApiGifByID(trGif[i].id)
+              .then((res) => {
+                const { data } = res;
+                likedArr.push(JSON.stringify(data));
+                localStorage.setItem("Liked", JSON.stringify(likedArr));
+              })
+              .catch((error) => console.warn("Error getApiGifByID: ", error));
+          }
+        }
+      } else if (loveTr[t].innerHTML !== "") {
+        loveTr[t].innerHTML = "";
+        for (let i = 0; i < trGif.length; i++) {
+          if (loveTr[t].parentNode.parentNode.parentNode.id === trGif[i].id) {
+            api
+              .getApiGifByID(trGif[i].id)
+              .then((res) => {
+                const { data } = res;
+                const index = likedArr.indexOf(JSON.stringify(data));
+                if (index > -1) {
+                  likedArr.splice(index, 1);
+                }
+                localStorage.setItem("Liked", JSON.stringify(likedArr));
+              })
+              .catch((error) => console.warn("Error getApiGifByID: ", error));
+          }
+        }
+      }
+    });
+  }
 }
-likeTrending();
+//likeTrending();
+setTimeout(() => {
+  likeTrending();
+}, 1000);
