@@ -8,10 +8,10 @@ const paintTrendings = (data) => {
   const { id, title, username, images } = data;
   return `
       <div class="gifSpace" id="${id}">
-        <img src="${images.original.url}" alt="" class="gif-img" id="${id}">
+        <img src="${images.original.url}" alt="" class="gif-img trGif" id="${id}">
         <div class="purpleSquare">
           <div class="iconsCard">
-              <div class="loveButton"></div>
+              <div class="loveButton loveTr"></div>
               <img class="downloadBtn" src="/img/icon-download.svg" alt="link" />
               <img class="maxBtn" src="/img/icon-max-normal.svg" alt="max" />
           </div>
@@ -45,3 +45,9 @@ const getTrendings = (arr) => {
 };
 
 readTrendings();
+
+function likeTrending() {
+  let trGif = document.querySelectorAll(".trGif");
+  console.log(trGif);
+}
+likeTrending();
