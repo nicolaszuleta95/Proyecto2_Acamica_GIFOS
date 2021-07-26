@@ -66,6 +66,7 @@ function likeTrending() {
                 const { data } = res;
                 likedArr.push(JSON.stringify(data));
                 localStorage.setItem("Liked", JSON.stringify(likedArr));
+                window.location.reload();
               })
               .catch((error) => console.warn("Error getApiGifByID: ", error));
           }
@@ -83,6 +84,7 @@ function likeTrending() {
                   likedArr.splice(index, 1);
                 }
                 localStorage.setItem("Liked", JSON.stringify(likedArr));
+                window.location.reload();
               })
               .catch((error) => console.warn("Error getApiGifByID: ", error));
           }
