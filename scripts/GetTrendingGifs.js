@@ -98,4 +98,5 @@ function likeTrending() {
 setTimeout(() => {
   likeTrending();
   downloadGif();
+  maxGif();
 }, 1000);
