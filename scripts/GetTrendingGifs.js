@@ -1,4 +1,5 @@
 import api from "./services/services.js";
+import { downloadGif, maxGif } from "./buttonsFunc.js";
 
 let trendings = document.querySelector(".trendings");
 let trendGifsArr = [];
@@ -96,4 +97,5 @@ function likeTrending() {
 //likeTrending();
 setTimeout(() => {
   likeTrending();
+  downloadGif();
 }, 1000);
