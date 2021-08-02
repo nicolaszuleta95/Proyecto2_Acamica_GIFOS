@@ -31,8 +31,10 @@ export function liked() {
               .getApiGifByID(allGifs[i].id)
               .then((res) => {
                 const { data } = res;
-                likedArr.push(JSON.stringify(data));
-                localStorage.setItem("Liked", JSON.stringify(likedArr));
+                if (JSON.stringify(data).length > 10) {
+                  likedArr.push(JSON.stringify(data));
+                  localStorage.setItem("Liked", JSON.stringify(likedArr));
+                }
               })
               .catch((error) => console.warn("Error getApiGifByID: ", error));
           }

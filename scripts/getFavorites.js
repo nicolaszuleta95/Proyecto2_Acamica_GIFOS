@@ -88,7 +88,7 @@ const readFavorites = () => {
   }
 };
 
-const unlikeFavs = () => {
+export const unlikeFavs = () => {
   let likedArr = localStorage.getItem("Liked");
   let likedLS = JSON.parse(likedArr);
   let likedIDs = [];
