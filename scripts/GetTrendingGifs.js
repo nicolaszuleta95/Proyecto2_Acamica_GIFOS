@@ -39,10 +39,14 @@ function readTrendings() {
 
 const getTrendings = (arr) => {
   let gifs = "";
+  let trArr = [];
   for (let i = 0; i < arr.length; i++) {
     const gif = arr[i];
     gifs += paintTrendings(gif);
     trendings.innerHTML = gifs;
+    const trendgif = JSON.stringify(arr[i]);
+    trArr.push(trendgif);
+    localStorage.setItem("trendingGifs", JSON.stringify(trArr));
   }
 };
 
@@ -94,7 +98,7 @@ function likeTrending() {
     });
   }
 }
-//likeTrending();
+
 setTimeout(() => {
   likeTrending();
   downloadGif();

@@ -8,7 +8,6 @@ function removeDuplicates() {
   const uniqueSet = new Set(array);
   const backToArray = Array.from(uniqueSet);
   localStorage.setItem("Liked", JSON.stringify(backToArray));
-  console.log(backToArray);
 }
 removeDuplicates();
 
