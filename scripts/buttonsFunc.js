@@ -1,6 +1,7 @@
 import paths from "./services/paths.js";
 import api from "./services/services.js";
 let likedArr = [];
+let allGifs = document.getElementsByClassName("gif-img");
 
 function removeDuplicates() {
   likedArr = localStorage.getItem("Liked");
@@ -20,7 +21,10 @@ export function liked() {
     let like = loveButton[t];
     like.addEventListener("click", () => {
       //likedArr = localStorage.getItem("Liked");
-      if (loveButton[t].innerHTML === "") {
+      if (
+        loveButton[t].innerHTML === "" &&
+        loveButton[t].classList.contains("loveTr") == false
+      ) {
         loveButton[t].innerHTML = '<span class="icon-icon-fav-active"></span>';
         for (let i = 0; i < allGifs.length; i++) {
           if (
@@ -39,7 +43,10 @@ export function liked() {
               .catch((error) => console.warn("Error getApiGifByID: ", error));
           }
         }
-      } else if (loveButton[t].innerHTML !== "") {
+      } else if (
+        loveButton[t].innerHTML !== "" &&
+        loveButton[t].classList.contains("loveTr") == false
+      ) {
         loveButton[t].innerHTML = "";
         for (let i = 0; i < allGifs.length; i++) {
           if (
@@ -160,3 +167,59 @@ export function maxGif() {
     });
   }
 }
+
+export function unlikeTr() {
+  let loveButton = document.getElementsByClassName("loveButton");
+
+  let likedArr = localStorage.getItem("Liked");
+  let likedLS = JSON.parse(likedArr);
+  let likedIDs = [];
+  for (let e = 0; e < likedLS.length; e++) {
+    let likedGif = JSON.parse(likedLS[e]);
+    likedIDs.push(likedGif["id"]);
+  }
+  console.log(likedIDs);
+
+  for (let t = 0; t < loveButton.length; t++) {
+    if (loveButton[t].classList.contains("loveTr") == true) {
+      if (
+        likedIDs.includes(loveButton[t].parentNode.parentNode.parentNode.id)
+      ) {
+        console.log(loveButton[t].parentNode.parentNode.parentNode.id);
+        loveButton[t].innerHTML = '<span class="icon-icon-fav-active"></span>';
+
+        let unlikeTr = loveButton[t];
+        console.log(unlikeTr);
+        unlikeTr.addEventListener("click", () => {
+          loveButton[t].innerHTML = "";
+          for (let i = 0; i < allGifs.length; i++) {
+            if (
+              loveButton[t].parentNode.parentNode.parentNode.id ===
+              allGifs[i].id
+            ) {
+              let likedGifs = JSON.parse(localStorage.getItem("Liked"));
+              for (let e = 0; e < likedGifs.length; e++) {
+                const gif = JSON.parse(likedGifs[e]);
+                if (gif.id === allGifs[i].id) {
+                  const index = likedGifs.indexOf(JSON.stringify(gif));
+                  console.log(index);
+                  if (index > -1) {
+                    likedGifs.splice(index, 1);
+                  }
+                  localStorage.setItem("Liked", JSON.stringify(likedGifs));
+                  console.log(likedGifs);
+                  //refresco la pagina
+                  window.location.reload();
+                }
+              }
+            }
+          }
+        });
+      }
+    }
+  }
+}
+
+// setTimeout(() => {
+//   unlikeTr();
+// }, 500);
