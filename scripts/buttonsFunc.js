@@ -2,6 +2,16 @@ import paths from "./services/paths.js";
 import api from "./services/services.js";
 let likedArr = [];
 
+function removeDuplicates() {
+  likedArr = localStorage.getItem("Liked");
+  let array = JSON.parse(likedArr);
+  const uniqueSet = new Set(array);
+  const backToArray = Array.from(uniqueSet);
+  localStorage.setItem("Liked", JSON.stringify(backToArray));
+  console.log(backToArray);
+}
+removeDuplicates();
+
 //Like function
 export function liked() {
   let loveButton = document.getElementsByClassName("loveButton");
