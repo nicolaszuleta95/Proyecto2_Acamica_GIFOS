@@ -4,6 +4,7 @@ const gifResults = document.querySelector(".gifResults");
 const btnVerMas = document.querySelector(".btnVerMas");
 let trashButton = document.getElementsByClassName("trashButton");
 let allGifs = document.getElementsByClassName("gif-img");
+let loveButton = document.getElementsByClassName("loveButton");
 
 let likedGifs = JSON.parse(localStorage.getItem("Liked"));
 let myGifs = JSON.parse(localStorage.getItem("myGifs"));
@@ -127,6 +128,59 @@ const saveTrash = () => {
   let myGifs = JSON.parse(localStorage.getItem("myGifs"));
   localStorage.setItem("myGifs", JSON.stringify(myGifs));
 };
+
+export function unlikeTr() {
+  let likedArr = localStorage.getItem("Liked");
+  let likedLS = JSON.parse(likedArr);
+  let likedIDs = [];
+  for (let e = 0; e < likedLS.length; e++) {
+    let likedGif = JSON.parse(likedLS[e]);
+    likedIDs.push(likedGif["id"]);
+  }
+  console.log(likedIDs);
+
+  for (let t = 0; t < loveButton.length; t++) {
+    if (loveButton[t].classList.contains("loveTr") == true) {
+      if (
+        likedIDs.includes(loveButton[t].parentNode.parentNode.parentNode.id)
+      ) {
+        console.log(loveButton[t].parentNode.parentNode.parentNode.id);
+        loveButton[t].innerHTML = '<span class="icon-icon-fav-active"></span>';
+
+        let unlikeTr = loveButton[t];
+        console.log(unlikeTr);
+        unlikeTr.addEventListener("click", () => {
+          loveButton[t].innerHTML = "";
+          for (let i = 0; i < allGifs.length; i++) {
+            if (
+              loveButton[t].parentNode.parentNode.parentNode.id ===
+              allGifs[i].id
+            ) {
+              let likedGifs = JSON.parse(localStorage.getItem("Liked"));
+              for (let e = 0; e < likedGifs.length; e++) {
+                const gif = JSON.parse(likedGifs[e]);
+                if (gif.id === allGifs[i].id) {
+                  const index = likedGifs.indexOf(JSON.stringify(gif));
+                  console.log(index);
+                  if (index > -1) {
+                    likedGifs.splice(index, 1);
+                  }
+                  localStorage.setItem("Liked", JSON.stringify(likedGifs));
+                  console.log(likedGifs);
+                  //refresco la pagina
+                  window.location.reload();
+                }
+              }
+            }
+          }
+        });
+      }
+    }
+  }
+}
+setTimeout(() => {
+  unlikeTr();
+}, 500);
 
 setTimeout(() => {
   readMyGifs();
