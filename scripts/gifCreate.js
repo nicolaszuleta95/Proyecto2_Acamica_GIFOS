@@ -1,4 +1,5 @@
 import api from "./services/services.js";
+import { downloadGif } from "./buttonsFunc.js";
 
 const startBtn = document.querySelector(".startBtn");
 const recBtn = document.querySelector(".recBtn");
@@ -17,6 +18,8 @@ const gifPreviewPurple = document.querySelector(".gifPreviewPurple");
 const insideText = document.querySelector(".insideText");
 const loading = document.querySelector(".loading");
 const check = document.querySelector(".check");
+const downloadBtn = document.querySelector(".downloadBtn");
+const linkBtn = document.querySelector(".linkBtn");
 
 const timeP = document.querySelector(".timeP");
 const gifTimer = document.querySelector(".gifTimer");
@@ -107,6 +110,37 @@ function stopRecordingCallback() {
             check.style.display = "block";
             paintBtn(twoBtn, "white");
             paintBtn(threeBtn, "purple");
+            downloadBtn.addEventListener("click", () => {
+              api
+                .downloadGifLink(data.images.original.url)
+                .then((response) => {
+                  response
+                    .blob()
+                    .then((file) => {
+                      const a = document.createElement("a");
+                      a.download = data.id;
+                      a.href = window.URL.createObjectURL(file);
+                      a.dataset.downloadurl = [
+                        "application/octet-stream",
+                        a.download,
+                        a.href,
+                      ].join(":");
+                      a.click();
+                    })
+                    .catch((err) => {
+                      console.error("Error al crear descargable: ", err);
+                    });
+                })
+                .catch((err) => {
+                  console.error("Error al descargar el gif: ", err);
+                });
+            });
+            linkBtn.addEventListener("click", () => {
+              api.downloadGifLink(data.images.original.url).then((response) => {
+                let copyText = response.url;
+                navigator.clipboard.writeText(copyText);
+              });
+            });
           })
           .catch((error) => console.warn("Error getApiGifByID: ", error));
       })
