@@ -262,3 +262,15 @@ function trendWords() {
 }
 
 trendWords();
+
+const burger = document.querySelector(".burger");
+const searchbar = document.querySelector(".search-bar");
+const close = document.querySelector(".close");
+
+burger.addEventListener("click", () => {
+  searchbar.style.display = "none";
+});
+
+close.addEventListener("click", () => {
+  searchbar.style.display = "flex";
+});
