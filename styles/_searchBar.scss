@@ -150,5 +150,22 @@
     .searchButton {
       margin-left: 320px;
     }
+    .searchButtonLeft {
+      margin-right: 0px;
+      right: 310px;
+    }
+
+    .autocomSearch {
+      width: 334px;
+      height: 350px;
+
+      hr {
+        width: 330px;
+      }
+    }
+
+    .XButton {
+      margin-left: 280px;
+    }
   }
 }

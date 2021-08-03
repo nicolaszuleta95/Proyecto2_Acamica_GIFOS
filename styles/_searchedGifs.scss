@@ -137,3 +137,31 @@
     background: var(--verMasHover) no-repeat;
   }
 }
+
+/*mobile*/
+@media screen and (max-width: 375px) {
+  .searchedGIFS {
+    margin-top: 79px;
+
+    .searchedValue {
+      font-size: 25px;
+      line-height: 40px;
+      margin-bottom: 38px;
+    }
+
+    .gifResults {
+      display: grid;
+      grid-auto-flow: row;
+      grid-template-columns: repeat(2, 156px);
+      grid-gap: 21px;
+      grid-template-rows: repeat(6, 120px);
+
+      .gifSpace {
+        .gif-img {
+          width: 156px;
+          height: 120px;
+        }
+      }
+    }
+  }
+}

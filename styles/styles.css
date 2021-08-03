@@ -535,6 +535,20 @@ header nav .listas-nav li:nth-child(5) {
   .header-search .search-bar .searchButton {
     margin-left: 320px;
   }
+  .header-search .search-bar .searchButtonLeft {
+    margin-right: 0px;
+    right: 310px;
+  }
+  .header-search .search-bar .autocomSearch {
+    width: 334px;
+    height: 350px;
+  }
+  .header-search .search-bar .autocomSearch hr {
+    width: 330px;
+  }
+  .header-search .search-bar .XButton {
+    margin-left: 280px;
+  }
 }
 
 /*mobile*/
@@ -626,6 +640,10 @@ header nav .listas-nav li:nth-child(5) {
   .trending h3 {
     font-size: 16px;
     line-height: 25px;
+  }
+  .trending ul {
+    width: 225px;
+    margin-left: 80px;
   }
   .trending ul li {
     margin-top: 2px;
@@ -795,6 +813,32 @@ header nav .listas-nav li:nth-child(5) {
 
 .searchedGIFS .seeMoreBtn:hover {
   background: var(--verMasHover) no-repeat;
+}
+
+/*mobile*/
+@media screen and (max-width: 375px) {
+  .searchedGIFS {
+    margin-top: 79px;
+  }
+  .searchedGIFS .searchedValue {
+    font-size: 25px;
+    line-height: 40px;
+    margin-bottom: 38px;
+  }
+  .searchedGIFS .gifResults {
+    display: -ms-grid;
+    display: grid;
+    grid-auto-flow: row;
+    -ms-grid-columns: (156px)[2];
+        grid-template-columns: repeat(2, 156px);
+    grid-gap: 21px;
+    -ms-grid-rows: (120px)[6];
+        grid-template-rows: repeat(6, 120px);
+  }
+  .searchedGIFS .gifResults .gifSpace .gif-img {
+    width: 156px;
+    height: 120px;
+  }
 }
 
 /*Trending GIFOS*/
