@@ -504,6 +504,21 @@ header nav .listas-nav li:nth-child(5) {
   margin-bottom: 51px;
 }
 
+/*mobile*/
+@media screen and (max-width: 375px) {
+  .gifGrid .gifResults {
+    -ms-grid-columns: (156px)[2];
+        grid-template-columns: repeat(2, 156px);
+    grid-gap: 21px;
+    -ms-grid-rows: (120px)[6];
+        grid-template-rows: repeat(6, 120px);
+  }
+  .gifGrid .gifResults .gifSpace .gif-img {
+    width: 156px;
+    height: 120px;
+  }
+}
+
 .trendingGIFOS {
   background-color: var(--backgroundSec);
   width: 100%;
