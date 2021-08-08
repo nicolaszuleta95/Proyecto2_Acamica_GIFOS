@@ -737,8 +737,8 @@ header nav .listas-nav li:nth-child(5) {
     display: none;
   }
   .trendingGIFOS .gifSection .gifSpace img {
-    width: 243px;
-    height: 187px;
+    width: 100px;
+    height: 100px;
   }
   .trendingGIFOS .gifSection .gifSpace:first-child {
     margin-left: 22px;
